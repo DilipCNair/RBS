@@ -18,7 +18,7 @@ namespace RBS.Commands
         public MyICommand(Func<bool> CanExecuteMethod,  Action ExecuteMthod)
         {
             TargetCanExecuteMethod = CanExecuteMethod;
-            TargetExecuteMethod = ExecuteMthod;
+            TargetExecuteMethod = ExecuteMthod;           
         }
 
 
