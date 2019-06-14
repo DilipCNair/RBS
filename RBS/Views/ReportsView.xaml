@@ -1,0 +1,67 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:Views ="clr-namespace:RBS.Views"
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel"
+             xmlns:ChildViews="clr-namespace:RBS.Views.ReportsChildViews" 
+             x:Class="RBS.Views.ReportsView"
+             mc:Ignorable="d" 
+             d:DesignWidth="942" d:DesignHeight="650" 
+             Width="942" Height="650"           
+             Background="White">
+    <UserControl.Resources>
+        <Style x:Key="StyleForTabItem" TargetType="{x:Type TabItem}"  BasedOn="{StaticResource MetroTabItem}" >
+            <Setter Property="Custom:ControlsHelper.HeaderFontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <ViewModel:ReportsViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="569*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="426,25,403,10" HorizontalAlignment="Center" Width="113">
+            <TextBlock Text="&#xE12A;" FontSize="27" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0" />
+            <TextBlock Text="Reports" HorizontalAlignment="Center" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="20" Margin="10,0,0,0" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <Line VerticalAlignment="Bottom" StrokeThickness="0.5" X2="942" Margin="20,0,20,5" Stroke="LightGray" />
+
+        <TabControl Grid.Row="1" Height="583">
+            <TabControl.Resources>
+                <Style TargetType="TabPanel">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="Applications" Style="{StaticResource StyleForTabItem}">
+                <ChildViews:Applications MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="File System" Style="{StaticResource StyleForTabItem}">
+                <Views:FSM_Reports MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="Packet Sniffer" Style="{StaticResource StyleForTabItem}">
+                <Views:PacketSniffer_Reports MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="Process" Style="{StaticResource StyleForTabItem}">
+                <Views:ProcessReports MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="Process Port Mapper" Style="{StaticResource StyleForTabItem}">
+                <ChildViews:Process_Port_Map MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="User Input" Style="{StaticResource StyleForTabItem}">
+                <Views:UIM_Reports MaxHeight="562"/>
+            </TabItem>
+            <TabItem Header="Services/Drivers" Style="{StaticResource StyleForTabItem}">
+                <ChildViews:WindowsServices MaxHeight="562"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

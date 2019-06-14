@@ -1,0 +1,203 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel" 
+             x:Class="RBS.Views.SettingsView"
+             mc:Ignorable="d" 
+             d:DesignWidth="942" d:DesignHeight="650" 
+             Width="942" Height="650" 
+             Background="White">
+    <UserControl.Resources>
+        <Style x:Key="TextBlockForSettingsStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Gray"/>
+        </Style>
+    </UserControl.Resources>
+
+
+    <UserControl.DataContext>
+        <ViewModel:SettingsViewModel/>
+    </UserControl.DataContext>
+
+
+    <StackPanel x:Name="StackPanel_Settings" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+        <!--Title-->
+        <StackPanel Margin="0,25,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="&#xE713;" FontSize="20" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" />
+            <TextBlock Text="Settings" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="20" Margin="10,0,0,0" />
+        </StackPanel>
+
+        <!--Top Line-->
+        <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
+              X2="942" Margin="0,25,0,0"/>
+
+        <StackPanel Orientation="Horizontal" Margin="20,10,20,0">
+            <BulletDecorator VerticalAlignment="Center" Margin="0,3,0,0">
+                <BulletDecorator.Bullet>
+                    <Ellipse Height="7.5" Width="7.5" Fill="Gray" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                </BulletDecorator.Bullet>
+            </BulletDecorator>
+            <TextBlock Text="Alert Mailing  :" Style="{StaticResource TextBlockForSettingsStyle}" 
+                       VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <ToggleButton x:Name="ToggleButton_AlertMailing" Style="{StaticResource AnimatedSwitchForSubMenu}" 
+                          Margin="10,0,0,0" Width="16" VerticalAlignment="Bottom" 
+                          Checked="ToggleButton_AlertMailing_Checked" Unchecked="ToggleButton_AlertMailing_Unchecked"/>
+        </StackPanel>
+
+        <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
+              X2="942" Margin="0,10,0,0" Visibility="Hidden"/>
+
+        <StackPanel Orientation="Horizontal" Margin="20,10,20,0">
+            <BulletDecorator VerticalAlignment="Center" Margin="0,3,0,0">
+                <BulletDecorator.Bullet>
+                    <Ellipse Height="7.5" Width="7.5" Fill="Gray" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                </BulletDecorator.Bullet>
+            </BulletDecorator>
+            <TextBlock Text="Default Network Interface :" Style="{StaticResource TextBlockForSettingsStyle}"
+                       VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <ComboBox x:Name="Interface_Selction_ComboBox" Margin="10,0,0,0" VerticalAlignment="Center" 
+                      SelectionChanged="Interface_Selction_ComboBox_SelectionChanged">
+                <ComboBox.Foreground>
+                    <SolidColorBrush Color="{DynamicResource FlatUI_Black}"/>
+                </ComboBox.Foreground>
+                <ComboBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
+                </ComboBox.BorderBrush>
+                <ComboBoxItem IsSelected="True">
+                    <Italic>
+                        <Run Text="802.3 - Ethernet"/>
+                    </Italic>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <Italic>
+                        <Run Text="802.11ac - Wifi"/>
+                    </Italic>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
+              X2="942" Margin="0,10,0,0" Visibility="Hidden"/>
+
+
+        <!--Tree View FSM-->
+        <TreeView x:Name="TreeView_FSM" Style="{x:Null}" Margin="0,10,0,0" BorderThickness="0" VerticalAlignment="Top">
+            <TreeViewItem VerticalAlignment="Center" IsExpanded="True" Height="137" Width="903">
+                <TreeViewItem.Header>
+                    <TextBlock Text="Drives for File system monitoring :" Style="{StaticResource TextBlockForSettingsStyle}" 
+                               Margin="10,0,0,0"/>
+                </TreeViewItem.Header>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_C" IsChecked="True" Checked="CheckBox_C_Checked" 
+                              Unchecked="CheckBox_C_UnChecked"/>
+                    <TextBlock Text="C: Drive" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_D" IsChecked="True" Checked="CheckBox_D_Checked" 
+                              Unchecked="CheckBox_D_UnChecked"/>
+                    <TextBlock Text="D: Drive" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_E" IsChecked="True" Checked="CheckBox_E_Checked" 
+                              Unchecked="CheckBox_E_UnChecked"/>
+                    <TextBlock Text="E: Drive" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="CheckBox_F" IsChecked="True" Checked="CheckBox_F_Checked"
+                              Unchecked="CheckBox_F_UnChecked"/>
+                    <TextBlock Text="F: Drive" Foreground="Gray"/>
+                </StackPanel>
+            </TreeViewItem>
+        </TreeView>
+
+        <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
+              X2="942" Margin="0,10,0,0" Visibility="Hidden"/>
+
+
+        <TreeView x:Name="TreeView_ME" Margin="0,10,0,0" BorderThickness="0" VerticalAlignment="Top">
+            <TreeViewItem Margin="20,0,0,0" IsExpanded="True">
+                <TreeViewItem.Header>
+                    <TextBlock Text="Monitoring Engine :" Style="{StaticResource TextBlockForSettingsStyle}" 
+                               Margin="10,0,0,0"/>
+                </TreeViewItem.Header>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_IA" IsChecked="False" Checked="CheckBox_Applications_Checked" 
+                              Unchecked="CheckBox_Applications_UnChecked"/>
+                    <TextBlock Text="Applications" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_FSM" IsChecked="True" Checked="CheckBox_FSM_Checked" 
+                              Unchecked="CheckBox_FSM_UnChecked"/>
+                    <TextBlock Text="File System Monitoring" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_PS" IsChecked="False" Checked="CheckBox_PS_Checked" 
+                              Unchecked="CheckBox_PS_Unchecked"/>
+                    <TextBlock Text="Packet Analyser" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_PM" IsChecked="True" Checked="CheckBox_PM_Checked" 
+                              Unchecked="CheckBox_PM_Unchecked"/>
+                    <TextBlock Text="Process Monitoring" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_PPM" IsChecked="False" Checked="CheckBox_PPM_Checked" 
+                              Unchecked="CheckBox_PPM_Unchecked"/>
+                    <TextBlock Text="Process Port Mapper" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                    <CheckBox x:Name="CheckBox_WSM" IsChecked="False" Checked="CheckBox_WSM_Checked" 
+                              Unchecked="CheckBox_WSM_Unchecked"/>
+                    <TextBlock Text="Services and Devices" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="CheckBox_UIM" IsChecked="False" Checked="CheckBox_UIM_Checked" 
+                              Unchecked="CheckBox_UIM_UnChecked"/>
+                    <TextBlock Text="User Input Monitoring" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                </StackPanel>
+            </TreeViewItem>
+        </TreeView>
+
+
+        <StackPanel Orientation="Horizontal" Margin="20,10,20,0">
+            <BulletDecorator VerticalAlignment="Center" Margin="0,3,0,0">
+                <BulletDecorator.Bullet>
+                    <Ellipse Height="7.5" Width="7.5" Fill="Gray" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                </BulletDecorator.Bullet>
+            </BulletDecorator>
+            <TextBlock Text="Process Restrictions Type :" Style="{StaticResource TextBlockForSettingsStyle}" 
+                       VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <ComboBox x:Name="ProcessSignature_ComboBox" Margin="10,0,0,0" VerticalAlignment="Center" 
+                      SelectionChanged="ProcessSignature_ComboBox_SelectionChanged">
+                <ComboBox.Foreground>
+                    <SolidColorBrush Color="{DynamicResource FlatUI_Black}"/>
+                </ComboBox.Foreground>
+                <ComboBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
+                </ComboBox.BorderBrush>
+                <ComboBoxItem IsSelected="True">
+                    <Italic>
+                        <Run Text="White-list"/>
+                    </Italic>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <Italic>
+                        <Run Text="Black-list"/>
+                    </Italic>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+
+
+
+
+
+    </StackPanel>
+</UserControl>

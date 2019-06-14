@@ -1,0 +1,63 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:CustomControls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:local="clr-namespace:RBS.Views"
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel" x:Class="RBS.Views.AlertsView"
+             mc:Ignorable="d" 
+             d:DesignWidth="942" d:DesignHeight="650" 
+             Width="942" Height="650" 
+             Background="White">
+    <UserControl.Resources>
+        <Style x:Key="StyleForTabItem" TargetType="{x:Type TabItem}"  BasedOn="{StaticResource MetroTabItem}" >
+            <Setter Property="CustomControls:ControlsHelper.HeaderFontSize" Value="18"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <ViewModel:AlertsViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <!--Title-->
+        <StackPanel Margin="423,30,421,593" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="22" Width="98">
+            <TextBlock Text="&#xE730;" FontSize="20" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" />
+            <TextBlock Text="Alerts" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="20" Margin="10,0,0,0" />
+        </StackPanel>
+
+        <!--Top Line-->
+        <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" X2="942" Margin="25,71,30,0"/>
+ 
+        <StackPanel Margin="0,76,0,0">
+            <DataGrid x:Name="DataGrid_AllAlerts" Margin="24,0" CanUserAddRows="False" ItemsSource="{Binding Path=AlertList}" ColumnHeaderStyle="{StaticResource MyColumnHeader}" BorderBrush="#FF396274" HorizontalAlignment="Center" Width="894" AutoGenerateColumns="False" AlternationCount="2" Height="475" >
+                <DataGrid.AlternatingRowBackground>
+                    <SolidColorBrush Color="#7FE2F5E2"/>
+                </DataGrid.AlternatingRowBackground>
+                <DataGrid.Foreground>
+                    <SolidColorBrush Color="{DynamicResource FlatUI_Black}"/>
+                </DataGrid.Foreground>
+                <DataGrid.VerticalGridLinesBrush>
+                    <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+                </DataGrid.VerticalGridLinesBrush>
+                <DataGrid.HorizontalGridLinesBrush>
+                    <SolidColorBrush Color="{DynamicResource AwesomeGreen}"/>
+                </DataGrid.HorizontalGridLinesBrush>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="No" MinWidth="50" Binding="{Binding No}" />
+                    <DataGridTextColumn Header="Time" MinWidth="75"  Binding="{Binding Time}" />
+                    <DataGridTextColumn Header="Date" MinWidth="100" Binding="{Binding Date}" />
+                    <DataGridTextColumn Header="Information" MinWidth="200"  Binding="{Binding Information}" />
+                    <DataGridTextColumn Header="Activity" MinWidth="200"  Binding="{Binding Activity}" />
+                    <DataGridTextColumn Header="Type" MinWidth="250"  Binding="{Binding Type}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <TextBox x:Name="Textbox_SearchAlerts" CustomControls:TextBoxHelper.Watermark="Enter the search filter" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,25,0,0" Width="250" KeyDown="Textbox_SearchAlerts_KeyDown">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

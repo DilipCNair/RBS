@@ -1,0 +1,139 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel"
+             x:Class="RBS.Views.SplashScreenView"
+             x:Name="UserControl_SplashScreen" 
+             mc:Ignorable="d" 
+             d:DesignWidth="900" d:DesignHeight="500"
+             Width="900" Height="500" BorderThickness="5">
+
+    <UserControl.Resources>
+        <Style x:Key="StyleButtonContinue" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="325"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BorderThickness" Value="0.1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="7" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{DynamicResource AwesomeGreen}"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{DynamicResource AwesomeGreen}"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0.1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderThickness" Value="2"/>
+                    <Setter Property="BorderBrush">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush Color="#FF075F5F"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <SolidColorBrush Color="#FFDADADA"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.BorderBrush>
+        <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
+    </UserControl.BorderBrush>
+
+
+    <UserControl.DataContext>
+        <ViewModel:SplashScreenViewModel/>
+    </UserControl.DataContext>
+
+
+    <Grid x:Name="Grid_SplashScreen" Margin="0">
+        <Grid.Background>
+            <SolidColorBrush>#1C3249</SolidColorBrush>
+        </Grid.Background>
+
+        <!--Header-->
+        <TextBlock x:Name="TextBlock_Title" TextWrapping="Wrap" Text="Restriction Based System" Foreground="White" 
+                   FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="35" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
+
+
+        <!--Content-->
+        <StackPanel x:Name="StackPanelContent" Margin="0,176,0,0">
+            <StackPanel x:Name="StackPanel_ButtonContainer" Orientation="Vertical" HorizontalAlignment="Center" 
+                        Margin="0,25,0,0" VerticalAlignment="Center" Width="425">
+                <Button x:Name="ButtonRegistration" Style="{StaticResource StyleButtonContinue}" Content="Register" 
+                        Margin="0" HorizontalAlignment="Center" 
+                        Command="{Binding Path=RegisterCommand}"/>
+                <Button x:Name="ButtonModify" Style="{StaticResource StyleButtonContinue}" Content="Modify"
+                        Margin="0,25,0,0" HorizontalAlignment="Center" 
+                        Command="{Binding Path=ModifyCommand}"/>
+                <Button x:Name="ButtonLogin" Style="{StaticResource StyleButtonContinue}" Content="Login" 
+                        Margin="0,25,0,0" HorizontalAlignment="Center" 
+                        Command="{Binding Path=LoginCommand}"/>
+            </StackPanel>
+
+            <TextBlock x:Name="TextBlock_SplashMessageTitle" HorizontalAlignment="Center" FontWeight="Thin" 
+                       Margin="15,20,0,0" TextWrapping="Wrap" Text="Please Select !" VerticalAlignment="Center" 
+                       FontSize="17" FontFamily="Calibri" FontStretch="Expanded" FontStyle="Italic" 
+                       Foreground="#FFD9DEE0"/>
+        </StackPanel>
+
+
+        <!--Footer-->
+        <StackPanel x:Name="StackPanelFooter" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" >
+            <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" 
+                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system"
+                       HorizontalAlignment="Center" Margin="0,0,0,5"
+                       FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" Foreground="#7FECF0F1"/>
+            <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR"
+                       HorizontalAlignment="Center" FontSize="10" Margin="0" 
+                       FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" Foreground="#7FECF0F1"/>
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>
