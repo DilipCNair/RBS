@@ -19,7 +19,7 @@
         ShowCloseButton="False">
 
     <Grid x:Name="Grid_Main" Height="650">
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300*"/>
             <ColumnDefinition Width="1095*"/>

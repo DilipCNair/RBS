@@ -29,7 +29,6 @@ namespace RBS.Commands
         }
 
         //When User Clicks a Button this function get invoked
-        //Test1
         bool ICommand.CanExecute(object parameter)
         {
             if (TargetCanExecuteMethod != null)
