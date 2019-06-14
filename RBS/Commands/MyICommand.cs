@@ -29,7 +29,7 @@ namespace RBS.Commands
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        //When User Clicks a Button this function get invoked - Testing
+        //When User Clicks a Button this function get invoked
         bool ICommand.CanExecute(object parameter)
         {
             if (TargetCanExecuteMethod != null)
