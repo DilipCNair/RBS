@@ -5,6 +5,7 @@ namespace RBS.Commands
 {
     public class MyICommand : ICommand
     {
+        //Delegates holding references to the target functions
         readonly Func<bool> TargetCanExecuteMethod;
         readonly Action TargetExecuteMethod;
 
