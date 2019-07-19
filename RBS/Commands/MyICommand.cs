@@ -30,7 +30,7 @@ namespace RBS.Commands
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        //When User Clicks a Button this function get invoked
+        //When User Clicks a Button this function gets invoked
         bool ICommand.CanExecute(object parameter)
         {
             if (TargetCanExecuteMethod != null)
@@ -41,7 +41,7 @@ namespace RBS.Commands
                 return false;
         }
 
-        //When User Clicks a Button this function get invoked
+        //When User Clicks a Button this function gets invoked
         void ICommand.Execute(object parameter)
         {
             TargetExecuteMethod();
