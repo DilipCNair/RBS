@@ -49,7 +49,7 @@ namespace RBS.ViewModel
             GlobalResources.IInitiatedSettingsUpdate();
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged;
 
         private void RaisePropertyChanged(string property)
         {

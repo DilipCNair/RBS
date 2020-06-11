@@ -1,8 +1,15 @@
-<Application x:Name="Application_RBS" x:Class="RBS.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"	xmlns:local="clr-namespace:RBS"	Startup="Application_RBS_Startup"	Exit="Application_RBS_Exit"	ShutdownMode="OnMainWindowClose">
+<Application x:Name="Application_RBS"
+             x:Class="RBS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"	
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_RBS_Startup"	
+             StartupUri="MainWindow.xaml"
+             Exit="Application_RBS_Exit"	
+             ShutdownMode="OnMainWindowClose">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="RBSResourceDictionary.xaml"/>
+                <ResourceDictionary Source="Lib/RBSResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

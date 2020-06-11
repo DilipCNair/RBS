@@ -13,6 +13,7 @@ namespace RBS
         {
             InitializeComponent();
             GlobalResources.ShowNotiffication += GlobalResources_ShowNotiffication;
+            this.Hide();
             NotificationWindow.Hide();
         }
 

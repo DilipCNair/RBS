@@ -11,15 +11,14 @@ namespace RBS
     public partial class App : Application
     {
         public AuthenticationWindow AuthenticationWindow;
-        public new MainWindow MainWindow;
         public NotificationWindow NotificationWindow;
 
         private void Application_RBS_Startup(object sender, StartupEventArgs e)
         {
             AuthenticationWindow = new AuthenticationWindow();
-            MainWindow = new MainWindow();
             NotificationWindow = new NotificationWindow();
-            MainWindow.Show();
+            AuthenticationWindow.Show();
+
             GlobalResources.IsNotificationWindowShown = false;
             GlobalResources.AlertMailing = false;
             GlobalResources.IsProcessRestrictionsSet = false;
@@ -32,12 +31,6 @@ namespace RBS
             GettingCurrentUserInfo();
             GettingAllUsersInfo();
             GlobalResources.IWantToShowCurrentUser();
-        }
-
-        private void Application_RBS_Exit(object sender, ExitEventArgs e)
-        {
-            File.Delete(GlobalResources.Path + "Keylogger.txt");
-            File.Delete(GlobalResources.Path + "Mouselogger.txt");
         }
 
         private void GettingCurrentUserInfo()
@@ -72,6 +65,12 @@ namespace RBS
                 if (string.Equals(user.UserName, "Sharada Valiveti"))
                     user.Email_ID = "sharada.valiveti@nirmauni.ac.in";
             }
+        }
+
+        private void Application_RBS_Exit(object sender, ExitEventArgs e)
+        {
+            File.Delete(GlobalResources.Path + "Keylogger.txt");
+            File.Delete(GlobalResources.Path + "Mouselogger.txt");
         }
     }
 }
