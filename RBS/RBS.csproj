@@ -9,14 +9,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RBS</RootNamespace>
     <AssemblyName>RBS</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>D:\Work\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -29,6 +29,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -104,6 +105,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>78F383EFF5864F9B2AE219685F57C29FE7A1DAC9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RBS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gma.System.MouseKeyHook, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseKeyHook.5.4.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
@@ -160,12 +176,9 @@
     <Compile Include="MailingSystem.cs" />
     <Compile Include="Model\AlertsModel.cs" />
     <Compile Include="Model\AuthenticationModel.cs" />
-    <Compile Include="Model\CustomizeModel.cs" />
     <Compile Include="Model\ExceptionModel.cs" />
-    <Compile Include="Model\HelpModel.cs" />
     <Compile Include="Model\HomeModel.cs" />
     <Compile Include="Model\ModifyModel.cs" />
-    <Compile Include="Model\ParentMenuModel.cs" />
     <Compile Include="Model\RegistrationModel.cs" />
     <Compile Include="Model\ReportsChildModels\ApplicationsModel.cs" />
     <Compile Include="Model\ReportsChildModels\FileSystemReportsModel.cs" />
@@ -174,9 +187,7 @@
     <Compile Include="Model\ReportsChildModels\ProcessReportsModel.cs" />
     <Compile Include="Model\ReportsChildModels\UIMModel.cs" />
     <Compile Include="Model\ReportsChildModels\WindowsServices-Model.cs" />
-    <Compile Include="Model\ReportsModel.cs" />
-    <Compile Include="Model\SettingsModel.cs" />
-    <Compile Include="Model\SplashScreenModel.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Monitoring Engine\Applications Monitoring.cs" />
     <Compile Include="Monitoring Engine\File System Monitoring.cs" />
     <Compile Include="Monitoring Engine\Packet Sniffer.cs" />
@@ -193,10 +204,8 @@
     <Compile Include="ViewModel\AlertsViewModel.cs" />
     <Compile Include="ViewModel\AuthenticationViewModel.cs" />
     <Compile Include="ViewModel\CustomizeViewModel.cs" />
-    <Compile Include="ViewModel\HelpViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\ModifyViewModel.cs" />
-    <Compile Include="ViewModel\ParentMenuViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\ReportsChildViewModels\ApplicationsViewModel.cs" />
     <Compile Include="ViewModel\ReportsChildViewModels\FileSystemReportsViewModel.cs" />
@@ -205,8 +214,6 @@
     <Compile Include="ViewModel\ReportsChildViewModels\ProcessReportsViewModel.cs" />
     <Compile Include="ViewModel\ReportsChildViewModels\UIM_ReportsViewModel.cs" />
     <Compile Include="ViewModel\ReportsChildViewModels\WindowsServices_ViewModel.cs" />
-    <Compile Include="ViewModel\ReportsViewModel.cs" />
-    <Compile Include="ViewModel\SettingsViewModel.cs" />
     <Compile Include="ViewModel\SplashScreenViewModel.cs" />
     <Compile Include="Views\AlertsView.xaml.cs">
       <DependentUpon>AlertsView.xaml</DependentUpon>
@@ -385,6 +392,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="RBS_TemporaryKey.pfx" />
     <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Bold.ttf" />
     <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-BoldItalic.ttf" />
     <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Italic.ttf" />

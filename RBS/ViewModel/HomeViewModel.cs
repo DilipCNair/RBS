@@ -7,14 +7,14 @@ namespace RBS.ViewModel
 {
     public class HomeViewModel : BindableBase, INotifyPropertyChanged
     {
-        private HomeModel HomeModelObject;
+        //private readonly HomeModel HomeModelObject;
 
         public MyICommand Command_ToggleButtonMEIsChecked { get; private set; }
         public MyICommand Command_ToggleButtonMEIsUnChecked { get; private set; }
 
         public HomeViewModel()
         {
-            HomeModelObject = new HomeModel();
+            //HomeModelObject = new HomeModel();
             Command_ToggleButtonMEIsChecked = new MyICommand(ME_ToggledOn);
             Command_ToggleButtonMEIsUnChecked = new MyICommand(Me_ToggledOff);
         }
@@ -49,11 +49,11 @@ namespace RBS.ViewModel
             GlobalResources.IInitiatedSettingsUpdate();
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
 
-        private void RaisePropertyChanged(string property)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
-        }
+        //private void RaisePropertyChanged(string property)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        //}
     }
 }

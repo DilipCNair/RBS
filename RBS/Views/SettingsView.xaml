@@ -17,9 +17,6 @@
     </UserControl.Resources>
 
 
-    <UserControl.DataContext>
-        <ViewModel:SettingsViewModel/>
-    </UserControl.DataContext>
 
 
     <StackPanel x:Name="StackPanel_Settings" ScrollViewer.VerticalScrollBarVisibility="Auto">

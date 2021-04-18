@@ -62,7 +62,7 @@ namespace RBS.ViewModel
             AdminAccountStatus = AS.AdminAccountStatus;
             RowCount = AS.RowCount;
 
-            if (RowCount == 0 & !AdminAccountStatus)
+            if (RowCount == 0 | AdminAccountStatus == false)
                 return true;
             else
                 return false;

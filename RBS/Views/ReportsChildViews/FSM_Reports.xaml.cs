@@ -45,7 +45,8 @@ namespace RBS.Views
             if (String.IsNullOrEmpty(TextBox_DisplayFilter.Text))
                 return true;
             else
-                return ((item as FileSystemReportsModel).FullPath.IndexOf(TextBox_DisplayFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0);
+                return ((item as FileSystemReportsModel).FullPath.IndexOf(TextBox_DisplayFilter.Text, 
+                    StringComparison.OrdinalIgnoreCase) >= 0);
         }
 
         private void UserControl_FSM_Loaded(object sender, RoutedEventArgs e)

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Management;
 using System.Linq;
+using RBS.Model;
 
 namespace RBS
 {
@@ -22,7 +23,7 @@ namespace RBS
             GlobalResources.AlertMailing = false;
             GlobalResources.IsProcessRestrictionsSet = false;
             GlobalResources.IsFileSytemRestrictionSet = false;
-            GlobalResources.IsRestrictionsMonitoringSet = false;            
+            GlobalResources.IsRestrictionsMonitoringSet = false;
             GlobalResources.InitialiseGlobalResources();
             GlobalAlerts.InitializeGlobalAlerts();
             GlobalException.InitializeGlobalException();
@@ -54,7 +55,7 @@ namespace RBS
 
         private void GettingAllUsersInfo()
         {
-            int id =1;
+            int id = 1;
             GlobalResources.Users = new System.Collections.ObjectModel.ObservableCollection<User>();
             SelectQuery query = new SelectQuery("Win32_UserAccount");
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
@@ -62,7 +63,7 @@ namespace RBS
             {
                 GlobalResources.Users.Add(new User { UserName = user["Name"].ToString() });
             }
-            foreach(User user in GlobalResources.Users)
+            foreach (User user in GlobalResources.Users)
             {
                 user.UserID = id++;
                 if (string.Equals(user.UserName, "Dilip"))
@@ -72,13 +73,4 @@ namespace RBS
             }
         }
     }
-}
-
-public class User
-{
-    public int UserID { get; set; }
-
-    public string UserName { get; set; }
-
-    public string Email_ID { get; set; }
 }

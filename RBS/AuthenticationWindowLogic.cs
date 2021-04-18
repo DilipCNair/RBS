@@ -78,7 +78,6 @@ namespace RBS
         }
 
 
-
         private void RBSNavigationSystem_RegistrationScreenCancelButtonPressed(object sender, EventArgs e)
         {
             CurrentViewModelWhole = _SplashScreenViewModel;

@@ -10,10 +10,10 @@ using System.Windows;
 [assembly: AssemblyTitle("Restriction Based System")]
 [assembly: AssemblyDescription("A Security Program to detect malicious activities happenning in the OS")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NIRMA University")]
+[assembly: AssemblyCompany("Dilip")]
 [assembly: AssemblyProduct("RBS")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyTrademark("Dilip")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

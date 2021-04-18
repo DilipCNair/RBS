@@ -181,9 +181,6 @@
         </Style>
     </UserControl.Resources>
 
-    <UserControl.DataContext>
-        <ViewModel:ParentMenuViewModel/>
-    </UserControl.DataContext>
 
     <Grid x:Name="Grid_ParentMenu" Background="White">
         <ItemsControl x:Name="ItemsControlForMainMenu" Width="258" Height="650" HorizontalAlignment="Center" 

@@ -11,7 +11,7 @@ namespace RBS.ViewModel
 
         public string TextBox_MasterPassword { get; set; }
 
-        private AuthenticationModel AuthenticationModelObject;
+        private readonly AuthenticationModel AuthenticationModelObject;
 
         public MyICommand LoginCommand { get; set; }
 
@@ -31,7 +31,8 @@ namespace RBS.ViewModel
         {
             TextBox_MasterPassword = GlobalResources.MasterPassword;
             GlobalResources.MasterPassword = null;
-            if (string.Equals(TextBox_EmployeeID, AuthenticationModelObject.EmployeeID) & string.Equals(TextBox_MasterPassword, AuthenticationModelObject.MasterPassword))
+            if (string.Equals(TextBox_EmployeeID, AuthenticationModelObject.EmployeeID) & 
+                string.Equals(TextBox_MasterPassword, AuthenticationModelObject.MasterPassword))
             {
                 GlobalResources.IInitiatedNavigationToMainWindow();
                 foreach (Window RBSWindow in Application.Current.Windows)

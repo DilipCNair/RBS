@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace RBS.Views
@@ -23,13 +22,14 @@ namespace RBS.Views
         public HomeView()
         {
             InitializeComponent();
-            GlobalResources.ShowCurrentUser += GlobalResources_ShowCurrentUser;
-        }
-
-        private void GlobalResources_ShowCurrentUser(object sender, EventArgs e)
-        {
+            //GlobalResources.Show_User += ShowUser;
             string Username = GlobalResources.CurrentUser.UserName;
             TextBlock_CurrentUser.Text = " : " + Username;
+        }
+
+        private void ShowUser()
+        {
+
         }
 
         private void Button_ME_Clicked(object sender, RoutedEventArgs e)

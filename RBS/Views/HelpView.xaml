@@ -9,9 +9,6 @@
               d:DesignWidth="942" d:DesignHeight="650" 
              Width="942" Height="650" 
              Background="White">
-    <UserControl.DataContext>
-        <ViewModel:HelpViewModel/>
-    </UserControl.DataContext>
     <Grid>
         <!--Title-->
         <StackPanel Margin="0,25,0,601" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">

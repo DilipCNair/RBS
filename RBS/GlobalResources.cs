@@ -78,7 +78,7 @@ namespace RBS
 
         public static event EventHandler UpdateAlert;
 
-        public static event EventHandler ShowCurrentUser;
+        public static event EventHandler Show_User;
 
         public static ObservableCollection<User> Users { get; set; }
 
@@ -101,7 +101,7 @@ namespace RBS
 
         public static void IWantToShowCurrentUser()
         {
-            ShowCurrentUser?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            Show_User?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
         public static void IWantToUpdateAlert(AlertsModel Alert)

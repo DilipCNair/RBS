@@ -58,6 +58,7 @@ namespace RBS.Views
         private void ButtonLogin_Clicked(object sender, RoutedEventArgs e)
         {
             GlobalResources.MasterPassword = TextBox_MasterPassword.Password;
+
         }
 
         private void Button_Background_Clicked(object sender, RoutedEventArgs e)

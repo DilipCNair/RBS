@@ -2,10 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:RBS.Views.ReportsChildViews"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:CustomControls="http://metro.mahapps.com/winfx/xaml/controls"
-             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels" x:Name="UserControl_Applications" x:Class="RBS.Views.ReportsChildViews.Applications"
+             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels"
+             x:Name="UserControl_Applications" x:Class="RBS.Views.ReportsChildViews.Applications"
              mc:Ignorable="d" 
              d:DesignHeight="562" d:DesignWidth="942"
              Height="562" Width="942"
@@ -83,18 +83,29 @@
     <Grid>
         <DockPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,10,0,0">
-                <Button x:Name="ButtonRefresh" Content="Refresh" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Margin="25,0,0,0" Height="22" FontSize="11"  HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding Path=RefreshCommand}"/>
-                <Button x:Name="ButtonClear" Content="Clear" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Margin="-1,0,2,0" Height="22" FontSize="11"  HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding ClearCommand}"/>
-                <TextBox x:Name="TextBox_DisplayFilter" CustomControls:TextBoxHelper.Watermark="Enter the display filter" Width="300" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="150,0,0,0" Height="22" FontSize="13" KeyDown="TextBox_DisplayFilter_KeyDown">
+                <Button x:Name="ButtonRefresh" Content="Refresh" Style="{StaticResource StyleDataGridControlsButtonsDefault}" 
+                        Margin="25,0,0,0" Height="22" FontSize="11"  HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        Command="{Binding Path=RefreshCommand}"/>
+                <Button x:Name="ButtonClear" Content="Clear" Style="{StaticResource StyleDataGridControlsButtonsDefault}" 
+                        Margin="-1,0,2,0" Height="22" FontSize="11"  HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        Command="{Binding ClearCommand}"/>
+                <TextBox x:Name="TextBox_DisplayFilter" CustomControls:TextBoxHelper.Watermark="Enter the display filter"
+                         Width="300" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" 
+                         Margin="150,0,0,0" Height="22" FontSize="13" KeyDown="TextBox_DisplayFilter_KeyDown">
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
                     </TextBox.BorderBrush>
                 </TextBox>
 
-                <StackPanel x:Name="StackPanel_DisplayCountControls" Orientation="Horizontal" Margin="110,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right">
-                    <Button x:Name="Button_DisplayCount" Content="Count" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Width="70" FontSize="11" Height="22" Click="Button_DisplayCount_Clicked"/>
+                <StackPanel x:Name="StackPanel_DisplayCountControls" Orientation="Horizontal" Margin="110,0,0,0" 
+                            VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Button x:Name="Button_DisplayCount" Content="Count"
+                            Style="{StaticResource StyleDataGridControlsButtonsDefault}" Width="70" FontSize="11" Height="22"
+                            Click="Button_DisplayCount_Clicked"/>
                     <TextBlock Text=":" Margin="5,0,0,0" FontSize="17"/>
-                    <TextBox x:Name="TextBox_DisplayCount" Margin="5,0,0,0" VerticalContentAlignment="Center" FontSize="15" IsReadOnly="True" CustomControls:TextBoxHelper.Watermark="0" Background="White" Height="18" BorderBrush="{x:Null}">
+                    <TextBox x:Name="TextBox_DisplayCount" Margin="5,0,0,0" VerticalContentAlignment="Center" FontSize="15" 
+                             IsReadOnly="True" CustomControls:TextBoxHelper.Watermark="0" Background="White" Height="18" 
+                             BorderBrush="{x:Null}">
                         <TextBox.Foreground>
                             <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                         </TextBox.Foreground>
@@ -102,7 +113,10 @@
                 </StackPanel>
 
             </StackPanel>
-            <DataGrid x:Name="Datagrid_Applications" IsReadOnly="True" ColumnHeaderStyle="{StaticResource MyColumnHeader}" Margin="0,15,0,37" BorderBrush="#FF396274" HorizontalAlignment="Center" Width="898" AutoGenerateColumns="False" AlternationCount="2" ItemsSource="{Binding Path=ApplicationsList}" AlternatingRowBackground="#7FE2F5E2">
+            <DataGrid x:Name="Datagrid_Applications" IsReadOnly="True" ColumnHeaderStyle="{StaticResource MyColumnHeader}"
+                      Margin="0,15,0,37" BorderBrush="#FF396274" HorizontalAlignment="Center" Width="898" 
+                      AutoGenerateColumns="False" AlternationCount="2" ItemsSource="{Binding Path=ApplicationsList}"
+                      AlternatingRowBackground="#7FE2F5E2">
                 <DataGrid.Foreground>
                     <SolidColorBrush Color="{DynamicResource FlatUI_Black}"/>
                 </DataGrid.Foreground>
@@ -120,6 +134,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
-        <Label x:Name="AM_Label" Foreground="#7F808080" FontSize="25" Content="Application Monitoring is Off" HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+        <Label x:Name="AM_Label" Foreground="#7F808080" FontSize="25" Content="Application Monitoring is Off"
+               HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
     </Grid>
 </UserControl>
