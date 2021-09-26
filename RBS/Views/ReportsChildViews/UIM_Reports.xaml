@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RBS.Views"
              xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
-             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels" x:Name="UserControl_UIMReports" x:Class="RBS.Views.UIM_Reports"
+             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels" 
+             x:Name="UserControl_UIMReports" x:Class="RBS.Views.UIM_Reports"
              mc:Ignorable="d"
              d:DesignWidth="942" d:DesignHeight="562" 
              Width="942" Height="562" 
@@ -65,12 +66,19 @@
                 </Style>
             </TabControl.Resources>
             <TabItem Header="Keyboard" Style="{StaticResource StyleForTabItem}">
-                <TextBox x:Name="TextBox_Keylogger" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Path=TextBoxKeylogger}" Background="White" Margin="0,42,0,0" Style="{StaticResource StyleRichTextBox}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="390" Width="870" FontSize="13" IsReadOnly="True"/>
+                <TextBox x:Name="TextBox_Keylogger" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" 
+                AcceptsReturn="True" Text="{Binding Path=TextBoxKeylogger}" Background="White" Margin="0,42,0,0" 
+                Style="{StaticResource StyleRichTextBox}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="390"
+                 Width="870" FontSize="13" IsReadOnly="True"/>
             </TabItem>
             <TabItem Header="Mouse" Style="{StaticResource StyleForTabItem}">
-                <TextBox x:Name="TextBox_Mouselogger" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Path=TextBoxMouselogger}" Background="White" Margin="0,42,0,0" Style="{StaticResource StyleRichTextBox}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="390" Width="870" FontSize="13" IsReadOnly="True"/>
+                <TextBox x:Name="TextBox_Mouselogger" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" 
+                AcceptsReturn="True" Text="{Binding Path=TextBoxMouselogger}" Background="White" Margin="0,42,0,0"
+                 Style="{StaticResource StyleRichTextBox}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="390"
+                  Width="870" FontSize="13" IsReadOnly="True"/>
             </TabItem>
         </TabControl>
-        <Label x:Name="UIM_Label" Foreground="#7F808080" FontSize="25" Content="User Input Monitoring is Off" HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+        <Label x:Name="UIM_Label" Foreground="#7F808080" FontSize="25" Content="User Input Monitoring is Off" 
+        HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
     </Grid>
 </UserControl>

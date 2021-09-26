@@ -104,18 +104,21 @@
             <SolidColorBrush Color="{DynamicResource FlatUI_BlackDarker}"/>
         </Grid.Background>
 
-        <TextBlock x:Name="Textblock_Title" Text="Admin Account Registration" FontSize="27" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" FontStyle="Normal" TextDecorations="{x:Null}" FontFamily="./#Lato">
+        <TextBlock x:Name="Textblock_Title" Text="Admin Account Registration" FontSize="27" HorizontalAlignment="Center"
+         Margin="0,37,0,0" VerticalAlignment="Top" FontStyle="Normal" TextDecorations="{x:Null}" FontFamily="./#Lato">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
             </TextBlock.Foreground>
         </TextBlock>
 
-        <Border x:Name="Border_Form" BorderThickness="1" HorizontalAlignment="Center" Margin="0,85,0,0" VerticalAlignment="Top" Height="285" Width="518" CornerRadius="7" Padding="10">
+        <Border x:Name="Border_Form" BorderThickness="1" HorizontalAlignment="Center" Margin="0,85,0,0"
+         VerticalAlignment="Top" Height="285" Width="518" CornerRadius="7" Padding="10">
             <Border.BorderBrush>
                 <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
             </Border.BorderBrush>
 
-            <StackPanel x:Name="StackPanel_RegisterForm" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
+            <StackPanel x:Name="StackPanel_RegisterForm" Orientation="Horizontal" HorizontalAlignment="Center" 
+            VerticalAlignment="Top" Margin="0,30,0,0">
 
                 <StackPanel x:Name="StackPanelAllTextblock" Orientation="Vertical" Height="230">
                     <TextBlock Text="Full Name   " FontSize="15" FontFamily="SegoeUI" FontWeight="Thin" Margin="0,8,0,0">
@@ -128,17 +131,20 @@
                             <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock Text="Email ID                        " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" FontWeight="Thin">
+                    <TextBlock Text="Email ID                        " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" 
+                    FontWeight="Thin">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock Text="Master Password         " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" FontWeight="Thin">
+                    <TextBlock Text="Master Password         " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" 
+                    FontWeight="Thin">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock Text="Confirm Password       " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" FontWeight="Thin">
+                    <TextBlock Text="Confirm Password       " FontSize="15" Margin="0,27,0,0" FontFamily="SegoeUI" 
+                    FontWeight="Thin">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
                         </TextBlock.Foreground>
@@ -173,23 +179,36 @@
                     </TextBlock>
                 </StackPanel>
 
-                <StackPanel x:Name="StackPanelAllTextbox" Orientation="Vertical" Height="230"  VerticalAlignment="Center" Margin="20,0,0,0">
-                    <TextBox x:Name="TextBoxFullName" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15" Margin="0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_FullName}"/>
-                    <TextBox x:Name="TextBoxEmployeeID" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15" Margin="0,15,0,0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_EmployeeID}"/>
-                    <TextBox x:Name="TextBoxEmailID" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15" Margin="0,15,0,0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_EmailID}"/>
-                    <PasswordBox x:Name="PasswordBoxMasterPassword" Style="{StaticResource StyleTextOrPasswordBox}" Margin="0,15,0,0" CaretBrush="#FFFDFDFD" FontSize="15"/>
-                    <PasswordBox x:Name="PasswordBoxConfirmMasterPassword" Style="{StaticResource StyleTextOrPasswordBox}" Margin="0,15,0,0" CaretBrush="#FFFDFDFD" FontSize="15" />
+                <StackPanel x:Name="StackPanelAllTextbox" Orientation="Vertical" Height="230"  VerticalAlignment="Center" 
+                Margin="20,0,0,0">
+                    <TextBox x:Name="TextBoxFullName" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15"
+                     Margin="0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_FullName}"/>
+                    <TextBox x:Name="TextBoxEmployeeID" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15" 
+                    Margin="0,15,0,0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_EmployeeID}"/>
+                    <TextBox x:Name="TextBoxEmailID" Style="{StaticResource StyleTextOrPasswordBox}" FontSize="15" 
+                    Margin="0,15,0,0" CaretBrush="#FFFDFDFD" Text="{Binding Path=TextBox_EmailID}"/>
+                    <PasswordBox x:Name="PasswordBoxMasterPassword" Style="{StaticResource StyleTextOrPasswordBox}" 
+                    Margin="0,15,0,0" CaretBrush="#FFFDFDFD" FontSize="15"/>
+                    <PasswordBox x:Name="PasswordBoxConfirmMasterPassword" Style="{StaticResource StyleTextOrPasswordBox}"
+                     Margin="0,15,0,0" CaretBrush="#FFFDFDFD" FontSize="15" />
                 </StackPanel>
 
             </StackPanel>
         </Border>
-        <StackPanel x:Name="StackPanel_Buttons" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Horizontal">
-            <Button x:Name="Button_Cancel" Content="Cancel" Style="{StaticResource StyleButtonRegistration}" Click="Button_Cancel_Clicked"/>
-            <Button x:Name="Button_Register" Content="Register" Style="{StaticResource StyleButtonRegistration}" Margin="25,0,0,0" Click="Button_Register_Clicked" Command="{Binding Path=RegisterCommand}"/>
+        <StackPanel x:Name="StackPanel_Buttons" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+        Margin="0,400,0,0" Orientation="Horizontal">
+            <Button x:Name="Button_Cancel" Content="Cancel" Style="{StaticResource StyleButtonRegistration}"
+             Click="Button_Cancel_Clicked"/>
+            <Button x:Name="Button_Register" Content="Register" Style="{StaticResource StyleButtonRegistration}" 
+            Margin="25,0,0,0" Click="Button_Register_Clicked" Command="{Binding Path=RegisterCommand}"/>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,5" >
-            <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system" HorizontalAlignment="Center" FontSize="11" Margin="0,0,0,5" Foreground="#7FECF0F1" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
-            <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR" HorizontalAlignment="Center" FontSize="10" Margin="0" Foreground="#7FECF0F1" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
+            <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" Text="RBS provides Ultimate Protection against
+             all the malicious activities by monitoring the entire system" HorizontalAlignment="Center" FontSize="11" 
+             Margin="0,0,0,5" Foreground="#7FECF0F1" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
+            <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR" 
+            HorizontalAlignment="Center" FontSize="10" Margin="0" Foreground="#7FECF0F1" 
+            FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
         </StackPanel>
     </Grid>
 </UserControl>

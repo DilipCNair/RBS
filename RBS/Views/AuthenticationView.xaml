@@ -17,40 +17,6 @@
         <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
     </UserControl.BorderBrush>
     <UserControl.Resources>
-        <!--<Style x:Key="StyleTextOrPasswordBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
-            <Setter Property="SnapsToDevicePixels" Value="True" />
-            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
-            <Setter Property="Width" Value="224"/>
-            <Setter Property="BorderThickness" Value="01"/>
-            <Setter Property="AllowDrop" Value="true" />
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Control}">
-                        <Grid>
-                            <Border x:Name="Border"  CornerRadius="2" BorderThickness="{TemplateBinding BorderThickness}" 
-                                BorderBrush="#26FFFFFF" >
-                                <Border.Background>
-                                    <SolidColorBrush Color="{DynamicResource FlatUI_Black}" />
-                                </Border.Background>
-
-                                <ScrollViewer Margin="10,0,10,0" x:Name="PART_ContentHost" VerticalAlignment="Center"/>
-                            </Border>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderThickness" Value="2"/>
-                            </Trigger>
-                            <Trigger Property="IsFocused" Value="True">
-                                <Setter Property="BorderBrush" TargetName="Border" Value="#A8ECF0F1"/>
-                                <Setter Property="BorderThickness" Value="1"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
         <Style x:Key="StyleButtonContinue" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Foreground" Value="White" />
@@ -240,19 +206,6 @@
             </Style.Triggers>
         </Style>
         <Style x:Key="StyleTextOrPasswordBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
-            <!--<Setter Property="Template">
-                <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderThickness" Value="2"/>
-                            </Trigger>
-                            <Trigger Property="IsFocused" Value="True">
-                                <Setter Property="BorderBrush" TargetName="Border" Value="#A8ECF0F1"/>
-                                <Setter Property="BorderThickness" Value="1"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>-->
             <Style.Triggers>
                 <Trigger Property="IsFocused" Value="True">
                     <Setter Property="BorderBrush"  Value="Green"/>
@@ -343,7 +296,8 @@
 
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,7" >
             <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap"
-                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system" 
+                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the 
+                       entire system" 
                        HorizontalAlignment="Center" FontSize="11" Margin="0,0,0,5" Foreground="#7FECF0F1" 
                        FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
             <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" 

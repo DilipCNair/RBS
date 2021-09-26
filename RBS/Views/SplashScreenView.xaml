@@ -127,7 +127,8 @@
         <!--Footer-->
         <StackPanel x:Name="StackPanelFooter" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" >
             <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" 
-                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system"
+                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the 
+                       entire system"
                        HorizontalAlignment="Center" Margin="0,0,0,5"
                        FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" Foreground="#7FECF0F1"/>
             <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR"

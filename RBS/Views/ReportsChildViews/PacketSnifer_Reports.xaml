@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RBS.Views"
              xmlns:CustomControls="http://metro.mahapps.com/winfx/xaml/controls"
-             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels" x:Name="UserControl_NetworkMonitoring" x:Class="RBS.Views.PacketSniffer_Reports"
+             xmlns:ReportsChildViewModels="clr-namespace:RBS.ViewModel.ReportsChildViewModels"
+              x:Name="UserControl_NetworkMonitoring" x:Class="RBS.Views.PacketSniffer_Reports"
              mc:Ignorable="d" 
              d:DesignHeight="562" d:DesignWidth="1600"
              Height="562" Width="942"
@@ -32,7 +33,8 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border CornerRadius="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border CornerRadius="3" Background="{TemplateBinding Background}"
+                         BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -79,19 +81,29 @@
     <Grid>
         <DockPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,25,0,0" VerticalAlignment="Center">
-                <StackPanel x:Name="StackPanel_ButtonControls" DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="20,0,0,0" VerticalAlignment="Center"/>
-                <Button x:Name="ButtonClear" Content="Clear" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Margin="10,0,0,0" FontSize="11" Click="ButtonClear_Clicked" Height="22"/>
-                <Button x:Name="ButtonSave" Content="Save" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Margin="-1,0,0,0" FontSize="11" Click="ButtonSave_Clicked" Height="22"/>
-                <TextBox x:Name="TextBox_DisplayFilter" CustomControls:TextBoxHelper.Watermark="Enter the display filter" Width="300" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="125,0,0,0" Height="22" FontSize="13" KeyDown="TextBox_DisplayFilter_KeyDown" TextChanged="TextBox_DisplayFilter_TextChanged">
+                <StackPanel x:Name="StackPanel_ButtonControls" DockPanel.Dock="Bottom" Orientation="Horizontal" 
+                HorizontalAlignment="Center" Margin="20,0,0,0" VerticalAlignment="Center"/>
+                <Button x:Name="ButtonClear" Content="Clear" Style="{StaticResource StyleDataGridControlsButtonsDefault}"
+                 Margin="10,0,0,0" FontSize="11" Click="ButtonClear_Clicked" Height="22"/>
+                <Button x:Name="ButtonSave" Content="Save" Style="{StaticResource StyleDataGridControlsButtonsDefault}" 
+                Margin="-1,0,0,0" FontSize="11" Click="ButtonSave_Clicked" Height="22"/>
+                <TextBox x:Name="TextBox_DisplayFilter" CustomControls:TextBoxHelper.Watermark="Enter the display filter"
+                 Width="300" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" 
+                 Margin="125,0,0,0" Height="22" FontSize="13" KeyDown="TextBox_DisplayFilter_KeyDown" 
+                 TextChanged="TextBox_DisplayFilter_TextChanged">
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
                     </TextBox.BorderBrush>
                 </TextBox>
 
-                <StackPanel x:Name="StackPanel_DisplayCountControls" Orientation="Horizontal" Margin="125,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Right">
-                    <Button x:Name="Button_DisplayCount" Content="Count" Style="{StaticResource StyleDataGridControlsButtonsDefault}" Width="70" Height="22" FontSize="11" Click="Button_DisplayCount_Clicked"/>
+                <StackPanel x:Name="StackPanel_DisplayCountControls" Orientation="Horizontal" Margin="125,0,0,0" 
+                VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Button x:Name="Button_DisplayCount" Content="Count" 
+                    Style="{StaticResource StyleDataGridControlsButtonsDefault}" Width="70" Height="22" FontSize="11" 
+                    Click="Button_DisplayCount_Clicked"/>
                     <TextBlock Text=":" Margin="5,0,0,0" FontSize="17" HorizontalAlignment="Right"/>
-                    <TextBox x:Name="TextBox_DisplayCount" Margin="5,0,0,0" MinWidth="36" FontSize="15" IsReadOnly="True" CustomControls:TextBoxHelper.Watermark="0" Background="White" Height="22">
+                    <TextBox x:Name="TextBox_DisplayCount" Margin="5,0,0,0" MinWidth="36" FontSize="15" IsReadOnly="True" 
+                    CustomControls:TextBoxHelper.Watermark="0" Background="White" Height="22">
                         <TextBox.BorderBrush>
                             <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
                         </TextBox.BorderBrush>
@@ -101,7 +113,9 @@
 
 
 
-            <DataGrid x:Name="DataGrid_PacketSniffer" ColumnHeaderStyle="{StaticResource MyColumnHeader}" Margin="20,20,25,27" HorizontalAlignment="Center" AutoGenerateColumns="False" ScrollViewer.HorizontalScrollBarVisibility="Auto" AlternationCount="2">
+            <DataGrid x:Name="DataGrid_PacketSniffer" ColumnHeaderStyle="{StaticResource MyColumnHeader}" 
+            Margin="20,20,25,27" HorizontalAlignment="Center" AutoGenerateColumns="False" 
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" AlternationCount="2">
                 <DataGrid.AlternatingRowBackground>
                     <SolidColorBrush Color="#7FE2F5E2"/>
                 </DataGrid.AlternatingRowBackground>
@@ -128,6 +142,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
-        <Label x:Name="PS_Label" Foreground="#7F808080" FontSize="25" Content="Packet Sniffer is Off" HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+        <Label x:Name="PS_Label" Foreground="#7F808080" FontSize="25" Content="Packet Sniffer is Off" 
+        HorizontalAlignment="Center" Margin="0,228,10,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
     </Grid>
 </UserControl>

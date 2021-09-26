@@ -114,7 +114,8 @@
             <SolidColorBrush Color="{DynamicResource FlatUI_BlackDarker}"/>
         </Grid.Background>
 
-        <TextBlock x:Name="Textblock_Title" Text="Admin account modification" FontSize="33" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontStyle="Normal" FontFamily="Segoe UI Light">
+        <TextBlock x:Name="Textblock_Title" Text="Admin account modification" FontSize="33" HorizontalAlignment="Center"
+         Margin="0,28,0,0" VerticalAlignment="Top" FontStyle="Normal" FontFamily="Segoe UI Light">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
             </TextBlock.Foreground>
@@ -131,28 +132,38 @@
                 </Border.BorderBrush>
 
                 <StackPanel x:Name="StackPanelForTextBoxes" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Login" FontFamily="Segoe UI Light" HorizontalAlignment="Center" FontSize="20" Margin="0,5,0,10" TextDecorations="{x:Null}">
+                    <TextBlock Text="Login" FontFamily="Segoe UI Light" HorizontalAlignment="Center" FontSize="20" 
+                    Margin="0,5,0,10" TextDecorations="{x:Null}">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource FlatUI_White}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
 
-                    <TextBox x:Name="TextBox_EmployeeID" Text="{Binding Path=TextBox_EmployeeID}" CustomControls:TextBoxHelper.Watermark="Enter Employee ID :" 
-                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center" VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
+                    <TextBox x:Name="TextBox_EmployeeID" Text="{Binding Path=TextBox_EmployeeID}" 
+                    CustomControls:TextBoxHelper.Watermark="Enter Employee ID :" 
+                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" 
+                                   VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
                         <TextBox.Background>
                             <SolidColorBrush Color="#26ECF0F1"/>
                         </TextBox.Background>
                     </TextBox>
 
-                    <TextBox x:Name="TextBox_EmailID" Text="{Binding Path=TextBox_EmailID}" CustomControls:TextBoxHelper.Watermark="Enter Email ID :" 
-                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center" VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
+                    <TextBox x:Name="TextBox_EmailID" Text="{Binding Path=TextBox_EmailID}" 
+                    CustomControls:TextBoxHelper.Watermark="Enter Email ID :" 
+                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" 
+                                  VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
                         <TextBox.Background>
                             <SolidColorBrush Color="#26ECF0F1"/>
                         </TextBox.Background>
                     </TextBox>
 
-                    <PasswordBox x:Name="TextBox_MasterPassword"  CustomControls:TextBoxHelper.Watermark="Enter Master Password :" 
-                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center" VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
+                    <PasswordBox x:Name="TextBox_MasterPassword"  
+                    CustomControls:TextBoxHelper.Watermark="Enter Master Password :" 
+                                  FontSize="15" Margin="0,25,0,0" Width="350" Height="37" HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#FFECF0F1" 
+                                  VerticalContentAlignment="Center" BorderBrush="#26ECF0F1" >
                         <PasswordBox.Background>
                             <SolidColorBrush Color="#26ECF0F1"/>
                         </PasswordBox.Background>
@@ -161,15 +172,23 @@
                 </StackPanel>
             </Border>
 
-            <StackPanel x:Name="StackPanelForBUtton" Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,30,0,0" HorizontalAlignment="Center">
-                <Button x:Name="ButtonCancel" Content="Cancel" Style="{StaticResource StyleButton}" Margin="0" Height="30" FontSize="13" Click="ButtonCancel_Clicked"/>
-                <Button x:Name="ButtonContinue" Content="Continue" Style="{StaticResource StyleButton}" Margin="70,0,0,0" Height="30" FontSize="13" Click="ButtonContinue_Clicked" Command="{Binding Path=ContinueCommand}"/>
+            <StackPanel x:Name="StackPanelForBUtton" Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,30,0,0" 
+            HorizontalAlignment="Center">
+                <Button x:Name="ButtonCancel" Content="Cancel" Style="{StaticResource StyleButton}" Margin="0" Height="30" 
+                FontSize="13" Click="ButtonCancel_Clicked"/>
+                <Button x:Name="ButtonContinue" Content="Continue" Style="{StaticResource StyleButton}" Margin="70,0,0,0" 
+                Height="30" FontSize="13" Click="ButtonContinue_Clicked" Command="{Binding Path=ContinueCommand}"/>
             </StackPanel>
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" >
-            <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system" HorizontalAlignment="Center" FontSize="11" Margin="0,0,0,5" Foreground="#7FECF0F1" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
-            <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR" HorizontalAlignment="Center" FontSize="10" Margin="0" Foreground="#7FECF0F1" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
+            <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap" 
+            Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system" 
+            HorizontalAlignment="Center" FontSize="11" Margin="0,0,0,5" Foreground="#7FECF0F1" 
+            FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
+            <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" Text="Developed by @DILIP C NAIR"
+             HorizontalAlignment="Center" FontSize="10" Margin="0" Foreground="#7FECF0F1" 
+             FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
         </StackPanel>
 
     </Grid>
