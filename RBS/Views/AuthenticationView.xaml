@@ -6,7 +6,8 @@
              xmlns:CustomControls="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:local="clr-namespace:RBS.Views"
              xmlns:RBSLocal ="rbs"
-             xmlns:ViewModel="clr-namespace:RBS.ViewModel" x:Name="UserControl_AuthenticationView" 
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel" 
+             x:Name="UserControl_AuthenticationView" 
              x:Class="RBS.Views.AuthenticationView"
              mc:Ignorable="d" 
              d:DesignWidth="900" d:DesignHeight="500"
@@ -294,7 +295,7 @@
                            FontFamily="Segoe UI Light" FontStyle="Italic" Foreground="#ECF0F1"/>
 
                 <TextBox x:Name="TextBox_EmployeeID" Text="{Binding Path=TextBox_EmployeeID}" 
-                         CustomControls:TextBoxHelper.Watermark="EmployeeID" 
+                         CustomControls:TextBoxHelper.Watermark="Employee ID" 
                          FontSize="15" Margin="0,25,0,0" Width="240" Height="35" HorizontalAlignment="Center" 
                          VerticalAlignment="Center" CaretBrush="White" Grid.ColumnSpan="2" Foreground="#66ECF0F1" 
                          VerticalContentAlignment="Center" KeyDown="TextBox_EmployeeID_KeyDown" >

@@ -56,7 +56,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>media\icons\R1.ico</ApplicationIcon>
+    <ApplicationIcon>Media\icons\R1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -164,30 +164,35 @@
     </ApplicationDefinition>
     <Compile Include="Agents\Agent_FileSystem.cs" />
     <Compile Include="Agents\Agent_Processes.cs" />
-    <Compile Include="GlobalException.cs" />
-    <Compile Include="AuthenticationWindow.xaml.cs">
+    <Compile Include="Lib\GlobalException.cs" />
+    <Compile Include="Windows\AuthenticationWindow.xaml.cs">
       <DependentUpon>AuthenticationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AuthenticationWindowLogic.cs" />
-    <Compile Include="BindableBase.cs" />
+    <Compile Include="Lib\AuthenticationWindowLogic.cs" />
+    <Compile Include="Lib\BindableBase.cs" />
     <Compile Include="Commands\MyICommand.cs" />
-    <Compile Include="GlobalAlerts.cs" />
-    <Compile Include="GlobalResources.cs" />
-    <Compile Include="MailingSystem.cs" />
-    <Compile Include="Model\AlertsModel.cs" />
-    <Compile Include="Model\AuthenticationModel.cs" />
-    <Compile Include="Model\ExceptionModel.cs" />
-    <Compile Include="Model\HomeModel.cs" />
-    <Compile Include="Model\ModifyModel.cs" />
-    <Compile Include="Model\RegistrationModel.cs" />
-    <Compile Include="Model\ReportsChildModels\ApplicationsModel.cs" />
-    <Compile Include="Model\ReportsChildModels\FileSystemReportsModel.cs" />
-    <Compile Include="Model\ReportsChildModels\PacketSnifferModel.cs" />
-    <Compile Include="Model\ReportsChildModels\Process-Port-Map_Model.cs" />
-    <Compile Include="Model\ReportsChildModels\ProcessReportsModel.cs" />
-    <Compile Include="Model\ReportsChildModels\UIMModel.cs" />
-    <Compile Include="Model\ReportsChildModels\WindowsServices-Model.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Lib\GlobalAlerts.cs" />
+    <Compile Include="Lib\GlobalResources.cs" />
+    <Compile Include="Lib\MailingSystem.cs" />
+    <Compile Include="Models\AlertsModel.cs" />
+    <Compile Include="Models\AuthenticationModel.cs" />
+    <Compile Include="Models\CustomizeModel.cs" />
+    <Compile Include="Models\ExceptionModel.cs" />
+    <Compile Include="Models\HelpModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\ModifyModel.cs" />
+    <Compile Include="Models\ParentMenuModel.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\ReportsChildModels\ApplicationsModel.cs" />
+    <Compile Include="Models\ReportsChildModels\FileSystemReportsModel.cs" />
+    <Compile Include="Models\ReportsChildModels\PacketSnifferModel.cs" />
+    <Compile Include="Models\ReportsChildModels\Process-Port-Map_Model.cs" />
+    <Compile Include="Models\ReportsChildModels\ProcessReportsModel.cs" />
+    <Compile Include="Models\ReportsChildModels\UIMModel.cs" />
+    <Compile Include="Models\ReportsChildModels\WindowsServices-Model.cs" />
+    <Compile Include="Models\ReportsModel.cs" />
+    <Compile Include="Models\SettingsModel.cs" />
+    <Compile Include="Models\SplashScreenModel.cs" />
     <Compile Include="Monitoring Engine\Applications Monitoring.cs" />
     <Compile Include="Monitoring Engine\File System Monitoring.cs" />
     <Compile Include="Monitoring Engine\Packet Sniffer.cs" />
@@ -195,26 +200,30 @@
     <Compile Include="Monitoring Engine\Process Monitoring.cs" />
     <Compile Include="Monitoring Engine\User Input Monitoring.cs" />
     <Compile Include="Monitoring Engine\WindowsServices.cs" />
-    <Compile Include="NotificationWindow.xaml.cs">
+    <Compile Include="Windows\NotificationWindow.xaml.cs">
       <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PasswordBoxBindingBehavior.cs" />
-    <Compile Include="RBSNavigationSystem.cs" />
-    <Compile Include="Restrictions.cs" />
-    <Compile Include="ViewModel\AlertsViewModel.cs" />
-    <Compile Include="ViewModel\AuthenticationViewModel.cs" />
-    <Compile Include="ViewModel\CustomizeViewModel.cs" />
-    <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="ViewModel\ModifyViewModel.cs" />
-    <Compile Include="ViewModel\RegistrationViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\ApplicationsViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\FileSystemReportsViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\PacketSnifferViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\Process-Port-Map_ViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\ProcessReportsViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\UIM_ReportsViewModel.cs" />
-    <Compile Include="ViewModel\ReportsChildViewModels\WindowsServices_ViewModel.cs" />
-    <Compile Include="ViewModel\SplashScreenViewModel.cs" />
+    <Compile Include="Lib\PasswordBoxBindingBehavior.cs" />
+    <Compile Include="Lib\RBSNavigationSystem.cs" />
+    <Compile Include="Lib\Restrictions.cs" />
+    <Compile Include="ViewModels\AlertsViewModel.cs" />
+    <Compile Include="ViewModels\AuthenticationViewModel.cs" />
+    <Compile Include="ViewModels\CustomizeViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ModifyViewModel.cs" />
+    <Compile Include="ViewModels\ParentMenuViewModel.cs" />
+    <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\ApplicationsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\FileSystemReportsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\PacketSnifferViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\Process-Port-Map_ViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\ProcessReportsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\UIM_ReportsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsChildViewModels\WindowsServices_ViewModel.cs" />
+    <Compile Include="ViewModels\ReportsViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\SplashScreenViewModel.cs" />
     <Compile Include="Views\AlertsView.xaml.cs">
       <DependentUpon>AlertsView.xaml</DependentUpon>
     </Compile>
@@ -272,7 +281,7 @@
     <Compile Include="Views\ReportsChildViews\UIM_Reports.xaml.cs">
       <DependentUpon>UIM_Reports.xaml</DependentUpon>
     </Compile>
-    <Page Include="AuthenticationWindow.xaml">
+    <Page Include="Windows\AuthenticationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -288,11 +297,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NotificationWindow.xaml">
+    <Page Include="Windows\NotificationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RBSResourceDictionary.xaml">
+    <Page Include="Lib\RBSResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -374,7 +383,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentication\AuthenticationSystem.cs" />
+    <Compile Include="Lib\AuthenticationSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -392,45 +401,44 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="RBS_TemporaryKey.pfx" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Bold.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-BoldItalic.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Italic.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Light.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-LightItalic.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Regular.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-SemiBold.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-SemiBoldItalic.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-Thin.ttf" />
-    <Resource Include="RBSFonts\Josefin_Sans\JosefinSans-ThinItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Black.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-BlackItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Bold.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-BoldItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-ExtraBold.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-ExtraBoldItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-ExtraLight.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-ExtraLightItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Italic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Light.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-LightItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Medium.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-MediumItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Regular.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-SemiBold.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-SemiBoldItalic.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-Thin.ttf" />
-    <Resource Include="RBSFonts\Raleway\Raleway-ThinItalic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Black.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-BlackItalic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Bold.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-BoldItalic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Hairline.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-HairlineItalic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Italic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Light.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-LightItalic.ttf" />
-    <Resource Include="RBSFonts\Lato\Lato-Regular.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-Bold.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-BoldItalic.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-Italic.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-Light.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-LightItalic.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-Regular.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-SemiBold.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-Thin.ttf" />
+    <Resource Include="Fonts\Josefin_Sans\JosefinSans-ThinItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Black.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-BlackItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Bold.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-BoldItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-ExtraBold.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-ExtraLight.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-ExtraLightItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Italic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Light.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-LightItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Medium.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-MediumItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Regular.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-SemiBold.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-Thin.ttf" />
+    <Resource Include="Fonts\Raleway\Raleway-ThinItalic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Black.ttf" />
+    <Resource Include="Fonts\Lato\Lato-BlackItalic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Bold.ttf" />
+    <Resource Include="Fonts\Lato\Lato-BoldItalic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Hairline.ttf" />
+    <Resource Include="Fonts\Lato\Lato-HairlineItalic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Italic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Light.ttf" />
+    <Resource Include="Fonts\Lato\Lato-LightItalic.ttf" />
+    <Resource Include="Fonts\Lato\Lato-Regular.ttf" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -447,19 +455,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\images\Login.jpg" />
+    <Resource Include="Media\images\Login.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\icons\R1.ico" />
+    <Resource Include="Media\icons\R1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\icons\logo.jpg" />
+    <Resource Include="Media\icons\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\icons\logo2.png" />
+    <Resource Include="Media\icons\logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\icons\logo3.png" />
+    <Resource Include="Media\icons\logo3.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -473,6 +481,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

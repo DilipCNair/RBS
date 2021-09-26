@@ -8,6 +8,7 @@ namespace RBS
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        //Test
         NotificationWindow NotificationWindow = new NotificationWindow();
         public MainWindow()
         {

@@ -33,12 +33,6 @@ namespace RBS
             GlobalResources.IWantToShowCurrentUser();
         }
 
-        private void Application_RBS_Exit(object sender, ExitEventArgs e)
-        {
-            File.Delete(GlobalResources.Path + "Keylogger.txt");
-            File.Delete(GlobalResources.Path + "Mouselogger.txt");
-        }
-
         private void GettingCurrentUserInfo()
         {
             GlobalResources.CurrentUser = new User();
@@ -71,6 +65,12 @@ namespace RBS
                 if (string.Equals(user.UserName, "Sharada Valiveti"))
                     user.Email_ID = "sharada.valiveti@nirmauni.ac.in";
             }
+        }
+
+        private void Application_RBS_Exit(object sender, ExitEventArgs e)
+        {
+            File.Delete(GlobalResources.Path + "Keylogger.txt");
+            File.Delete(GlobalResources.Path + "Mouselogger.txt");
         }
     }
 }
