@@ -49,15 +49,11 @@ namespace RBS.ViewModel
             GlobalResources.IInitiatedSettingsUpdate();
         }
 
-<<<<<<< HEAD:RBS/ViewModel/HomeViewModel.cs
-        //public event PropertyChangedEventHandler PropertyChanged;
-=======
         public new event PropertyChangedEventHandler PropertyChanged;
->>>>>>> a90c1561e34e1b42597b4b7f6395a50db1006c88:RBS/ViewModels/HomeViewModel.cs
 
-        //private void RaisePropertyChanged(string property)
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
-        //}
+        private void RaisePropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
     }
 }
