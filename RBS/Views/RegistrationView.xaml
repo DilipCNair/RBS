@@ -22,7 +22,8 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Control}">
                         <Grid>
-                            <Border x:Name="Border"  CornerRadius="1" BorderThickness="{TemplateBinding BorderThickness}" Background="#26ECF0F1" BorderBrush="#26ECF0F1" >
+                            <Border x:Name="Border"  CornerRadius="1" BorderThickness="{TemplateBinding BorderThickness}"
+                             Background="#26ECF0F1" BorderBrush="#26ECF0F1" >
                                 <ScrollViewer Margin="10,0,10,0" x:Name="PART_ContentHost" VerticalAlignment="Center"/>
                             </Border>
                         </Grid>
@@ -57,7 +58,8 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border CornerRadius="4" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border CornerRadius="4" Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
