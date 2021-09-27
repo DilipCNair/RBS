@@ -296,8 +296,7 @@
 
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,7" >
             <TextBlock x:Name="TextBlock_Definition" TextWrapping="Wrap"
-                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the 
-                       entire system" 
+                       Text="RBS provides Ultimate Protection against all the malicious activities by monitoring the entire system" 
                        HorizontalAlignment="Center" FontSize="11" Margin="0,0,0,5" Foreground="#7FECF0F1" 
                        FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
             <TextBlock x:Name="TextBlock_CopyRight" TextWrapping="Wrap" 
