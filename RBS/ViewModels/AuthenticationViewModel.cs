@@ -45,17 +45,20 @@ namespace RBS.ViewModel
                 RBSNavigationSystem.IPressedAuthenticationViewLoginButton();
             }
             else
-            {
-                GlobalResources.IInitiatedAuthenticationError();
-                //GlobalResources.IInitiatedNavigationToMainWindow();
-                //foreach (Window RBSWindow in Application.Current.Windows)
-                //{
-                //    if (RBSWindow is AuthenticationWindow)
-                //        RBSWindow.Hide();
-                //    if (RBSWindow is MainWindow)
-                //        RBSWindow.Show();
-                //}
-                //RBSNavigationSystem.IPressedAuthenticationViewLoginButton();
+            {     
+                //To bypass User AUthentication from SQL Database
+                GlobalResources.IInitiatedNavigationToMainWindow();
+                foreach (Window RBSWindow in Application.Current.Windows)
+                {
+                    if (RBSWindow is AuthenticationWindow)
+                        RBSWindow.Hide();
+                    if (RBSWindow is MainWindow)
+                        RBSWindow.Show();
+                }
+                RBSNavigationSystem.IPressedAuthenticationViewLoginButton();
+
+                //Real code for authentication
+                //GlobalResources.IInitiatedAuthenticationError();
 
             }
         }
