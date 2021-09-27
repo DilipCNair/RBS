@@ -178,8 +178,10 @@
     <Compile Include="Models\AuthenticationModel.cs" />
     <Compile Include="Models\CustomizeModel.cs" />
     <Compile Include="Models\ExceptionModel.cs" />
+    <Compile Include="Models\HelpModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\ModifyModel.cs" />
+    <Compile Include="Models\ParentMenuModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\ReportsChildModels\ApplicationsModel.cs" />
     <Compile Include="Models\ReportsChildModels\FileSystemReportsModel.cs" />
@@ -188,6 +190,9 @@
     <Compile Include="Models\ReportsChildModels\ProcessReportsModel.cs" />
     <Compile Include="Models\ReportsChildModels\UIMModel.cs" />
     <Compile Include="Models\ReportsChildModels\WindowsServices-Model.cs" />
+    <Compile Include="Models\ReportsModel.cs" />
+    <Compile Include="Models\SettingsModel.cs" />
+    <Compile Include="Models\SplashScreenModel.cs" />
     <Compile Include="Monitoring Engine\Applications Monitoring.cs" />
     <Compile Include="Monitoring Engine\File System Monitoring.cs" />
     <Compile Include="Monitoring Engine\Packet Sniffer.cs" />
