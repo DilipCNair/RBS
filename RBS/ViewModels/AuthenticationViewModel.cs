@@ -47,6 +47,16 @@ namespace RBS.ViewModel
             else
             {
                 GlobalResources.IInitiatedAuthenticationError();
+                //GlobalResources.IInitiatedNavigationToMainWindow();
+                //foreach (Window RBSWindow in Application.Current.Windows)
+                //{
+                //    if (RBSWindow is AuthenticationWindow)
+                //        RBSWindow.Hide();
+                //    if (RBSWindow is MainWindow)
+                //        RBSWindow.Show();
+                //}
+                //RBSNavigationSystem.IPressedAuthenticationViewLoginButton();
+
             }
         }
     }

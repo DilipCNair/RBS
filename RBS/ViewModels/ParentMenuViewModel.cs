@@ -9,6 +9,6 @@ namespace RBS.ViewModel
 {
     public class ParentMenuViewModel : BindableBase
     {
-        ParentMenuModel ParentMenuModelObject = new ParentMenuModel();
+        
     }
 }

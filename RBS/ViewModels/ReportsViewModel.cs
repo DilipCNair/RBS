@@ -9,6 +9,6 @@ namespace RBS.ViewModel
 {
     public class ReportsViewModel : BindableBase
     {
-        ReportsModel ReportsModelObject = new ReportsModel();
+
     }
 }

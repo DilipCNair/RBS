@@ -9,6 +9,6 @@ namespace RBS.ViewModel
 {
     public class SettingsViewModel : BindableBase
     {
-        SettingsModel SettingsModelObject = new SettingsModel();
+
     }
 }

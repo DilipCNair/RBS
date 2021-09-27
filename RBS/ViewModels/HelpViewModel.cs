@@ -9,6 +9,6 @@ namespace RBS.ViewModel
 {
     public class HelpViewModel :BindableBase
     {
-        HelpModel HelpModelObject = new HelpModel();
+        
     }
 }
