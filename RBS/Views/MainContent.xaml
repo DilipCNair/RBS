@@ -1,5 +1,4 @@
-﻿
-//This is the View which has tab control which holds all the other views that you see in parent menu
+﻿<!--This is the View which has tab control which holds all the other views that you see in parent menu-->
 <UserControl x:Class="RBS.Views.MainContent"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
