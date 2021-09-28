@@ -69,11 +69,12 @@ namespace RBS.Model
 
         public ModifyModel()
         {
-            AuthenticationSystem Au = new AuthenticationSystem();
-            Au.GetAdminAccount();
-            EmployeeID = Au.EmployeeID;
-            EmailID = Au.EmailID;
-            MasterPassword = Au.MasterPassword;
+            //By passing authentication system from MSSQL Server Database
+            //AuthenticationSystem Au = new AuthenticationSystem();
+            //Au.GetAdminAccount();
+            //EmployeeID = Au.EmployeeID;
+            //EmailID = Au.EmailID;
+            //MasterPassword = Au.MasterPassword;
         }
     }
 }

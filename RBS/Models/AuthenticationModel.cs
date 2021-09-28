@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using RBS.Authentication;
 
 namespace RBS.Model
 {
@@ -51,10 +50,11 @@ namespace RBS.Model
 
         public AuthenticationModel()
         {
-            AuthenticationSystem Au = new AuthenticationSystem();
-            Au.GetAdminAccount();
-            EmployeeID = Au.EmployeeID;
-            MasterPassword = Au.MasterPassword;
+            //By passing authentication system from MSSQL Server Database
+            //AuthenticationSystem Au = new AuthenticationSystem();
+            //Au.GetAdminAccount();
+            //EmployeeID = Au.EmployeeID;
+            //MasterPassword = Au.MasterPassword;
         }
     }
 }

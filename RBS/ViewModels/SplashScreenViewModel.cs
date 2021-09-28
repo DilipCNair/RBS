@@ -1,5 +1,4 @@
 ﻿using RBS.Commands;
-using RBS.Authentication;
 
 namespace RBS.ViewModel
 {
@@ -57,16 +56,19 @@ namespace RBS.ViewModel
 
         private bool CanRegister()
         {
-            AuthenticationSystem AS = new AuthenticationSystem();
-            AS.GetAdminAccount();
-            AdminAccountStatus = AS.AdminAccountStatus;
-            RowCount = AS.RowCount;
+            //By passing authentication system from MSSQL Server Database
+            //AuthenticationSystem AS = new AuthenticationSystem();
+            //AS.GetAdminAccount();
+            //AdminAccountStatus = AS.AdminAccountStatus;
+            //RowCount = AS.RowCount;
 
-            if (RowCount == 0 | AdminAccountStatus == false)
-                return true;
-            else
-                return false;
-        } 
+            //if (RowCount == 0 | AdminAccountStatus == false)
+            //    return true;
+            //else
+            //    return false;
+
+            return true;
+        }
 
         private void Register()
         {
@@ -75,9 +77,12 @@ namespace RBS.ViewModel
 
         private bool CanModify()
         {
-            if (AdminAccountStatus)
-                return true;
-            return false;
+            //By passing authentication system from MSSQL Server Database
+            //if (AdminAccountStatus)
+            //    return true;
+            //return false;
+
+            return true;
         }
 
         private void Modify()
@@ -87,9 +92,12 @@ namespace RBS.ViewModel
 
         private bool CanLogin()
         {
-            if (AdminAccountStatus)
-                return true;
-            return false;
+            //By passing authentication system from MSSQL Server Database
+            //if (AdminAccountStatus)
+            //    return true;
+            //return false;
+
+            return true;
         }
 
         private void Login()

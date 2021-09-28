@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:ViewModel="clr-namespace:RBS.ViewModel" 
              x:Class="RBS.Views.SettingsView"
              mc:Ignorable="d" 
              d:DesignWidth="942" d:DesignHeight="650" 

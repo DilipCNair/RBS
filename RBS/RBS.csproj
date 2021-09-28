@@ -188,7 +188,6 @@
     <Compile Include="Models\ReportsChildModels\ProcessReportsModel.cs" />
     <Compile Include="Models\ReportsChildModels\UIMModel.cs" />
     <Compile Include="Models\ReportsChildModels\WindowsServices-Model.cs" />
-    <Compile Include="Models\SplashScreenModel.cs" />
     <Compile Include="Monitoring Engine\Applications Monitoring.cs" />
     <Compile Include="Monitoring Engine\File System Monitoring.cs" />
     <Compile Include="Monitoring Engine\Packet Sniffer.cs" />
@@ -205,10 +204,8 @@
     <Compile Include="ViewModels\AlertsViewModel.cs" />
     <Compile Include="ViewModels\AuthenticationViewModel.cs" />
     <Compile Include="ViewModels\CustomizeViewModel.cs" />
-    <Compile Include="ViewModels\HelpViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ModifyViewModel.cs" />
-    <Compile Include="ViewModels\ParentMenuViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
     <Compile Include="ViewModels\ReportsChildViewModels\ApplicationsViewModel.cs" />
     <Compile Include="ViewModels\ReportsChildViewModels\FileSystemReportsViewModel.cs" />
@@ -217,8 +214,6 @@
     <Compile Include="ViewModels\ReportsChildViewModels\ProcessReportsViewModel.cs" />
     <Compile Include="ViewModels\ReportsChildViewModels\UIM_ReportsViewModel.cs" />
     <Compile Include="ViewModels\ReportsChildViewModels\WindowsServices_ViewModel.cs" />
-    <Compile Include="ViewModels\ReportsViewModel.cs" />
-    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\SplashScreenViewModel.cs" />
     <Compile Include="Views\AlertsView.xaml.cs">
       <DependentUpon>AlertsView.xaml</DependentUpon>

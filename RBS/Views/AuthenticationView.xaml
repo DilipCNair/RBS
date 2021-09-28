@@ -4,14 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:CustomControls="http://metro.mahapps.com/winfx/xaml/controls"
-             xmlns:local="clr-namespace:RBS.Views"
-             xmlns:RBSLocal ="rbs"
-             xmlns:ViewModel="clr-namespace:RBS.ViewModel" 
-             x:Name="UserControl_AuthenticationView" 
+             xmlns:ViewModel="clr-namespace:RBS.ViewModel"
+             x:Name="UserControl_AuthenticationView"
              x:Class="RBS.Views.AuthenticationView"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignWidth="900" d:DesignHeight="500"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              Width="900" Height="500" BorderThickness="5" >
     <UserControl.BorderBrush>
         <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
