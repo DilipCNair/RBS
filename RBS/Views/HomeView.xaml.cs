@@ -9,27 +9,23 @@ namespace RBS.Views
     public partial class HomeView : UserControl
     {
         #region 1. Fields
-           private static bool ME_Status = false;
-           private static bool BL_Status = false;
-           private static bool Restrictions_Status = false;
-           private static bool MDS_Status = false;
-           private static bool TDS_Status = false;
-           private static bool AntiMalware_Status = false;
-           private static bool PdnE_Status = false;
-           private static bool Non_PdnE_Status = false;
+
+        private static bool ME_Status = false;
+        private static bool BL_Status = false;
+        private static bool Restrictions_Status = false;
+        private static bool MDS_Status = false;
+        private static bool TDS_Status = false;
+        private static bool AntiMalware_Status = false;
+        private static bool PdnE_Status = false;
+        private static bool Non_PdnE_Status = false;
+
         #endregion
 
         public HomeView()
         {
             InitializeComponent();
-            //GlobalResources.Show_User += ShowUser;
             string Username = GlobalResources.CurrentUser.UserName;
             TextBlock_CurrentUser.Text = " : " + Username;
-        }
-
-        private void ShowUser()
-        {
-
         }
 
         private void Button_ME_Clicked(object sender, RoutedEventArgs e)
@@ -79,7 +75,7 @@ namespace RBS.Views
                 TDS_Status = false;
                 ToggleButton_TDS.IsChecked = false;
             }
-            
+
         }
 
         private void Button_Restrictions_Clicked(object sender, RoutedEventArgs e)

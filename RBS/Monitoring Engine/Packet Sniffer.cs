@@ -17,12 +17,12 @@ namespace RBS.Monitoring_Engine
 
         public static void InitialisePacket_Sniffer()
         {
-            //Worker = new BackgroundWorker();
-            //Worker.DoWork += Worker_DoWork;
-            //Worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
-            //PacketSnifferResourcesObject = new Packet_Sniffer_Resources();
-            //GlobalResources.PacketSnifferIsOn += GlobalResources_PacketSnifferIsOn;
-            //GlobalResources.PacketSnifferIsOff += GlobalResources_PacketSnifferIsOff;
+            Worker = new BackgroundWorker();
+            Worker.DoWork += Worker_DoWork;
+            Worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
+            PacketSnifferResourcesObject = new Packet_Sniffer_Resources();
+            GlobalResources.PacketSnifferIsOn += GlobalResources_PacketSnifferIsOn;
+            GlobalResources.PacketSnifferIsOff += GlobalResources_PacketSnifferIsOff;
         }
 
         private static void GlobalResources_PacketSnifferIsOn(object sender, EventArgs e)

@@ -118,8 +118,8 @@
             <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="StackPanel_Header" Orientation="Vertical"  HorizontalAlignment="Stretch" 
-        VerticalAlignment="Stretch">
+        <StackPanel x:Name="StackPanel_Header" Orientation="Vertical"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            
             <StackPanel x:Name="StackPanel_Title" Orientation="Horizontal">
                 <StackPanel x:Name="Stackpanel_TitleName" Orientation="Horizontal" Margin="426,25,225,0"
                  HorizontalAlignment="Center" Width="98">
@@ -141,6 +141,7 @@
                     </TextBlock.Foreground>
                 </TextBlock>
             </StackPanel>
+
             <StackPanel x:Name="StackPanel_StatusButtons" Margin="0" VerticalAlignment="Center" Height="179" 
             Background="White">
                 <StackPanel x:Name="StackPanelTopRow" Orientation="Horizontal" HorizontalAlignment="Center" 
@@ -208,9 +209,7 @@
                 </StackPanel>
             </StackPanel>
 
-
         </StackPanel>
-
 
         <StackPanel x:Name="StackPanel_MainContent" Grid.Row="1">
             <StackPanel x:Name="StackPanel_ME" Orientation="Horizontal"  Margin="30,25,0,0" VerticalAlignment="Top">
@@ -378,5 +377,6 @@
             </StackPanel>
 
         </StackPanel>
+        
     </Grid>
 </UserControl>

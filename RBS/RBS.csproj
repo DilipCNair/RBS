@@ -56,7 +56,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Media\icons\R1.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\icons\R1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -121,8 +121,8 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gma.System.MouseKeyHook, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MouseKeyHook.5.4.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
+    <Reference Include="Gma.System.MouseKeyHook, Version=5.6.130.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MouseKeyHook.5.6.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.4.1.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.4.1\lib\net45\MahApps.Metro.dll</HintPath>
@@ -446,19 +446,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\images\Login.jpg" />
+    <Resource Include="Assets\images\Login.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\icons\R1.ico" />
+    <Resource Include="Assets\icons\R1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\icons\logo.jpg" />
+    <Resource Include="Assets\icons\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\icons\logo2.png" />
+    <Resource Include="Assets\icons\logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\icons\logo3.png" />
+    <Resource Include="Assets\icons\logo3.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

@@ -79,12 +79,12 @@ namespace RBS.Views
                 Packet_Capture_Resources_OfWorker.PacketCount = 0;
                 Packet_Capture_Resources_OfWorker.I_Ethernet.Open(DeviceMode.Promiscuous);
                 while ((Raw_Packet = Packet_Capture_Resources_OfWorker.I_Ethernet.GetNextPacket()) != null)
-                { 
+                {
                     count++;
                     if (count == 500)
                     {
                         count = 0;
-                        App.Current.Dispatcher.Invoke((Action)delegate
+                        Application.Current.Dispatcher.Invoke(delegate
                                 {
                                     DataGrid_PacketSniffer.ItemsSource = Packet_Capture_Resources_OfWorker.Packet_HolderList;
                                 });
@@ -92,7 +92,7 @@ namespace RBS.Views
                     }
                     Packet_Capture_Resources_OfWorker.PacketCaptureCount++;
                     Packet_Capture_Resources_OfWorker.PacketCount += 1;
-                    if (Worker.CancellationPending == true)
+                    if (Worker.CancellationPending)
                     {
                         e.Cancel = true;
                         Packet_Capture_Resources_OfWorker.I_Ethernet.Close();
@@ -128,7 +128,7 @@ namespace RBS.Views
                         try
                         {
 
-                            App.Current.Dispatcher.Invoke((Action)delegate
+                            Application.Current.Dispatcher.Invoke(delegate
                             {
                                 try
                                 {
