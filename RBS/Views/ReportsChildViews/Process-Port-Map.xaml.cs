@@ -4,7 +4,6 @@ using System.Windows.Data;
 using System.Windows.Input;
 using RBS.Model.ReportsChildModels;
 using System.Windows;
-using System.ComponentModel;
 
 namespace RBS.Views.ReportsChildViews
 {

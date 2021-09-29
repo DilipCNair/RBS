@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Windows.Controls;
 using System.ComponentModel;
 using RBS.Model.ReportsChildModels;
+using System.Windows.Controls;
 using SharpPcap;
 using PacketDotNet;
 using System.Collections.ObjectModel;
-using System.Windows.Data;
 using System.Windows.Input;
 using SharpPcap.LibPcap;
 using System.Windows;
 using System.Threading;
+using System.Windows.Data;
 
 namespace RBS.Views
 {
@@ -85,9 +85,9 @@ namespace RBS.Views
                     {
                         count = 0;
                         Application.Current.Dispatcher.Invoke(delegate
-                                {
-                                    DataGrid_PacketSniffer.ItemsSource = Packet_Capture_Resources_OfWorker.Packet_HolderList;
-                                });
+                        {
+                            DataGrid_PacketSniffer.ItemsSource = Packet_Capture_Resources_OfWorker.Packet_HolderList;
+                        });
                         Thread.Sleep(1000);
                     }
                     Packet_Capture_Resources_OfWorker.PacketCaptureCount++;
@@ -128,7 +128,7 @@ namespace RBS.Views
                         try
                         {
 
-                            Application.Current.Dispatcher.Invoke(delegate
+                            App.Current.Dispatcher.Invoke(delegate
                             {
                                 try
                                 {
