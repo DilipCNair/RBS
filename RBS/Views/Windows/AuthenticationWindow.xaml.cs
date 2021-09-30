@@ -12,8 +12,8 @@ namespace RBS
         public AuthenticationWindow()
         {
             InitializeComponent();
-            GlobalResources.Minimize += GlobalResources_Minimize;
             Hide();
+            GlobalResources.Minimize += GlobalResources_Minimize;          
         }
 
         private void GlobalResources_Minimize(object sender, EventArgs e)

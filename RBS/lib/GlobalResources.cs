@@ -106,12 +106,14 @@ namespace RBS
 
         public static void IWantToUpdateAlert(AlertsModel Alert)
         {
-            LastAlert = new AlertsModel();
-            LastAlert.Activity = Alert.Activity;
-            LastAlert.Time = Alert.Time;
-            LastAlert.Date = Alert.Date;
-            LastAlert.Information = Alert.Information;
-            LastAlert.No = Alert.No;
+            LastAlert = new AlertsModel
+            {
+                Activity = Alert.Activity,
+                Time = Alert.Time,
+                Date = Alert.Date,
+                Information = Alert.Information,
+                No = Alert.No
+            };
             UpdateAlert?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
