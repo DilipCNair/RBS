@@ -165,7 +165,7 @@
     <Compile Include="lib\Agents\Agent_FileSystem.cs" />
     <Compile Include="lib\Agents\Agent_Processes.cs" />
     <Compile Include="lib\GlobalException.cs" />
-    <Compile Include="Windows\AuthenticationWindow.xaml.cs">
+    <Compile Include="Views\Windows\AuthenticationWindow.xaml.cs">
       <DependentUpon>AuthenticationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="lib\AuthenticationWindowLogic.cs" />
@@ -195,7 +195,7 @@
     <Compile Include="lib\Monitoring Engine\Process Monitoring.cs" />
     <Compile Include="lib\Monitoring Engine\User Input Monitoring.cs" />
     <Compile Include="lib\Monitoring Engine\WindowsServices.cs" />
-    <Compile Include="Windows\NotificationWindow.xaml.cs">
+    <Compile Include="Views\Windows\NotificationWindow.xaml.cs">
       <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="lib\PasswordBoxBindingBehavior.cs" />
@@ -215,64 +215,64 @@
     <Compile Include="ViewModels\ReportsChildViewModels\UIM_ReportsViewModel.cs" />
     <Compile Include="ViewModels\ReportsChildViewModels\WindowsServices_ViewModel.cs" />
     <Compile Include="ViewModels\SplashScreenViewModel.cs" />
-    <Compile Include="Views\AlertsView.xaml.cs">
+    <Compile Include="Views\User Controls\AlertsView.xaml.cs">
       <DependentUpon>AlertsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AuthenticationView.xaml.cs">
+    <Compile Include="Views\User Controls\AuthenticationView.xaml.cs">
       <DependentUpon>AuthenticationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CustomizeView.xaml.cs">
+    <Compile Include="Views\User Controls\CustomizeView.xaml.cs">
       <DependentUpon>CustomizeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\HelpView.xaml.cs">
+    <Compile Include="Views\User Controls\HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainContent.xaml.cs">
+    <Compile Include="Views\User Controls\MainContent.xaml.cs">
       <DependentUpon>MainContent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\Applications.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\Applications.xaml.cs">
       <DependentUpon>Applications.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\FSM_Reports.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\FSM_Reports.xaml.cs">
       <DependentUpon>FSM_Reports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\PacketSnifer_Reports.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\PacketSnifer_Reports.xaml.cs">
       <DependentUpon>PacketSnifer_Reports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\Process-Port-Map.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\Process-Port-Map.xaml.cs">
       <DependentUpon>Process-Port-Map.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\ProcessReports.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\ProcessReports.xaml.cs">
       <DependentUpon>ProcessReports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\HomeView.xaml.cs">
+    <Compile Include="Views\User Controls\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ModifiyView.xaml.cs">
+    <Compile Include="Views\User Controls\ModifiyView.xaml.cs">
       <DependentUpon>ModifiyView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ParentMenuView.xaml.cs">
+    <Compile Include="Views\User Controls\ParentMenuView.xaml.cs">
       <DependentUpon>ParentMenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RegistrationView.xaml.cs">
+    <Compile Include="Views\User Controls\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\WindowsServices.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\WindowsServices.xaml.cs">
       <DependentUpon>WindowsServices.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsView.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsView.xaml.cs">
       <DependentUpon>ReportsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SettingsView.xaml.cs">
+    <Compile Include="Views\User Controls\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SplashScreenView.xaml.cs">
+    <Compile Include="Views\User Controls\SplashScreenView.xaml.cs">
       <DependentUpon>SplashScreenView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportsChildViews\UIM_Reports.xaml.cs">
+    <Compile Include="Views\User Controls\ReportsChildViews\UIM_Reports.xaml.cs">
       <DependentUpon>UIM_Reports.xaml</DependentUpon>
     </Compile>
-    <Page Include="Windows\AuthenticationWindow.xaml">
+    <Page Include="Views\Windows\AuthenticationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -288,7 +288,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\NotificationWindow.xaml">
+    <Page Include="Views\Windows\NotificationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -296,79 +296,79 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AlertsView.xaml">
+    <Page Include="Views\User Controls\AlertsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AuthenticationView.xaml">
+    <Page Include="Views\User Controls\AuthenticationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CustomizeView.xaml">
+    <Page Include="Views\User Controls\CustomizeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\HelpView.xaml">
+    <Page Include="Views\User Controls\HelpView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MainContent.xaml">
+    <Page Include="Views\User Controls\MainContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\Applications.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\Applications.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\FSM_Reports.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\FSM_Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\PacketSnifer_Reports.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\PacketSnifer_Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\Process-Port-Map.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\Process-Port-Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\ProcessReports.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\ProcessReports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\HomeView.xaml">
+    <Page Include="Views\User Controls\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ModifiyView.xaml">
+    <Page Include="Views\User Controls\ModifiyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ParentMenuView.xaml">
+    <Page Include="Views\User Controls\ParentMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\RegistrationView.xaml">
+    <Page Include="Views\User Controls\RegistrationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\WindowsServices.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\WindowsServices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsView.xaml">
+    <Page Include="Views\User Controls\ReportsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SettingsView.xaml">
+    <Page Include="Views\User Controls\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SplashScreenView.xaml">
+    <Page Include="Views\User Controls\SplashScreenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReportsChildViews\UIM_Reports.xaml">
+    <Page Include="Views\User Controls\ReportsChildViews\UIM_Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
