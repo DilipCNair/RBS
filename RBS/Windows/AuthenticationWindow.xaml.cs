@@ -13,6 +13,7 @@ namespace RBS
         {
             InitializeComponent();
             GlobalResources.Minimize += GlobalResources_Minimize;
+            Hide();
         }
 
         private void GlobalResources_Minimize(object sender, EventArgs e)

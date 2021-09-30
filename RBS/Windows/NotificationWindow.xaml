@@ -68,9 +68,7 @@
             <StackPanel x:Name="StackPanel_Notify">
                 <TextBlock x:Name="Textblock_Notification" TextAlignment="Justify" HorizontalAlignment="Left"
                            Margin="52,15,0,0" TextWrapping="Wrap"
-                           Text="This is an Alert for the security administrator, some kind of potential 
-                           malicious activity has happened in the operating system which has violated the RBS
-                           imposed restrictions. The latest alert has been listed below :" 
+                           Text="This is an Alert for the security administrator, some kind of potential malicious activity has happened in the operating system which has violated the RBS imposed restrictions. The latest alert has been listed below :" 
                            VerticalAlignment="Top" Width="652" Height="69" FontSize="15"/>
                 <Line X2="730" Margin="0,3,0,0" StrokeThickness="1.5">
                     <Line.Stroke>

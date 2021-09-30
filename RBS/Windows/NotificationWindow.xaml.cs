@@ -13,7 +13,7 @@ namespace RBS
         public NotificationWindow()
         {
             InitializeComponent();
-
+            Hide();
             this.Closing += NotificationWindow_Closing; // For Canceling the Closing Event
             this.Activated += NotificationWindow_Activated; // To play sound when activated
             this.Deactivated += NotificationWindow_Deactivated; //To assure window always opens in foreground

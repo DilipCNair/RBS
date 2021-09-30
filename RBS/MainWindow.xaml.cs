@@ -14,8 +14,7 @@ namespace RBS
         {
             InitializeComponent();
             GlobalResources.ShowNotiffication += GlobalResources_ShowNotiffication;
-            this.Hide();
-            NotificationWindow.Hide();
+            //Hide();
         }
 
         private void GlobalResources_ShowNotiffication(object sender, EventArgs e)

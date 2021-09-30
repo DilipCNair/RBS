@@ -11,14 +11,10 @@ namespace RBS
     /// </summary>
     public partial class App : Application
     {
-        public AuthenticationWindow AuthenticationWindow;
-        public NotificationWindow NotificationWindow;
 
         private void Application_RBS_Startup(object sender, StartupEventArgs e)
         {
-            AuthenticationWindow = new AuthenticationWindow();
-            NotificationWindow = new NotificationWindow();
-            AuthenticationWindow.Show();
+            _ = new AuthenticationWindow();
             GlobalResources.IsNotificationWindowShown = false;
             GlobalResources.AlertMailing = false;
             GlobalResources.IsProcessRestrictionsSet = false;
