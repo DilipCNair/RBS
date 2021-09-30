@@ -162,18 +162,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="lib\Agents\Agent_FileSystem.cs" />
-    <Compile Include="lib\Agents\Agent_Processes.cs" />
-    <Compile Include="lib\GlobalException.cs" />
+    <Compile Include="RBS_Library\Agents\Agent_FileSystem.cs" />
+    <Compile Include="RBS_Library\Agents\Agent_Processes.cs" />
+    <Compile Include="RBS_Library\GlobalException.cs" />
     <Compile Include="Windows\AuthenticationWindow.xaml.cs">
       <DependentUpon>AuthenticationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="lib\AuthenticationWindowLogic.cs" />
-    <Compile Include="lib\BindableBase.cs" />
-    <Compile Include="lib\Commands\MyICommand.cs" />
-    <Compile Include="lib\GlobalAlerts.cs" />
-    <Compile Include="lib\GlobalResources.cs" />
-    <Compile Include="lib\MailingSystem.cs" />
+    <Compile Include="RBS_Library\AuthenticationWindowLogic.cs" />
+    <Compile Include="RBS_Library\BindableBase.cs" />
+    <Compile Include="RBS_Library\Commands\MyICommand.cs" />
+    <Compile Include="RBS_Library\GlobalAlerts.cs" />
+    <Compile Include="RBS_Library\GlobalResources.cs" />
+    <Compile Include="RBS_Library\MailingSystem.cs" />
     <Compile Include="Models\AlertsModel.cs" />
     <Compile Include="Models\AuthenticationModel.cs" />
     <Compile Include="Models\CustomizeModel.cs" />
@@ -188,19 +188,19 @@
     <Compile Include="Models\ReportsChildModels\ProcessReportsModel.cs" />
     <Compile Include="Models\ReportsChildModels\UIMModel.cs" />
     <Compile Include="Models\ReportsChildModels\WindowsServices-Model.cs" />
-    <Compile Include="lib\Monitoring Engine\Applications Monitoring.cs" />
-    <Compile Include="lib\Monitoring Engine\File System Monitoring.cs" />
-    <Compile Include="lib\Monitoring Engine\Packet Sniffer.cs" />
-    <Compile Include="lib\Monitoring Engine\PPM.cs" />
-    <Compile Include="lib\Monitoring Engine\Process Monitoring.cs" />
-    <Compile Include="lib\Monitoring Engine\User Input Monitoring.cs" />
-    <Compile Include="lib\Monitoring Engine\WindowsServices.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\Applications Monitoring.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\File System Monitoring.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\Packet Sniffer.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\PPM.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\Process Monitoring.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\User Input Monitoring.cs" />
+    <Compile Include="RBS_Library\Monitoring Engine\WindowsServices.cs" />
     <Compile Include="Windows\NotificationWindow.xaml.cs">
       <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="lib\PasswordBoxBindingBehavior.cs" />
-    <Compile Include="lib\RBSNavigationSystem.cs" />
-    <Compile Include="lib\Restrictions.cs" />
+    <Compile Include="RBS_Library\PasswordBoxBindingBehavior.cs" />
+    <Compile Include="RBS_Library\RBSNavigationSystem.cs" />
+    <Compile Include="RBS_Library\Restrictions.cs" />
     <Compile Include="ViewModels\AlertsViewModel.cs" />
     <Compile Include="ViewModels\AuthenticationViewModel.cs" />
     <Compile Include="ViewModels\CustomizeViewModel.cs" />
@@ -292,7 +292,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="lib\RBSResourceDictionary.xaml">
+    <Page Include="RBS_Library\RBSResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -374,7 +374,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="lib\AuthenticationSystem.cs" />
+    <Compile Include="RBS_Library\AuthenticationSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
