@@ -14,19 +14,19 @@ namespace RBS
         {
             InitializeComponent();
             Hide();
-            this.Closing += NotificationWindow_Closing; // For Canceling the Closing Event
-            this.Activated += NotificationWindow_Activated; // To play sound when activated
-            this.Deactivated += NotificationWindow_Deactivated; //To assure window always opens in foreground
+            Closing += NotificationWindow_Closing; // For Canceling the Closing Event
+            Activated += NotificationWindow_Activated; // To play sound when activated
+            Deactivated += NotificationWindow_Deactivated; //To assure window always opens in foreground
 
             GlobalResources.ShowNotiffication += GlobalResources_ShowNotiffication; //To activate notification window
             GlobalResources.AlertSound += GlobalResources_AlertSound; //To play alert sound
             GlobalResources.UpdateAlert += GlobalResources_UpdateAlert; //To update Alert
-            
+
         }
 
         private void NotificationWindow_Deactivated(object sender, EventArgs e)
         {
-            this.Activate();
+            Activate();
         }
 
         private void GlobalResources_UpdateAlert(object sender, System.EventArgs e)
@@ -46,7 +46,7 @@ namespace RBS
 
         private void NotificationWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.Hide();
+            Hide();
             GlobalResources.IsNotificationWindowShown = false;
             e.Cancel = true;
         }
@@ -58,7 +58,7 @@ namespace RBS
 
         private void GlobalResources_ShowNotiffication(object sender, System.EventArgs e)
         {
-            this.ShowDialog();
+            Show();
             GlobalResources.IsNotificationWindowShown = true;
         }
 

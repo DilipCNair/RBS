@@ -15,6 +15,7 @@ namespace RBS
         private void Application_RBS_Startup(object sender, StartupEventArgs e)
         {
             _ = new AuthenticationWindow();
+            _ = new NotificationWindow();
             GlobalResources.IsNotificationWindowShown = false;
             GlobalResources.AlertMailing = false;
             GlobalResources.IsProcessRestrictionsSet = false;
