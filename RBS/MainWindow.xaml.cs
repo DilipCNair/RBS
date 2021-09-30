@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using MahApps.Metro.Controls;
+﻿using MahApps.Metro.Controls;
 
 namespace RBS
 {
@@ -12,17 +10,7 @@ namespace RBS
         public MainWindow()
         {
             InitializeComponent();
-            //GlobalResources.ShowNotiffication += GlobalResources_ShowNotiffication;
             //Hide();
         }
-
-        //private void GlobalResources_ShowNotiffication(object sender, EventArgs e)
-        //{
-        //    foreach (Window RBSWindow in Application.Current.Windows)
-        //    {
-        //        if (RBSWindow is NotificationWindow)
-        //            RBSWindow.Show();
-        //    }
-        //}
     }
 }
