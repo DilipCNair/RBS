@@ -164,14 +164,14 @@
     </ApplicationDefinition>
     <Compile Include="lib\Agents\Agent_FileSystem.cs" />
     <Compile Include="lib\Agents\Agent_Processes.cs" />
-    <Compile Include="lib\GlobalException.cs" />
+    <Compile Include="Models\GlobalException.cs" />
     <Compile Include="Views\Windows\AuthenticationWindow.xaml.cs">
       <DependentUpon>AuthenticationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="lib\AuthenticationWindowLogic.cs" />
     <Compile Include="lib\BindableBase.cs" />
     <Compile Include="lib\Commands\MyICommand.cs" />
-    <Compile Include="lib\GlobalAlerts.cs" />
+    <Compile Include="Models\GlobalAlerts.cs" />
     <Compile Include="lib\AppResources.cs" />
     <Compile Include="lib\MailingSystem.cs" />
     <Compile Include="Models\AlertsModel.cs" />

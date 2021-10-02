@@ -15,7 +15,7 @@ namespace RBS.Views
             TextBlock_Notification.Text = null;
             AppResources.NavigatedToMainWindow += AppResources_NavigatedToMainWindow;
             AppResources.NavigatedToMainAuthenticationWindow += AppResources_NavigatedToMainAuthenticationWindow;
-            AppResources.AuthenticationError += AppResources_AuthenticationError;         
+            AppResources.AuthenticationError += AppResources_AuthenticationError;
         }
 
         private void AppResources_AuthenticationError(object sender, System.EventArgs e)
