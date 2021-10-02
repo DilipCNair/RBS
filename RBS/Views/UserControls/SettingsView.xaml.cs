@@ -11,14 +11,14 @@ namespace RBS.Views
         public SettingsView()
         {
             InitializeComponent();
-            GlobalResources.SelectedNetworkInterface = Interface_Selction_ComboBox.SelectedIndex;
-            GlobalResources.SelectedProcessRestrictionType = ProcessSignature_ComboBox.SelectedIndex;
-            GlobalResources.UpdateSettings += GlobalResources_UpdateSettings;
+            AppResources.SelectedNetworkInterface = Interface_Selction_ComboBox.SelectedIndex;
+            AppResources.SelectedProcessRestrictionType = ProcessSignature_ComboBox.SelectedIndex;
+            AppResources.UpdateSettings += AppResources_UpdateSettings;
         }
 
-        private void GlobalResources_UpdateSettings(object sender, System.EventArgs e)
+        private void AppResources_UpdateSettings(object sender, System.EventArgs e)
         {
-            if (GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.IsMonitoringEngineOn)
             {
                 TreeView_ME.IsEnabled = false;
                 TreeView_FSM.IsEnabled = false;
@@ -38,142 +38,142 @@ namespace RBS.Views
 
         private void CheckBox_UIM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.UserInputMonitoringChecked = true;
+            AppResources.UserInputMonitoringChecked = true;
         }
 
         private void CheckBox_UIM_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.UserInputMonitoringChecked = false;
+            AppResources.UserInputMonitoringChecked = false;
         }
 
         private void CheckBox_PM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ProcessMonitoring = true;
+            AppResources.ProcessMonitoring = true;
         }
 
         private void CheckBox_PM_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ProcessMonitoring = false;
+            AppResources.ProcessMonitoring = false;
         }
 
         private void CheckBox_FSM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.FileSystemMonitoring = true;
+            AppResources.FileSystemMonitoring = true;
         }
 
         private void CheckBox_FSM_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.FileSystemMonitoring = false;
+            AppResources.FileSystemMonitoring = false;
         }
 
         private void CheckBox_PS_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.PacketSniffer = true;
+            AppResources.PacketSniffer = true;
         }
 
         private void CheckBox_PS_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.PacketSniffer = false;
+            AppResources.PacketSniffer = false;
         }
 
         private void CheckBox_PPM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ProcessPortMapper = true;
+            AppResources.ProcessPortMapper = true;
         }
 
         private void CheckBox_PPM_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ProcessPortMapper = false;
+            AppResources.ProcessPortMapper = false;
         }
 
         private void CheckBox_WRM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.WindowsRegistryMonitoring = true;
+            AppResources.WindowsRegistryMonitoring = true;
         }
 
         private void CheckBox_WRM_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.WindowsRegistryMonitoring = false;
+            AppResources.WindowsRegistryMonitoring = false;
         }
 
         private void CheckBox_C_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.C_CheckBox = true;
+            AppResources.C_CheckBox = true;
         }
 
         private void CheckBox_C_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.C_CheckBox = false;
+            AppResources.C_CheckBox = false;
         }
 
         private void CheckBox_D_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.D_CheckBox = true;
+            AppResources.D_CheckBox = true;
         }
 
         private void CheckBox_D_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.D_CheckBox = false;
+            AppResources.D_CheckBox = false;
         }
 
         private void CheckBox_E_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.E_CheckBox = true;
+            AppResources.E_CheckBox = true;
         }
 
         private void CheckBox_E_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.E_CheckBox = false;
+            AppResources.E_CheckBox = false;
         }
 
         private void CheckBox_F_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.F_CheckBox = true;
+            AppResources.F_CheckBox = true;
         }
 
         private void CheckBox_F_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.F_CheckBox = false;
+            AppResources.F_CheckBox = false;
         }
 
         private void Interface_Selction_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            GlobalResources.SelectedNetworkInterface = Interface_Selction_ComboBox.SelectedIndex;
+            AppResources.SelectedNetworkInterface = Interface_Selction_ComboBox.SelectedIndex;
         }
 
         private void CheckBox_WSM_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.WindowsServices = true;
+            AppResources.WindowsServices = true;
         }
 
         private void CheckBox_WSM_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.WindowsServices = false;
+            AppResources.WindowsServices = false;
         }
 
         private void CheckBox_Applications_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ApplicationsMonitoring = true;
+            AppResources.ApplicationsMonitoring = true;
         }
 
         private void CheckBox_Applications_UnChecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.ApplicationsMonitoring = false;
+            AppResources.ApplicationsMonitoring = false;
         }
 
         private void ToggleButton_AlertMailing_Checked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.AlertMailing = true;
+            AppResources.AlertMailing = true;
         }
 
         private void ToggleButton_AlertMailing_Unchecked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.AlertMailing = false;
+            AppResources.AlertMailing = false;
         }
 
         private void ProcessSignature_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            GlobalResources.SelectedProcessRestrictionType = ProcessSignature_ComboBox.SelectedIndex;
+            AppResources.SelectedProcessRestrictionType = ProcessSignature_ComboBox.SelectedIndex;
         }
     }
 }

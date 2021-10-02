@@ -16,14 +16,14 @@ namespace RBS.Views.ReportsChildViews
         {
             InitializeComponent();
             ButtonRefresh.IsEnabled = false;
-            if (GlobalResources.ApplicationsMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.ApplicationsMonitoring & AppResources.IsMonitoringEngineOn)
                 AM_Label.Visibility = Visibility.Collapsed;
             else
                 AM_Label.Visibility = Visibility.Visible;
-            GlobalResources.AllApplicationsFetched += GlobalResources_AllApplicationsFetched;
+            AppResources.AllApplicationsFetched += AppResources_AllApplicationsFetched;
         }
 
-        private void GlobalResources_AllApplicationsFetched(object sender, EventArgs e)
+        private void AppResources_AllApplicationsFetched(object sender, EventArgs e)
         {
             ButtonRefresh.IsEnabled = true;
         }
@@ -52,7 +52,7 @@ namespace RBS.Views.ReportsChildViews
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.ApplicationsMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.ApplicationsMonitoring & AppResources.IsMonitoringEngineOn)
                 AM_Label.Visibility = Visibility.Collapsed;
             else
                 AM_Label.Visibility = Visibility.Visible;

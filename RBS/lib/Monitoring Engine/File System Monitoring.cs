@@ -35,17 +35,17 @@ namespace RBS.Monitoring_Engine
         public static void InitialiseFileSystemMonitoring()
         {
             FSMListHolder = new ObservableCollection<FileSystemReportsModel>();
-            GlobalResources.FileSystemMonitoringIsOn += GlobalResources_FileSystemMonitoringIsOn;
-            GlobalResources.FileSystemMonitoringIsOff += GlobalResources_FileSystemMonitoringIsOff;
+            AppResources.FileSystemMonitoringIsOn += AppResources_FileSystemMonitoringIsOn;
+            AppResources.FileSystemMonitoringIsOff += AppResources_FileSystemMonitoringIsOff;
             
         }    
 
-        private static void GlobalResources_FileSystemMonitoringIsOn(object sender, System.EventArgs e)
+        private static void AppResources_FileSystemMonitoringIsOn(object sender, System.EventArgs e)
         {
             StartFSM();
         }
 
-        private static void GlobalResources_FileSystemMonitoringIsOff(object sender, System.EventArgs e)
+        private static void AppResources_FileSystemMonitoringIsOff(object sender, System.EventArgs e)
         {
             StopFSM();
         }
@@ -53,7 +53,7 @@ namespace RBS.Monitoring_Engine
         private static void StartFSM()
         {
             #region FOR C: Drive
-            if (GlobalResources.C_CheckBox == true)
+            if (AppResources.C_CheckBox == true)
             {
                 CWatcher = new FileSystemWatcher
                 {
@@ -74,7 +74,7 @@ namespace RBS.Monitoring_Engine
             #endregion
 
             #region FSW D: Drive
-            if (GlobalResources.D_CheckBox == true)
+            if (AppResources.D_CheckBox == true)
             {
                 DWatcher = new FileSystemWatcher
                 {
@@ -95,7 +95,7 @@ namespace RBS.Monitoring_Engine
             #endregion
 
             #region FSW E: Drive
-            if (GlobalResources.E_CheckBox == true)
+            if (AppResources.E_CheckBox == true)
             {
                 EWatcher = new FileSystemWatcher
                 {
@@ -116,7 +116,7 @@ namespace RBS.Monitoring_Engine
             #endregion
 
             #region FSW F: Drive
-            if (GlobalResources.F_CheckBox == true)
+            if (AppResources.F_CheckBox == true)
             {
                 FWatcher = new FileSystemWatcher
                 {
@@ -208,7 +208,7 @@ namespace RBS.Monitoring_Engine
                 });
                 GlobalException.LogTheException();
             }
-            if (GlobalResources.IsRestrictionsMonitoringSet & GlobalResources.IsFileSytemRestrictionSet)
+            if (AppResources.IsRestrictionsMonitoringSet & AppResources.IsFileSytemRestrictionSet)
                 Agent_FileSystem.Analyse(e.FullPath, _Author);
             try
             {
@@ -285,7 +285,7 @@ namespace RBS.Monitoring_Engine
                 GlobalException.AllExceptions.Add(new Model.ExceptionModel { No = GlobalException.No, Date = DateTime.Now.ToShortDateString(), Time = DateTime.Now.ToShortTimeString(), Message = ex.Message });
                 GlobalException.LogTheException();
             }
-            if (GlobalResources.IsRestrictionsMonitoringSet & GlobalResources.IsFileSytemRestrictionSet)
+            if (AppResources.IsRestrictionsMonitoringSet & AppResources.IsFileSytemRestrictionSet)
                 Agent_FileSystem.Analyse(e.FullPath, _Author);
             try
             {
@@ -375,7 +375,7 @@ namespace RBS.Monitoring_Engine
                 GlobalException.AllExceptions.Add(new Model.ExceptionModel { No = GlobalException.No, Date = DateTime.Now.ToShortDateString(), Time = DateTime.Now.ToShortTimeString(), Message = ex.Message });
                 GlobalException.LogTheException();
             }
-            if (GlobalResources.IsRestrictionsMonitoringSet & GlobalResources.IsFileSytemRestrictionSet)
+            if (AppResources.IsRestrictionsMonitoringSet & AppResources.IsFileSytemRestrictionSet)
                 Agent_FileSystem.Analyse(e.FullPath, _Author);
             try
             {
@@ -464,7 +464,7 @@ namespace RBS.Monitoring_Engine
                 GlobalException.AllExceptions.Add(new Model.ExceptionModel { No = GlobalException.No, Date = DateTime.Now.ToShortDateString(), Time = DateTime.Now.ToShortTimeString(), Message = ex.Message });
                 GlobalException.LogTheException();
             }
-            if (GlobalResources.IsRestrictionsMonitoringSet & GlobalResources.IsFileSytemRestrictionSet)
+            if (AppResources.IsRestrictionsMonitoringSet & AppResources.IsFileSytemRestrictionSet)
                 Agent_FileSystem.Analyse(e.OldFullPath, _Author);
             try
             {
@@ -491,25 +491,25 @@ namespace RBS.Monitoring_Engine
         {
             try
             {
-                if (GlobalResources.C_CheckBox == true)
+                if (AppResources.C_CheckBox == true)
                 {
                     CWatcher.EnableRaisingEvents = false;
                     CWatcher.Dispose();
                 }
-                if (GlobalResources.D_CheckBox == true)
+                if (AppResources.D_CheckBox == true)
                 {
                     DWatcher.EnableRaisingEvents = false;
                     DWatcher.Dispose();
                 }
-                if (GlobalResources.E_CheckBox == true)
+                if (AppResources.E_CheckBox == true)
                 {
                     EWatcher.EnableRaisingEvents = false;
                     EWatcher.Dispose();
                 }
-                if (GlobalResources.F_CheckBox == true)
+                if (AppResources.F_CheckBox == true)
                 {
                     FWatcher.EnableRaisingEvents = false;
-                    GlobalResources.TurnOffUIM();
+                    AppResources.TurnOffUIM();
                     FWatcher.Dispose();
                 }
             }

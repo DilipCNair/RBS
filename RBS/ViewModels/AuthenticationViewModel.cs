@@ -19,22 +19,22 @@ namespace RBS.ViewModel
         {
             AuthenticationModelObject = new AuthenticationModel();
             LoginCommand = new MyICommand(Login);
-            GlobalResources.KeyDownFromTextBox += GlobalResources_KeyDownFromTextBox;
+            AppResources.KeyDownFromTextBox += AppResources_KeyDownFromTextBox;
         }
 
-        private void GlobalResources_KeyDownFromTextBox(object sender, System.EventArgs e)
+        private void AppResources_KeyDownFromTextBox(object sender, System.EventArgs e)
         {
             Login();
         }
 
         public void Login()
         {
-            TextBox_MasterPassword = GlobalResources.MasterPassword;
-            GlobalResources.MasterPassword = null;
+            TextBox_MasterPassword = AppResources.MasterPassword;
+            AppResources.MasterPassword = null;
             if (string.Equals(TextBox_EmployeeID, AuthenticationModelObject.EmployeeID) & 
                 string.Equals(TextBox_MasterPassword, AuthenticationModelObject.MasterPassword))
             {
-                GlobalResources.InitiateNavigationToMainWindow();
+                AppResources.InitiateNavigationToMainWindow();
                 foreach (Window RBSWindow in Application.Current.Windows)
                 {
                     if (RBSWindow is AuthenticationWindow)
@@ -47,7 +47,7 @@ namespace RBS.ViewModel
             else
             {     
                 //To bypass User AUthentication from SQL Database
-                GlobalResources.InitiateNavigationToMainWindow();
+                AppResources.InitiateNavigationToMainWindow();
                 foreach (Window RBSWindow in Application.Current.Windows)
                 {
                     if (RBSWindow is AuthenticationWindow)
@@ -58,7 +58,7 @@ namespace RBS.ViewModel
                 RBSNavigationSystem.IPressedAuthenticationViewLoginButton();
 
                 //Real code for authentication
-                //GlobalResources.IInitiatedAuthenticationError();
+                //AppResources.IInitiatedAuthenticationError();
 
             }
         }

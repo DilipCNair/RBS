@@ -15,12 +15,12 @@ namespace RBS.Monitoring_Engine
         public static void InitializeApplicationMonitoring()
         {
             PrgramHolderList = new ObservableCollection<ApplicationsModel>();
-            GlobalResources.ApplicationMonitoringIsOn += GlobalResources_ApplicationMonitoringIsOn;
-            GlobalResources.ApplicationMonitoringIsOff += GlobalResources_ApplicationMonitoringIsOff;
+            AppResources.ApplicationMonitoringIsOn += AppResources_ApplicationMonitoringIsOn;
+            AppResources.ApplicationMonitoringIsOff += AppResources_ApplicationMonitoringIsOff;
         }
 
 
-        private static void GlobalResources_ApplicationMonitoringIsOn(object sender, EventArgs e)
+        private static void AppResources_ApplicationMonitoringIsOn(object sender, EventArgs e)
         {
             Worker = new BackgroundWorker();
             Worker.DoWork += Worker_DoWork;
@@ -183,10 +183,10 @@ namespace RBS.Monitoring_Engine
         private static void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             ObservableCollection<ApplicationsModel> ProgramHolderList = e.Result as ObservableCollection<ApplicationsModel>;
-            GlobalResources.ApplicationFetchingCompleted();
+            AppResources.ApplicationFetchingCompleted();
         }
 
-        private static void GlobalResources_ApplicationMonitoringIsOff(object sender, EventArgs e)
+        private static void AppResources_ApplicationMonitoringIsOff(object sender, EventArgs e)
         {
             
         }

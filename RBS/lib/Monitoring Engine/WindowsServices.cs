@@ -15,10 +15,10 @@ namespace RBS.Monitoring_Engine
         public static void InitializePPM()
         {
             BGWData = new BGWData();
-            GlobalResources.WindowsServicesIsOn += GlobalResources_WindowsServicesIsOn;       
+            AppResources.WindowsServicesIsOn += AppResources_WindowsServicesIsOn;       
         }
 
-        private static void GlobalResources_WindowsServicesIsOn(object sender, EventArgs e)
+        private static void AppResources_WindowsServicesIsOn(object sender, EventArgs e)
         {
             Worker = new BackgroundWorker();
             Worker.DoWork += Worker_DoWork;
@@ -61,7 +61,7 @@ namespace RBS.Monitoring_Engine
         {
             BGWData BGWData = e.Result as BGWData;
             Worker.Dispose();
-            GlobalResources.WinServIsOver();
+            AppResources.WinServIsOver();
         }      
     }
 

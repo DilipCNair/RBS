@@ -27,10 +27,10 @@ namespace RBS.ViewModel
 
         private void Register()
         {
-            TextBox_MasterPassword = GlobalResources.MasterPassword;
-            TextBox_ConfirmMasterPassword = GlobalResources.ConfirmMasterPassword;
-            GlobalResources.MasterPassword = null;
-            GlobalResources.ConfirmMasterPassword = null;
+            TextBox_MasterPassword = AppResources.MasterPassword;
+            TextBox_ConfirmMasterPassword = AppResources.ConfirmMasterPassword;
+            AppResources.MasterPassword = null;
+            AppResources.ConfirmMasterPassword = null;
             RegistrationModelObject.FullName = TextBox_FullName;
             RegistrationModelObject.EmployeeID = TextBox_EmployeeID;
             RegistrationModelObject.EmailID = TextBox_EmailID;

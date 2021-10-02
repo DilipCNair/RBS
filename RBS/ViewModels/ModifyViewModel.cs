@@ -28,8 +28,8 @@ namespace RBS.ViewModel
 
         private void Continue()
         {
-            TextBox_MasterPassword = GlobalResources.MasterPassword;
-            GlobalResources.MasterPassword = null;
+            TextBox_MasterPassword = AppResources.MasterPassword;
+            AppResources.MasterPassword = null;
             if(string.Equals(ModifyModelObject.EmployeeID,TextBox_EmployeeID) & string.Equals(ModifyModelObject.EmailID,TextBox_EmailID) & string.Equals(ModifyModelObject.MasterPassword,TextBox_MasterPassword))
             {
                 RBSNavigationSystem.IPressedModifyViewDoneButton();

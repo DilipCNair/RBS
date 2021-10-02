@@ -16,45 +16,45 @@ namespace RBS
         {
             _ = new AuthenticationWindow();
             _ = new NotificationWindow();
-            GlobalResources.IsNotificationWindowShown = false;
-            GlobalResources.AlertMailing = false;
-            GlobalResources.IsProcessRestrictionsSet = false;
-            GlobalResources.IsFileSytemRestrictionSet = false;
-            GlobalResources.IsRestrictionsMonitoringSet = false;
-            GlobalResources.InitialiseGlobalResources();
+            AppResources.IsNotificationWindowShown = false;
+            AppResources.AlertMailing = false;
+            AppResources.IsProcessRestrictionsSet = false;
+            AppResources.IsFileSytemRestrictionSet = false;
+            AppResources.IsRestrictionsMonitoringSet = false;
+            AppResources.InitialiseAppResources();
             GlobalAlerts.InitializeGlobalAlerts();
             GlobalException.InitializeGlobalException();
             MailingSystem.InitializeMailingSystem();
             GettingCurrentUserInfo();
             GettingAllUsersInfo();
-            GlobalResources.ShowCurrentUser();
+            AppResources.ShowCurrentUser();
         }
 
         private void GettingCurrentUserInfo()
         {
-            GlobalResources.CurrentUser = new User();
+            AppResources.CurrentUser = new User();
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT UserName FROM Win32_ComputerSystem");
             ManagementObjectCollection collection = searcher.Get();
-            GlobalResources.CurrentUser.UserName = (string)collection.Cast<ManagementBaseObject>().First()["UserName"];
-            GlobalResources.CurrentUser.UserName = GlobalResources.CurrentUser.UserName.Remove(0, 12);
-            if (string.Equals(GlobalResources.CurrentUser.UserName, "Dilip"))
-                GlobalResources.CurrentUser.Email_ID = "dilipn6@gmail.com";
-            else if (string.Equals(GlobalResources.CurrentUser.UserName, "Sharada Valiveti"))
-                GlobalResources.CurrentUser.Email_ID = "sharada.valiveti@nirmauni.ac.in";
+            AppResources.CurrentUser.UserName = (string)collection.Cast<ManagementBaseObject>().First()["UserName"];
+            AppResources.CurrentUser.UserName = AppResources.CurrentUser.UserName.Remove(0, 12);
+            if (string.Equals(AppResources.CurrentUser.UserName, "Dilip"))
+                AppResources.CurrentUser.Email_ID = "dilipn6@gmail.com";
+            else if (string.Equals(AppResources.CurrentUser.UserName, "Sharada Valiveti"))
+                AppResources.CurrentUser.Email_ID = "sharada.valiveti@nirmauni.ac.in";
 
         }
 
         private void GettingAllUsersInfo()
         {
             int id = 1;
-            GlobalResources.Users = new System.Collections.ObjectModel.ObservableCollection<User>();
+            AppResources.Users = new System.Collections.ObjectModel.ObservableCollection<User>();
             SelectQuery query = new SelectQuery("Win32_UserAccount");
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
             foreach (ManagementObject user in searcher.Get())
             {
-                GlobalResources.Users.Add(new User { UserName = user["Name"].ToString() });
+                AppResources.Users.Add(new User { UserName = user["Name"].ToString() });
             }
-            foreach (User user in GlobalResources.Users)
+            foreach (User user in AppResources.Users)
             {
                 user.UserID = id++;
                 if (string.Equals(user.UserName, "Dilip"))
@@ -66,8 +66,8 @@ namespace RBS
 
         private void Application_RBS_Exit(object sender, ExitEventArgs e)
         {
-            File.Delete(GlobalResources.Path + "Keylogger.txt");
-            File.Delete(GlobalResources.Path + "Mouselogger.txt");
+            File.Delete(AppResources.Path + "Keylogger.txt");
+            File.Delete(AppResources.Path + "Mouselogger.txt");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace RBS.Monitoring_Engine
                 if(_ProcessListHolder!=value)
                 {
                     _ProcessListHolder = value;
-                    GlobalResources.DetectedNewProcess();
+                    AppResources.DetectedNewProcess();
                 }
             }
         }
@@ -34,16 +34,16 @@ namespace RBS.Monitoring_Engine
       
         public static void InitialiseProcessMonitoring()
         {
-            GlobalResources.ProcessMonitoringIsOn += GlobalResources_ProcessMonitoringIsOn;
-            GlobalResources.ProcessMonitoringIsOff += GlobalResources_ProcessMonitoringIsOff;
+            AppResources.ProcessMonitoringIsOn += AppResources_ProcessMonitoringIsOn;
+            AppResources.ProcessMonitoringIsOff += AppResources_ProcessMonitoringIsOff;
         }      
 
-        private static void GlobalResources_ProcessMonitoringIsOn(object sender, EventArgs e)
+        private static void AppResources_ProcessMonitoringIsOn(object sender, EventArgs e)
         {
             StartProcessMonitoring();
         }
 
-        private static void GlobalResources_ProcessMonitoringIsOff(object sender, EventArgs e)
+        private static void AppResources_ProcessMonitoringIsOff(object sender, EventArgs e)
         {
             StopProcessMonitoring();
         }
@@ -113,8 +113,8 @@ namespace RBS.Monitoring_Engine
         private static void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             ObservableCollection<ProcessReportsModel> ProcessListHolder = e.Result as ObservableCollection<ProcessReportsModel>;
-            GlobalResources.ProcessLoadComplete();
-            if(GlobalResources.IsRestrictionsMonitoringSet & GlobalResources.IsProcessRestrictionsSet)
+            AppResources.ProcessLoadComplete();
+            if(AppResources.IsRestrictionsMonitoringSet & AppResources.IsProcessRestrictionsSet)
             foreach (ProcessReportsModel Process in ProcessListHolder)
             {
                 Agents.Agent_Processes.ProcessAnalyse(Process);

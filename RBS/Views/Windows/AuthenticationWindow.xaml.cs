@@ -13,10 +13,10 @@ namespace RBS
         {
             InitializeComponent();
             Hide();
-            GlobalResources.Minimize += GlobalResources_Minimize;          
+            AppResources.Minimize += AppResources_Minimize;          
         }
 
-        private void GlobalResources_Minimize(object sender, EventArgs e)
+        private void AppResources_Minimize(object sender, EventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }

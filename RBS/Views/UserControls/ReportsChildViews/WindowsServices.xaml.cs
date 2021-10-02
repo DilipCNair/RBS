@@ -24,10 +24,10 @@ namespace RBS.Views.ReportsChildViews
         {
             InitializeComponent();
             ButtonRefresh.IsEnabled = false;
-            GlobalResources.WinServOver += GlobalResources_WinServOver;
+            AppResources.WinServOver += AppResources_WinServOver;
         }
 
-        private void GlobalResources_WinServOver(object sender, EventArgs e)
+        private void AppResources_WinServOver(object sender, EventArgs e)
         {
             ButtonRefresh.IsEnabled = true;
         }

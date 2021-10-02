@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace RBS
 {
-    public static class GlobalResources
+    public static class AppResources
     {
 
         public static bool IsMonitoringEngineOn;
@@ -85,23 +85,23 @@ namespace RBS
         public static void TurnOnMonitoringEngine()
         {
             IsMonitoringEngineOn = true;
-            UserInputMonitoringIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            ProcessMonitoringIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            FileSystemMonitoringIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            PacketSnifferIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            ProcessPortMapperIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            WindowsServicesIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            ApplicationMonitoringIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            UserInputMonitoringIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            ProcessMonitoringIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            FileSystemMonitoringIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            PacketSnifferIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            ProcessPortMapperIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            WindowsServicesIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
+            ApplicationMonitoringIsOn?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void PlayAlertSound()
         {
-            AlertSound?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            AlertSound?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void ShowCurrentUser()
         {
-            Show_User?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            Show_User?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void Update_Alert(AlertsModel Alert)
@@ -114,104 +114,104 @@ namespace RBS
                 Information = Alert.Information,
                 No = Alert.No
             };
-            UpdateAlert?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            UpdateAlert?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void Show_Notification()
         {
-            ShowNotiffication?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            ShowNotiffication?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void Refresh_ProcessList()
         {
-            RefreshProcessList?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            RefreshProcessList?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void ProcessLoadComplete()
         {
-            GettingAllProcesses?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            GettingAllProcesses?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void GeneratedAlert()
         {
-            AlertGenerated?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            AlertGenerated?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void Send_Mail()
         {
-            SendMail?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            SendMail?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void Minimizetheapp()
         {
-            Minimize?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            Minimize?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void TurnOffMonitoringEngine()
         {
             IsMonitoringEngineOn = false;
-            ProcessMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            FileSystemMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            PacketSnifferIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            ProcessPortMapperIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            WindowsServicesIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
-            ApplicationMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            ProcessMonitoringIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
+            FileSystemMonitoringIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
+            PacketSnifferIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
+            ProcessPortMapperIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
+            WindowsServicesIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
+            ApplicationMonitoringIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void InitiateNavigationToMainWindow()
         {
-            NavigatedToMainWindow?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            NavigatedToMainWindow?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void InitiateKeyDownFromTextBox()
         {
-            KeyDownFromTextBox?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            KeyDownFromTextBox?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void InitiateAuthenticationError()
         {
-            AuthenticationError?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            AuthenticationError?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void InitiateSettingsUpdate()
         {
-            UpdateSettings?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            UpdateSettings?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void InitiateNavigationToAuthenticationWindow()
         {
-            NavigatedToMainAuthenticationWindow?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            NavigatedToMainAuthenticationWindow?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         // Special Case - UIM needs to be turned off just before calling F_Dispose() in FSM since RBS resides in F: Drive
         public static void TurnOffUIM()
         {
-            UserInputMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            UserInputMonitoringIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void PPMIsOver()
         {
-            PPMOver?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            PPMOver?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void WinServIsOver()
         {
-            WinServOver?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            WinServOver?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void ApplicationFetchingCompleted()
         {
-            AllApplicationsFetched?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            AllApplicationsFetched?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void NewKeyStrokesHasCaptured()
         {
-            NewKeyStrokesCaptured?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            NewKeyStrokesCaptured?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static void NewMouseStrokesHasCaptured()
         {
-            NewMouseStrokesCaptured?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            NewMouseStrokesCaptured?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static ObservableCollection<ProcessReportsModel> ProcessList { get; set; }
@@ -254,14 +254,14 @@ namespace RBS
 
         public static AlertsModel LastAlert { get; set; }
 
-        public static void InitialiseGlobalResources()
+        public static void InitialiseAppResources()
         {
             Path = Assembly.GetExecutingAssembly().Location;
         }
 
         public static void DetectedNewProcess()
         {
-            NewProcessDetected?.Invoke(typeof(GlobalResources), EventArgs.Empty);
+            NewProcessDetected?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
         public static string MasterPassword { get; set; }

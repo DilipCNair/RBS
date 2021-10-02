@@ -17,7 +17,7 @@ namespace RBS.Agents
             bool AddAlert_W = true;
             bool AddAlert_B = true;
 
-            foreach (ProcessReportsModel EProcess in GlobalResources.ProcessList)
+            foreach (ProcessReportsModel EProcess in AppResources.ProcessList)
             {
                 if (string.Equals(EProcess.Name, Process.Name))
                     AuthorizeProcessAnalyse = false;
@@ -25,7 +25,7 @@ namespace RBS.Agents
 
             if (AuthorizeProcessAnalyse)
             {    
-                if (GlobalResources.SelectedProcessRestrictionType == 0)
+                if (AppResources.SelectedProcessRestrictionType == 0)
                 {
                     //Checks whether a process is there in the whitelist, if not triggers an alert
                     foreach (ProcessReportsModel _Process in Restrictions.AllProcess_Restrictions)
@@ -44,7 +44,7 @@ namespace RBS.Agents
                             {
                                 AddAlert_W = false;
                                 AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Type = "UnWanted Process", Activity = Process.Name, Information = "Process Restriction Violation " };
-                                GlobalResources.Update_Alert(Alert);
+                                AppResources.Update_Alert(Alert);
                             }
                         }
                         if (AddAlert_W)
@@ -55,10 +55,10 @@ namespace RBS.Agents
                             {          
                                 GlobalAlerts.AllAlerts.Add(Alert);
                             });
-                            GlobalResources.Update_Alert(Alert);
+                            AppResources.Update_Alert(Alert);
                         }
-                        GlobalResources.GeneratedAlert();                       
-                        if (!GlobalResources.IsNotificationWindowShown)
+                        AppResources.GeneratedAlert();                       
+                        if (!AppResources.IsNotificationWindowShown)
                         {
                             Notify();
                         }
@@ -81,7 +81,7 @@ namespace RBS.Agents
                                 {
                                     AddAlert_B = false;
                                     AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Type = "Blacklisted Process", Activity = Process.Name, Information = "Process Restriction Violation" };
-                                    GlobalResources.Update_Alert(Alert);
+                                    AppResources.Update_Alert(Alert);
                                 }
                             }
                             if (AddAlert_B)
@@ -92,10 +92,10 @@ namespace RBS.Agents
                                 {
                                     GlobalAlerts.AllAlerts.Add(Alert);
                                 });
-                                GlobalResources.GeneratedAlert();
-                                GlobalResources.Update_Alert(Alert);
+                                AppResources.GeneratedAlert();
+                                AppResources.Update_Alert(Alert);
                             }
-                            if (!GlobalResources.IsNotificationWindowShown)
+                            if (!AppResources.IsNotificationWindowShown)
                                 Notify();
                         }
                         
@@ -106,7 +106,7 @@ namespace RBS.Agents
 
         public static void Notify()
         {
-            GlobalResources.IsNotificationWindowShown = true;
+            AppResources.IsNotificationWindowShown = true;
             Application.Current.Dispatcher.Invoke(delegate
             {
                 foreach (Window RBSWindow in Application.Current.Windows)

@@ -168,7 +168,7 @@ namespace RBS.Authentication
                 MessageBoxResult result = MessageBox.Show(e.Message,"Database Error",MessageBoxButton.OK,
                     MessageBoxImage.Error);
                 if (result == MessageBoxResult.OK)
-                    GlobalResources.Shutdown();
+                    AppResources.Shutdown();
             }
 
         }

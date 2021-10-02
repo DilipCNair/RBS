@@ -27,7 +27,7 @@ namespace RBS.Agents
                 {
                     bool AddAlert = true;
                     //Check whether the change is done by owner or not
-                    if (!string.Equals(Author, GlobalResources.CurrentUser.UserName))
+                    if (!string.Equals(Author, AppResources.CurrentUser.UserName))
                     {
                         //Direct Changes to the File being locked
                         if (!string.Equals(_File, "null") & string.Equals(_File, FS_Activity))
@@ -38,7 +38,7 @@ namespace RBS.Agents
                                 {
                                     AddAlert = false;
                                     AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Information = "File System Restriction Violation", Activity = FS_Restriction.File, Type = "File" };
-                                    GlobalResources.Update_Alert(Alert);
+                                    AppResources.Update_Alert(Alert);
                                 }
                             }
                             if (AddAlert)
@@ -51,11 +51,11 @@ namespace RBS.Agents
                                 });
                                 MailingSystem.Mdata.Alert = Alert;
                                 MailingSystem.Mdata.CompromisedUser = Author;
-                                GlobalResources.Send_Mail();
-                                GlobalResources.Update_Alert(Alert);
+                                AppResources.Send_Mail();
+                                AppResources.Update_Alert(Alert);
                             }
-                            GlobalResources.GeneratedAlert();
-                            if (GlobalResources.IsNotificationWindowShown == false)
+                            AppResources.GeneratedAlert();
+                            if (AppResources.IsNotificationWindowShown == false)
                                 Notify();
 
                         } 
@@ -66,7 +66,7 @@ namespace RBS.Agents
                 #region 2. Directory
                 else
                 {
-                    if (!string.Equals(Author, GlobalResources.CurrentUser.UserName))
+                    if (!string.Equals(Author, AppResources.CurrentUser.UserName))
                     {
                         //Changes to the contents inside the root folder being locked
                         if (!string.Equals(_Directory, "null") & string.Equals(Directory.GetParent(FS_Activity).ToString(), _Directory))
@@ -90,7 +90,7 @@ namespace RBS.Agents
                                     if (string.Equals(AM.Activity, FS_Activity))
                                     {
                                         AddAlert = false;
-                                        GlobalResources.Update_Alert(Alert);
+                                        AppResources.Update_Alert(Alert);
                                     }
                                 }
 
@@ -101,14 +101,14 @@ namespace RBS.Agents
                                     {
                                         GlobalAlerts.AllAlerts.Add(Alert);
                                     });
-                                    GlobalResources.Update_Alert(Alert);
+                                    AppResources.Update_Alert(Alert);
                                     MailingSystem.Mdata.Alert = Alert;
                                     MailingSystem.Mdata.CompromisedUser = Author;
-                                    GlobalResources.Send_Mail();
+                                    AppResources.Send_Mail();
                                 }
 
-                                GlobalResources.GeneratedAlert();
-                                if (GlobalResources.IsNotificationWindowShown == false)
+                                AppResources.GeneratedAlert();
+                                if (AppResources.IsNotificationWindowShown == false)
                                     Notify();
                             }
                         }
@@ -125,7 +125,7 @@ namespace RBS.Agents
                                     if (string.Equals(AM.Activity, FS_Activity))
                                     {
                                         AddAlert = false;
-                                        GlobalResources.Update_Alert(Alert);
+                                        AppResources.Update_Alert(Alert);
                                     }
                                 }
 
@@ -136,13 +136,13 @@ namespace RBS.Agents
                                     {
                                         GlobalAlerts.AllAlerts.Add(Alert);
                                     });
-                                    GlobalResources.Update_Alert(Alert);
+                                    AppResources.Update_Alert(Alert);
                                     MailingSystem.Mdata.Alert = Alert;
                                     MailingSystem.Mdata.CompromisedUser = Author;
-                                    GlobalResources.Send_Mail();
+                                    AppResources.Send_Mail();
                                 }
-                                GlobalResources.GeneratedAlert();
-                                if (GlobalResources.IsNotificationWindowShown == false)
+                                AppResources.GeneratedAlert();
+                                if (AppResources.IsNotificationWindowShown == false)
                                     Notify();
                             }
                         }
@@ -154,7 +154,7 @@ namespace RBS.Agents
 
         public static void Notify()
         {
-            GlobalResources.IsNotificationWindowShown = true;
+            AppResources.IsNotificationWindowShown = true;
             Application.Current.Dispatcher.Invoke(delegate
                  {
                      foreach (Window RBSWindow in Application.Current.Windows)

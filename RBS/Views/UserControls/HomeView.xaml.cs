@@ -24,7 +24,7 @@ namespace RBS.Views
         public HomeView()
         {
             InitializeComponent();
-            string Username = GlobalResources.CurrentUser.UserName;
+            string Username = AppResources.CurrentUser.UserName;
             TextBlock_CurrentUser.Text = " : " + Username;
         }
 
@@ -85,14 +85,14 @@ namespace RBS.Views
                 Button_Restrictions.Style = (Style)TryFindResource("StyleHomeScreenButtonsSelected");
                 ToggleButton_Restrictions.IsChecked = true;
                 Restrictions_Status = true;
-                GlobalResources.IsRestrictionsMonitoringSet = true;
+                AppResources.IsRestrictionsMonitoringSet = true;
             }
             else
             {
                 Button_Restrictions.Style = (Style)TryFindResource("StyleHomeScreenButtonsDefault");
                 ToggleButton_Restrictions.IsChecked = false;
                 Restrictions_Status = false;
-                GlobalResources.IsRestrictionsMonitoringSet = false;
+                AppResources.IsRestrictionsMonitoringSet = false;
             }
 
         }

@@ -17,10 +17,10 @@ namespace RBS.Monitoring_Engine
         public static void InitializePPM()
         {
             PPMListHolder = new ObservableCollection<Process_Port_Map_Model>();
-            GlobalResources.ProcessPortMapperIsOn += GlobalResources_ProcessPortMapperIsOn;
+            AppResources.ProcessPortMapperIsOn += AppResources_ProcessPortMapperIsOn;
         }
 
-        private static void GlobalResources_ProcessPortMapperIsOn(object sender, EventArgs e)
+        private static void AppResources_ProcessPortMapperIsOn(object sender, EventArgs e)
         {
             Worker = new BackgroundWorker();
             Worker.DoWork += Worker_DoWork;
@@ -91,7 +91,7 @@ namespace RBS.Monitoring_Engine
         private static void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             ObservableCollection<Process_Port_Map_Model> PPMListHolder = e.Result as ObservableCollection<Process_Port_Map_Model>;
-            GlobalResources.PPMIsOver();
+            AppResources.PPMIsOver();
             Worker.Dispose();
         }
 

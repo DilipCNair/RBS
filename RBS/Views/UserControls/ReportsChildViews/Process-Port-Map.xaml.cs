@@ -16,14 +16,14 @@ namespace RBS.Views.ReportsChildViews
         {
             InitializeComponent();
             ButtonRefresh.IsEnabled = false;
-            GlobalResources.PPMOver += GlobalResources_PPMOver;
-            if (GlobalResources.ProcessPortMapper & GlobalResources.IsMonitoringEngineOn)
+            AppResources.PPMOver += AppResources_PPMOver;
+            if (AppResources.ProcessPortMapper & AppResources.IsMonitoringEngineOn)
                 PPM_Label.Visibility = Visibility.Collapsed;
             else
                 PPM_Label.Visibility = Visibility.Visible;
         }
 
-        private void GlobalResources_PPMOver(object sender, EventArgs e)
+        private void AppResources_PPMOver(object sender, EventArgs e)
         {
             ButtonRefresh.IsEnabled = true;
         }
@@ -57,7 +57,7 @@ namespace RBS.Views.ReportsChildViews
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.ProcessPortMapper & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.ProcessPortMapper & AppResources.IsMonitoringEngineOn)
                 PPM_Label.Visibility = Visibility.Collapsed;
             else
                 PPM_Label.Visibility = Visibility.Visible;

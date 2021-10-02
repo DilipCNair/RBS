@@ -83,31 +83,31 @@ namespace RBS.ViewModel
             SelectAllCommand = new MyICommand(SelectAll);
             AddToSignatureCommand = new MyICommand(AddToSignature);
 
-            GlobalResources.ProcessList = new ObservableCollection<ProcessReportsModel>();
+            AppResources.ProcessList = new ObservableCollection<ProcessReportsModel>();
             Process_Exceptions();
         }
 
         public void Process_Exceptions()
         {
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "Idle" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "svchost" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "conhost" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "System" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "backgroundTaskHost" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "LocationNotificationWindows" });
-            GlobalResources.ProcessList.Add(new ProcessReportsModel { Name = "audiodg" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "Idle" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "svchost" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "conhost" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "System" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "backgroundTaskHost" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "LocationNotificationWindows" });
+            AppResources.ProcessList.Add(new ProcessReportsModel { Name = "audiodg" });
         }
 
         public void AddDirectory()
         {
             AllFSCRestrictions = new ObservableCollection<FSC_Restrictions>(Restrictions.AllFSC_Restritions);
-            GlobalResources.IsFileSytemRestrictionSet = true;
+            AppResources.IsFileSytemRestrictionSet = true;
         }
 
         public void AddFile()
         {
             AllFSCRestrictions = new ObservableCollection<FSC_Restrictions>(Restrictions.AllFSC_Restritions);
-            GlobalResources.IsFileSytemRestrictionSet = true;
+            AppResources.IsFileSytemRestrictionSet = true;
         }
 
         public void Load()
@@ -146,7 +146,7 @@ namespace RBS.ViewModel
             }
             catch (Exception) { }
             Restrictions.AllProcess_Restrictions = SelectedProcesses;
-            GlobalResources.IsProcessRestrictionsSet = true;
+            AppResources.IsProcessRestrictionsSet = true;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

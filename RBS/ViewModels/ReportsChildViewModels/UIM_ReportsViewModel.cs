@@ -50,12 +50,12 @@ namespace RBS.ViewModel.ReportsChildViewModels
         public UIM_ReportsViewModel()
         {
             UIMModelObject = new UIMModel();
-            GlobalResources.NewKeyStrokesCaptured += GlobalResources_NewKeyStrokesCaptured;
-            GlobalResources.NewMouseStrokesCaptured += GlobalResources_NewMouseStrokesCaptured;      
+            AppResources.NewKeyStrokesCaptured += AppResources_NewKeyStrokesCaptured;
+            AppResources.NewMouseStrokesCaptured += AppResources_NewMouseStrokesCaptured;      
         }
 
        
-        private void GlobalResources_NewKeyStrokesCaptured(object sender, System.EventArgs e)
+        private void AppResources_NewKeyStrokesCaptured(object sender, System.EventArgs e)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace RBS.ViewModel.ReportsChildViewModels
             catch (FileNotFoundException)
             { }
         }
-        private void GlobalResources_NewMouseStrokesCaptured(object sender, System.EventArgs e)
+        private void AppResources_NewMouseStrokesCaptured(object sender, System.EventArgs e)
         {
             try
             {

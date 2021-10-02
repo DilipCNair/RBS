@@ -15,14 +15,14 @@ namespace RBS.Views
         public ProcessReports()
         {
             InitializeComponent();
-            if (GlobalResources.ProcessMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.ProcessMonitoring & AppResources.IsMonitoringEngineOn)
                 PM_Label.Visibility = Visibility.Collapsed;
             else
                 PM_Label.Visibility = Visibility.Visible;
-            GlobalResources.NewProcessDetected += GlobalResources_NewProcessDetected;
+            AppResources.NewProcessDetected += AppResources_NewProcessDetected;
         }
 
-        private void GlobalResources_NewProcessDetected(object sender, EventArgs e)
+        private void AppResources_NewProcessDetected(object sender, EventArgs e)
         {
             //CollectionViewSource.GetDefaultView(DataGrid_Processes.ItemsSource).Refresh();
         }
@@ -57,7 +57,7 @@ namespace RBS.Views
 
         private void UserControl_ProcessReports_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.ProcessMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.ProcessMonitoring & AppResources.IsMonitoringEngineOn)
                 PM_Label.Visibility = Visibility.Collapsed;
             else
                 PM_Label.Visibility = Visibility.Visible;

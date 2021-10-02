@@ -26,10 +26,10 @@ namespace RBS.ViewModel
 
         public AlertsViewModel()
         {
-            GlobalResources.AlertGenerated += GlobalResources_AlertGenerated;
+            AppResources.AlertGenerated += AppResources_AlertGenerated;
         }
 
-        private void GlobalResources_AlertGenerated(object sender, System.EventArgs e)
+        private void AppResources_AlertGenerated(object sender, System.EventArgs e)
         {
             AlertList = GlobalAlerts.AllAlerts;
         }

@@ -14,14 +14,14 @@ namespace RBS
 
         public static void InitializeMailingSystem()
         {
-            GlobalResources.SendMail += GlobalResources_SendMail; // To send mail
+            AppResources.SendMail += AppResources_SendMail; // To send mail
             Mdata = new MailingData();
         }
 
-        private static void GlobalResources_SendMail(object sender, EventArgs e)
+        private static void AppResources_SendMail(object sender, EventArgs e)
         {
             MailingThread = new Thread(MailThisAlert);
-            if (GlobalResources.AlertMailing)
+            if (AppResources.AlertMailing)
                 MailingThread.Start(Mdata);
         }
 
@@ -37,13 +37,13 @@ namespace RBS
             string emailFrom = "dilipn6@gmail.com";
             string password = "anisatge1";
             string emailTo = null;
-            foreach (User user in GlobalResources.Users)
+            foreach (User user in AppResources.Users)
             {
                 if (string.Equals(user.UserName, mailingData.CompromisedUser))
                     emailTo = user.Email_ID;
             }
             string subject = "RBS Alert";
-            string message = "Your restrictions has been violated by " + GlobalResources.CurrentUser.UserName + 
+            string message = "Your restrictions has been violated by " + AppResources.CurrentUser.UserName + 
                              " as given below : <br/><br/>";
             string AlertNo = "No : " + mailingData.Alert.No + "<br/><br/>";
             string AlertTime = "Time : " + mailingData.Alert.Time + "<br/><br/>";

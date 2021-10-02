@@ -23,10 +23,10 @@ namespace RBS.Views
             Button_Load.IsEnabled = false;
             Button_SelectAll.IsEnabled = false;
             Button_AddToSignature.IsEnabled = false;
-            GlobalResources.GettingAllProcesses += GlobalResources_GettingAllProcesses;
+            AppResources.GettingAllProcesses += AppResources_GettingAllProcesses;
         }
 
-        private void GlobalResources_GettingAllProcesses(object sender, System.EventArgs e)
+        private void AppResources_GettingAllProcesses(object sender, System.EventArgs e)
         {
             Button_Load.IsEnabled = true;
             Button_SelectAll.IsEnabled = true;

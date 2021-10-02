@@ -24,7 +24,7 @@ namespace RBS.Views
         public UIM_Reports()
         {
             InitializeComponent();
-            if (GlobalResources.UserInputMonitoringChecked & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.UserInputMonitoringChecked & AppResources.IsMonitoringEngineOn)
                 UIM_Label.Visibility = Visibility.Collapsed;
             else
                 UIM_Label.Visibility = Visibility.Visible;
@@ -32,7 +32,7 @@ namespace RBS.Views
 
         private void UserControl_UIMReports_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.UserInputMonitoringChecked & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.UserInputMonitoringChecked & AppResources.IsMonitoringEngineOn)
                 UIM_Label.Visibility = Visibility.Collapsed;
             else
                 UIM_Label.Visibility = Visibility.Visible;

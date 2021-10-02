@@ -17,7 +17,7 @@ namespace RBS
 
         public static void LogTheException()
         {
-            //using (StreamWriter SW = File.AppendText(GlobalResources.Path + "Exception.log"))
+            //using (StreamWriter SW = File.AppendText(AppResources.Path + "Exception.log"))
             //{
             //    foreach (ExceptionModel _Exception in AllExceptions)
             //    {

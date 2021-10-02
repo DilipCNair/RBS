@@ -32,8 +32,8 @@ namespace RBS.Views
 
         private void Button_Register_Clicked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.MasterPassword = PasswordBoxMasterPassword.Password;
-            GlobalResources.ConfirmMasterPassword = PasswordBoxConfirmMasterPassword.Password;
+            AppResources.MasterPassword = PasswordBoxMasterPassword.Password;
+            AppResources.ConfirmMasterPassword = PasswordBoxConfirmMasterPassword.Password;
         }
     }
 }

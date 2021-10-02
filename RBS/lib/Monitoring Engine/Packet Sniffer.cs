@@ -21,11 +21,11 @@ namespace RBS.Monitoring_Engine
             Worker.DoWork += Worker_DoWork;
             Worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
             PacketSnifferResourcesObject = new Packet_Sniffer_Resources();
-            GlobalResources.PacketSnifferIsOn += GlobalResources_PacketSnifferIsOn;
-            GlobalResources.PacketSnifferIsOff += GlobalResources_PacketSnifferIsOff;
+            AppResources.PacketSnifferIsOn += AppResources_PacketSnifferIsOn;
+            AppResources.PacketSnifferIsOff += AppResources_PacketSnifferIsOff;
         }
 
-        private static void GlobalResources_PacketSnifferIsOn(object sender, EventArgs e)
+        private static void AppResources_PacketSnifferIsOn(object sender, EventArgs e)
         {
             Worker.RunWorkerAsync(PacketSnifferResourcesObject);
         }
@@ -34,7 +34,7 @@ namespace RBS.Monitoring_Engine
         {
             string InterfaceSelectedByUser = null;
 
-            if (GlobalResources.SelectedNetworkInterface == 0)
+            if (AppResources.SelectedNetworkInterface == 0)
                 InterfaceSelectedByUser = "802.3 - Ethernet";
             else
                 InterfaceSelectedByUser = "802.11ac - Wifi";
@@ -503,7 +503,7 @@ namespace RBS.Monitoring_Engine
             { }
         }
 
-        private static void GlobalResources_PacketSnifferIsOff(object sender, EventArgs e)
+        private static void AppResources_PacketSnifferIsOff(object sender, EventArgs e)
         {
             Worker.CancelAsync();
         }

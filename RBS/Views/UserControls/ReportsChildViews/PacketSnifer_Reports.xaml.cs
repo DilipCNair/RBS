@@ -26,7 +26,7 @@ namespace RBS.Views
         {
             InitializeComponent();
 
-            if (GlobalResources.PacketSniffer & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.PacketSniffer & AppResources.IsMonitoringEngineOn)
                PS_Label.Visibility = Visibility.Collapsed;
             else
                 PS_Label.Visibility = Visibility.Visible;
@@ -36,13 +36,13 @@ namespace RBS.Views
             Worker.DoWork += Worker_DoWork;
             Worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
             PacketSnifferResourcesObject = new Packet_Sniffer_Resources();
-            GlobalResources.PacketSnifferIsOn += GlobalResources_PacketSnifferIsOn;
-            GlobalResources.PacketSnifferIsOff += GlobalResources_PacketSnifferIsOff;
+            AppResources.PacketSnifferIsOn += AppResources_PacketSnifferIsOn;
+            AppResources.PacketSnifferIsOff += AppResources_PacketSnifferIsOff;
         }
 
-        private void GlobalResources_PacketSnifferIsOn(object sender, EventArgs e)
+        private void AppResources_PacketSnifferIsOn(object sender, EventArgs e)
         {
-            if (GlobalResources.PacketSniffer)
+            if (AppResources.PacketSniffer)
                 Worker.RunWorkerAsync(PacketSnifferResourcesObject);
         }
 
@@ -50,7 +50,7 @@ namespace RBS.Views
         {
             string InterfaceSelectedByUser = null;
 
-            if (GlobalResources.SelectedNetworkInterface == 0)
+            if (AppResources.SelectedNetworkInterface == 0)
                 InterfaceSelectedByUser = "802.3 - Ethernet";
             else
                 InterfaceSelectedByUser = "802.11ac - Wifi";
@@ -588,7 +588,7 @@ namespace RBS.Views
             { }
         }
 
-        private void GlobalResources_PacketSnifferIsOff(object sender, EventArgs e)
+        private void AppResources_PacketSnifferIsOff(object sender, EventArgs e)
         {
             Worker.CancelAsync();
         }
@@ -664,7 +664,7 @@ namespace RBS.Views
 
         private void ButtonSave_Clicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (!GlobalResources.IsMonitoringEngineOn)
+            if (!AppResources.IsMonitoringEngineOn)
             {
                 string PcapFile = "dump.pcap";
                 byte[] _packet = null;
@@ -688,7 +688,7 @@ namespace RBS.Views
 
         private void UserControl_NetworkMonitoring_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.PacketSniffer & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.PacketSniffer & AppResources.IsMonitoringEngineOn)
                 PS_Label.Visibility = Visibility.Collapsed;
             else
                 PS_Label.Visibility = Visibility.Visible;

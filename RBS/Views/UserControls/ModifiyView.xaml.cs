@@ -20,7 +20,7 @@ namespace RBS.Views
 
         private void ButtonContinue_Clicked(object sender, RoutedEventArgs e)
         {
-            GlobalResources.MasterPassword = TextBox_MasterPassword.Password;
+            AppResources.MasterPassword = TextBox_MasterPassword.Password;
         }
     }
 }

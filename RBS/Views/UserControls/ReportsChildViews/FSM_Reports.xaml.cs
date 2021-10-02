@@ -15,7 +15,7 @@ namespace RBS.Views
         public FSM_Reports()
         {
             InitializeComponent();
-            if (GlobalResources.FileSystemMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.FileSystemMonitoring & AppResources.IsMonitoringEngineOn)
                 FSM_Label.Visibility = Visibility.Collapsed;
             else
                 FSM_Label.Visibility = Visibility.Visible;
@@ -51,7 +51,7 @@ namespace RBS.Views
 
         private void UserControl_FSM_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GlobalResources.FileSystemMonitoring & GlobalResources.IsMonitoringEngineOn)
+            if (AppResources.FileSystemMonitoring & AppResources.IsMonitoringEngineOn)
                 FSM_Label.Visibility = Visibility.Collapsed;
             else
                 FSM_Label.Visibility = Visibility.Visible;

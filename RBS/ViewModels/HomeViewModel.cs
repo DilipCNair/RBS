@@ -21,32 +21,32 @@ namespace RBS.ViewModel
 
         private void ME_ToggledOn()
         {
-            if(GlobalResources.UserInputMonitoringChecked)
+            if(AppResources.UserInputMonitoringChecked)
                User_Input_Monitoring.InitialiseUserInputMonitoring();
 
-            if(GlobalResources.ProcessMonitoring)
+            if(AppResources.ProcessMonitoring)
                Process_Monitoring.InitialiseProcessMonitoring();
 
-            if(GlobalResources.FileSystemMonitoring)
+            if(AppResources.FileSystemMonitoring)
                File_System_Monitoring.InitialiseFileSystemMonitoring();
 
-            if (GlobalResources.ProcessPortMapper)
+            if (AppResources.ProcessPortMapper)
                 PPM.InitializePPM();
 
-            if (GlobalResources.WindowsServices)
+            if (AppResources.WindowsServices)
                 WindowsServices.InitializePPM();
 
-            if (GlobalResources.ApplicationsMonitoring)
+            if (AppResources.ApplicationsMonitoring)
                 Applications_Monitoring.InitializeApplicationMonitoring();
 
-            GlobalResources.TurnOnMonitoringEngine();
-            GlobalResources.InitiateSettingsUpdate();
+            AppResources.TurnOnMonitoringEngine();
+            AppResources.InitiateSettingsUpdate();
         }
 
         private void Me_ToggledOff()
         {
-            GlobalResources.TurnOffMonitoringEngine();
-            GlobalResources.InitiateSettingsUpdate();
+            AppResources.TurnOffMonitoringEngine();
+            AppResources.InitiateSettingsUpdate();
         }
 
         public new event PropertyChangedEventHandler PropertyChanged;

