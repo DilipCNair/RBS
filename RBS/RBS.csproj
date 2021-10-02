@@ -172,7 +172,7 @@
     <Compile Include="lib\BindableBase.cs" />
     <Compile Include="lib\Commands\MyICommand.cs" />
     <Compile Include="lib\GlobalAlerts.cs" />
-    <Compile Include="lib\GlobalResources.cs" />
+    <Compile Include="lib\AppResources.cs" />
     <Compile Include="lib\MailingSystem.cs" />
     <Compile Include="Models\AlertsModel.cs" />
     <Compile Include="Models\AuthenticationModel.cs" />

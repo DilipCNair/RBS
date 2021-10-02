@@ -8,13 +8,9 @@ namespace RBS.ViewModel
 
         private int _RowCount;
 
-
         public bool AdminAccountStatus
         {
-            get
-            {
-                return _AdminAccountStatus;
-            }
+            get => _AdminAccountStatus;
             set
             {
                 if (_AdminAccountStatus != value)
@@ -22,14 +18,11 @@ namespace RBS.ViewModel
                     _AdminAccountStatus = value;
                 }
             }
-        }       
+        }
 
         public int RowCount
         {
-            get
-            {
-                return _RowCount;
-            }
+            get => _RowCount;
             set
             {
                 if (_RowCount != value)
@@ -41,11 +34,9 @@ namespace RBS.ViewModel
 
         public MyICommand RegisterCommand { get; set; }
 
-        public MyICommand ModifyCommand { get; private set; }
+        public MyICommand ModifyCommand { get; set; }
 
-        public MyICommand LoginCommand { get; private set; }
-
-
+        public MyICommand LoginCommand { get; set; }
 
         public SplashScreenViewModel()
         {

@@ -27,7 +27,7 @@ namespace RBS
             MailingSystem.InitializeMailingSystem();
             GettingCurrentUserInfo();
             GettingAllUsersInfo();
-            GlobalResources.IWantToShowCurrentUser();
+            GlobalResources.ShowCurrentUser();
         }
 
         private void GettingCurrentUserInfo()

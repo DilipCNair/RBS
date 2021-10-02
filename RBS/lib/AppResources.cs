@@ -82,7 +82,7 @@ namespace RBS
 
         public static ObservableCollection<User> Users { get; set; }
 
-        public static void ITurnedOnMonitoringEngine()
+        public static void TurnOnMonitoringEngine()
         {
             IsMonitoringEngineOn = true;
             UserInputMonitoringIsOn?.Invoke(typeof(GlobalResources), EventArgs.Empty);
@@ -99,12 +99,12 @@ namespace RBS
             AlertSound?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IWantToShowCurrentUser()
+        public static void ShowCurrentUser()
         {
             Show_User?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IWantToUpdateAlert(AlertsModel Alert)
+        public static void Update_Alert(AlertsModel Alert)
         {
             LastAlert = new AlertsModel
             {
@@ -117,12 +117,12 @@ namespace RBS
             UpdateAlert?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IWantToShowNotification()
+        public static void Show_Notification()
         {
             ShowNotiffication?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IWantToRefreshProcessList()
+        public static void Refresh_ProcessList()
         {
             RefreshProcessList?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
@@ -132,12 +132,12 @@ namespace RBS
             GettingAllProcesses?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IGeneratedAlert()
+        public static void GeneratedAlert()
         {
             AlertGenerated?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IWantToSendMail()
+        public static void Send_Mail()
         {
             SendMail?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
@@ -147,7 +147,7 @@ namespace RBS
             Minimize?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void ITurnedOffMonitoringEngine()
+        public static void TurnOffMonitoringEngine()
         {
             IsMonitoringEngineOn = false;
             ProcessMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
@@ -158,33 +158,33 @@ namespace RBS
             ApplicationMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IInitiatedNavigationToMainWindow()
+        public static void InitiateNavigationToMainWindow()
         {
             NavigatedToMainWindow?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IInitiatedKeyDownFromTextBox()
+        public static void InitiateKeyDownFromTextBox()
         {
             KeyDownFromTextBox?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IInitiatedAuthenticationError()
+        public static void InitiateAuthenticationError()
         {
             AuthenticationError?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IInitiatedSettingsUpdate()
+        public static void InitiateSettingsUpdate()
         {
             UpdateSettings?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
-        public static void IInitiatedNavigationToAuthenticationWindow()
+        public static void InitiateNavigationToAuthenticationWindow()
         {
             NavigatedToMainAuthenticationWindow?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
 
         // Special Case - UIM needs to be turned off just before calling F_Dispose() in FSM since RBS resides in F: Drive
-        public static void ITurnerOffUIM()
+        public static void TurnOffUIM()
         {
             UserInputMonitoringIsOff?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }
@@ -259,7 +259,7 @@ namespace RBS
             Path = Assembly.GetExecutingAssembly().Location;
         }
 
-        public static void IDetectedNewProcess()
+        public static void DetectedNewProcess()
         {
             NewProcessDetected?.Invoke(typeof(GlobalResources), EventArgs.Empty);
         }

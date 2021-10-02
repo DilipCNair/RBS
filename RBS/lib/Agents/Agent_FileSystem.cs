@@ -38,7 +38,7 @@ namespace RBS.Agents
                                 {
                                     AddAlert = false;
                                     AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Information = "File System Restriction Violation", Activity = FS_Restriction.File, Type = "File" };
-                                    GlobalResources.IWantToUpdateAlert(Alert);
+                                    GlobalResources.Update_Alert(Alert);
                                 }
                             }
                             if (AddAlert)
@@ -51,10 +51,10 @@ namespace RBS.Agents
                                 });
                                 MailingSystem.Mdata.Alert = Alert;
                                 MailingSystem.Mdata.CompromisedUser = Author;
-                                GlobalResources.IWantToSendMail();
-                                GlobalResources.IWantToUpdateAlert(Alert);
+                                GlobalResources.Send_Mail();
+                                GlobalResources.Update_Alert(Alert);
                             }
-                            GlobalResources.IGeneratedAlert();
+                            GlobalResources.GeneratedAlert();
                             if (GlobalResources.IsNotificationWindowShown == false)
                                 Notify();
 
@@ -90,7 +90,7 @@ namespace RBS.Agents
                                     if (string.Equals(AM.Activity, FS_Activity))
                                     {
                                         AddAlert = false;
-                                        GlobalResources.IWantToUpdateAlert(Alert);
+                                        GlobalResources.Update_Alert(Alert);
                                     }
                                 }
 
@@ -101,13 +101,13 @@ namespace RBS.Agents
                                     {
                                         GlobalAlerts.AllAlerts.Add(Alert);
                                     });
-                                    GlobalResources.IWantToUpdateAlert(Alert);
+                                    GlobalResources.Update_Alert(Alert);
                                     MailingSystem.Mdata.Alert = Alert;
                                     MailingSystem.Mdata.CompromisedUser = Author;
-                                    GlobalResources.IWantToSendMail();
+                                    GlobalResources.Send_Mail();
                                 }
 
-                                GlobalResources.IGeneratedAlert();
+                                GlobalResources.GeneratedAlert();
                                 if (GlobalResources.IsNotificationWindowShown == false)
                                     Notify();
                             }
@@ -125,7 +125,7 @@ namespace RBS.Agents
                                     if (string.Equals(AM.Activity, FS_Activity))
                                     {
                                         AddAlert = false;
-                                        GlobalResources.IWantToUpdateAlert(Alert);
+                                        GlobalResources.Update_Alert(Alert);
                                     }
                                 }
 
@@ -136,12 +136,12 @@ namespace RBS.Agents
                                     {
                                         GlobalAlerts.AllAlerts.Add(Alert);
                                     });
-                                    GlobalResources.IWantToUpdateAlert(Alert);
+                                    GlobalResources.Update_Alert(Alert);
                                     MailingSystem.Mdata.Alert = Alert;
                                     MailingSystem.Mdata.CompromisedUser = Author;
-                                    GlobalResources.IWantToSendMail();
+                                    GlobalResources.Send_Mail();
                                 }
-                                GlobalResources.IGeneratedAlert();
+                                GlobalResources.GeneratedAlert();
                                 if (GlobalResources.IsNotificationWindowShown == false)
                                     Notify();
                             }

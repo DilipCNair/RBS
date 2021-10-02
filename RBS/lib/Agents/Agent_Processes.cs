@@ -44,7 +44,7 @@ namespace RBS.Agents
                             {
                                 AddAlert_W = false;
                                 AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Type = "UnWanted Process", Activity = Process.Name, Information = "Process Restriction Violation " };
-                                GlobalResources.IWantToUpdateAlert(Alert);
+                                GlobalResources.Update_Alert(Alert);
                             }
                         }
                         if (AddAlert_W)
@@ -55,9 +55,9 @@ namespace RBS.Agents
                             {          
                                 GlobalAlerts.AllAlerts.Add(Alert);
                             });
-                            GlobalResources.IWantToUpdateAlert(Alert);
+                            GlobalResources.Update_Alert(Alert);
                         }
-                        GlobalResources.IGeneratedAlert();                       
+                        GlobalResources.GeneratedAlert();                       
                         if (!GlobalResources.IsNotificationWindowShown)
                         {
                             Notify();
@@ -81,7 +81,7 @@ namespace RBS.Agents
                                 {
                                     AddAlert_B = false;
                                     AlertsModel Alert = new AlertsModel { No = GlobalAlerts.No, Time = DateTime.Now.ToShortTimeString(), Date = DateTime.Now.ToShortDateString(), Type = "Blacklisted Process", Activity = Process.Name, Information = "Process Restriction Violation" };
-                                    GlobalResources.IWantToUpdateAlert(Alert);
+                                    GlobalResources.Update_Alert(Alert);
                                 }
                             }
                             if (AddAlert_B)
@@ -92,8 +92,8 @@ namespace RBS.Agents
                                 {
                                     GlobalAlerts.AllAlerts.Add(Alert);
                                 });
-                                GlobalResources.IGeneratedAlert();
-                                GlobalResources.IWantToUpdateAlert(Alert);
+                                GlobalResources.GeneratedAlert();
+                                GlobalResources.Update_Alert(Alert);
                             }
                             if (!GlobalResources.IsNotificationWindowShown)
                                 Notify();

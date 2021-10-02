@@ -104,9 +104,7 @@
     </Style>
 
    <!--mahApps column header style-->
-    <Style x:Key="MyColumnHeader" 
-               BasedOn="{StaticResource MetroDataGridColumnHeader}" 
-               TargetType="{x:Type DataGridColumnHeader}">
+    <Style x:Key="MyColumnHeader" BasedOn="{StaticResource MetroDataGridColumnHeader}" TargetType="{x:Type DataGridColumnHeader}">
         <Setter Property="CustomControls:ControlsHelper.ContentCharacterCasing" Value="Normal"/>
         <Setter Property="FontWeight" Value="Normal"/>
         <Setter Property="FontSize" Value="13"/>

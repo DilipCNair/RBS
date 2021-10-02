@@ -23,7 +23,7 @@ namespace RBS.Monitoring_Engine
                 if(_ProcessListHolder!=value)
                 {
                     _ProcessListHolder = value;
-                    GlobalResources.IDetectedNewProcess();
+                    GlobalResources.DetectedNewProcess();
                 }
             }
         }

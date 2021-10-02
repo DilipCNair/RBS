@@ -121,7 +121,7 @@ namespace RBS.Views
             Button_Help.Style = (Style)FindResource("StyleMainMenuButtonsDefault");
             Button_Logout.Style = (Style)FindResource("StyleLogoutButtonSelected");
 
-            GlobalResources.IInitiatedNavigationToAuthenticationWindow();
+            GlobalResources.InitiateNavigationToAuthenticationWindow();
 
             foreach (Window RBSWindow in Application.Current.Windows)
             {

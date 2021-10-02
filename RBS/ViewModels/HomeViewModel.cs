@@ -39,14 +39,14 @@ namespace RBS.ViewModel
             if (GlobalResources.ApplicationsMonitoring)
                 Applications_Monitoring.InitializeApplicationMonitoring();
 
-            GlobalResources.ITurnedOnMonitoringEngine();
-            GlobalResources.IInitiatedSettingsUpdate();
+            GlobalResources.TurnOnMonitoringEngine();
+            GlobalResources.InitiateSettingsUpdate();
         }
 
         private void Me_ToggledOff()
         {
-            GlobalResources.ITurnedOffMonitoringEngine();
-            GlobalResources.IInitiatedSettingsUpdate();
+            GlobalResources.TurnOffMonitoringEngine();
+            GlobalResources.InitiateSettingsUpdate();
         }
 
         public new event PropertyChangedEventHandler PropertyChanged;

@@ -34,7 +34,7 @@ namespace RBS.ViewModel
             if (string.Equals(TextBox_EmployeeID, AuthenticationModelObject.EmployeeID) & 
                 string.Equals(TextBox_MasterPassword, AuthenticationModelObject.MasterPassword))
             {
-                GlobalResources.IInitiatedNavigationToMainWindow();
+                GlobalResources.InitiateNavigationToMainWindow();
                 foreach (Window RBSWindow in Application.Current.Windows)
                 {
                     if (RBSWindow is AuthenticationWindow)
@@ -47,7 +47,7 @@ namespace RBS.ViewModel
             else
             {     
                 //To bypass User AUthentication from SQL Database
-                GlobalResources.IInitiatedNavigationToMainWindow();
+                GlobalResources.InitiateNavigationToMainWindow();
                 foreach (Window RBSWindow in Application.Current.Windows)
                 {
                     if (RBSWindow is AuthenticationWindow)

@@ -13,6 +13,11 @@
         <Style x:Key="StyleButtonContinue" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="325"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BorderThickness" Value="0.1"/>
             <Setter Property="Background">
                 <Setter.Value>
                     <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
@@ -23,11 +28,6 @@
                     <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                 </Setter.Value>
             </Setter>
-            <Setter Property="FontWeight" Value="Normal"/>
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="Width" Value="325"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="BorderThickness" Value="0.1"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -82,6 +82,8 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
+    
+    
     <UserControl.BorderBrush>
         <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
     </UserControl.BorderBrush>
@@ -108,20 +110,16 @@
             <StackPanel x:Name="StackPanel_ButtonContainer" Orientation="Vertical" HorizontalAlignment="Center" 
                         Margin="0,25,0,0" VerticalAlignment="Center" Width="425">
                 <Button x:Name="ButtonRegistration" Style="{StaticResource StyleButtonContinue}" Content="Register" 
-                        Margin="0" HorizontalAlignment="Center" 
-                        Command="{Binding Path=RegisterCommand}"/>
+                        Margin="0" HorizontalAlignment="Center" Command="{Binding Path=RegisterCommand}"/>
                 <Button x:Name="ButtonModify" Style="{StaticResource StyleButtonContinue}" Content="Modify"
-                        Margin="0,25,0,0" HorizontalAlignment="Center" 
-                        Command="{Binding Path=ModifyCommand}"/>
+                        Margin="0,25,0,0" HorizontalAlignment="Center" Command="{Binding Path=ModifyCommand}"/>
                 <Button x:Name="ButtonLogin" Style="{StaticResource StyleButtonContinue}" Content="Login" 
-                        Margin="0,25,0,0" HorizontalAlignment="Center" 
-                        Command="{Binding Path=LoginCommand}"/>
+                        Margin="0,25,0,0" HorizontalAlignment="Center" Command="{Binding Path=LoginCommand}"/>
             </StackPanel>
 
             <TextBlock x:Name="TextBlock_SplashMessageTitle" HorizontalAlignment="Center" FontWeight="Thin" 
                        Margin="15,20,0,0" TextWrapping="Wrap" Text="Please Select !" VerticalAlignment="Center" 
-                       FontSize="17" FontFamily="Calibri" FontStretch="Expanded" FontStyle="Italic" 
-                       Foreground="#FFD9DEE0"/>
+                       FontSize="17" FontFamily="Calibri" FontStretch="Expanded" FontStyle="Italic" Foreground="#FFD9DEE0"/>
         </StackPanel>
 
 

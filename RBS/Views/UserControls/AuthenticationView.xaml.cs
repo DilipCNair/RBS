@@ -46,13 +46,13 @@ namespace RBS.Views
         private void TextBox_EmployeeID_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.Key == Key.Enter)
-               GlobalResources.IInitiatedKeyDownFromTextBox();
+               GlobalResources.InitiateKeyDownFromTextBox();
         }
 
         private void TextBox_MasterPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
-                GlobalResources.IInitiatedKeyDownFromTextBox();
+                GlobalResources.InitiateKeyDownFromTextBox();
         }
 
         private void ButtonLogin_Clicked(object sender, RoutedEventArgs e)

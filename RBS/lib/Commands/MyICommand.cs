@@ -6,20 +6,19 @@ namespace RBS.Commands
     public class MyICommand : ICommand
     {
         //Delegates holding references to the target functions 
-        //Test
-        readonly Func<bool> TargetCanExecuteMethod;
-        readonly Action TargetExecuteMethod;
+        private readonly Func<bool> TargetCanExecuteMethod;
+        private readonly Action TargetExecuteMethod;
 
 
         public MyICommand(Action ExecuteMethod)
         {
-           TargetExecuteMethod = ExecuteMethod;
+            TargetExecuteMethod = ExecuteMethod;
         }
 
-        public MyICommand(Func<bool> CanExecuteMethod,  Action ExecuteMthod)
+        public MyICommand(Func<bool> CanExecuteMethod, Action ExecuteMethod)
         {
             TargetCanExecuteMethod = CanExecuteMethod;
-            TargetExecuteMethod = ExecuteMthod;           
+            TargetExecuteMethod = ExecuteMethod;
         }
 
 
@@ -30,15 +29,11 @@ namespace RBS.Commands
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
+
         //When User Clicks a Button this function gets invoked
         bool ICommand.CanExecute(object parameter)
         {
-            if (TargetCanExecuteMethod != null)
-                return TargetCanExecuteMethod();
-            else if (TargetExecuteMethod != null)
-                return true;
-            else
-                return false;
+            return TargetCanExecuteMethod != null ? TargetCanExecuteMethod() : TargetExecuteMethod != null;
         }
 
         //When User Clicks a Button this function gets invoked
