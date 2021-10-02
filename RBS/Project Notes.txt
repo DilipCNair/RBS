@@ -1,2 +1,12 @@
 ﻿
-Testing
+
+-> The Namespace Structure and the Project Structure are different - Check class view to get namespace structure.
+
+-> The project depends on Winpcap and Airpcap drivers to capture ethernet and Wifi packets respectively.
+
+-> The projects has 4 external dependencies (NuGet Pacakges), details can be found on packages.conf file.
+
+-> The project uses MSSQL Server to store Authentication information using plain ADO.net.
+   The authenication codes has been by passed by commenting it, since the project needs to upgraded to entity framework in the future.
+   If uncommented the code will work but the naming conventions needs to be updated to be in sync with the project, otherwise it will give
+   compilation error.

@@ -9,9 +9,7 @@ namespace RBS
 {
     public static class AppResources
     {
-
-        public static bool IsMonitoringEngineOn;
-
+        #region 1. Static Events
         public static event EventHandler UserInputMonitoringIsOn;
 
         public static event EventHandler ProcessMonitoringIsOn;
@@ -79,9 +77,9 @@ namespace RBS
         public static event EventHandler UpdateAlert;
 
         public static event EventHandler Show_User;
+        #endregion
 
-        public static ObservableCollection<User> Users { get; set; }
-
+        #region 2. Static Event Handlers
         public static void TurnOnMonitoringEngine()
         {
             IsMonitoringEngineOn = true;
@@ -183,7 +181,7 @@ namespace RBS
             NavigatedToMainAuthenticationWindow?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
-        // Special Case - UIM needs to be turned off just before calling F_Dispose() in FSM since RBS resides in F: Drive
+        // UIM needs to be turned off just before calling F_Dispose() in FSM since RBS resides in F: Drive
         public static void TurnOffUIM()
         {
             UserInputMonitoringIsOff?.Invoke(typeof(AppResources), EventArgs.Empty);
@@ -214,11 +212,23 @@ namespace RBS
             NewMouseStrokesCaptured?.Invoke(typeof(AppResources), EventArgs.Empty);
         }
 
+        public static void DetectedNewProcess()
+        {
+            NewProcessDetected?.Invoke(typeof(AppResources), EventArgs.Empty);
+        }
+        #endregion
+
+        #region 3. Static Properties
+
+        public static ObservableCollection<User> Users { get; set; }
+
         public static ObservableCollection<ProcessReportsModel> ProcessList { get; set; }
 
         public static string Path { get; set; }
 
         public static User CurrentUser { get; set; }
+
+        public static bool IsMonitoringEngineOn;
 
         public static bool C_CheckBox { get; set; }
 
@@ -254,21 +264,11 @@ namespace RBS
 
         public static AlertsModel LastAlert { get; set; }
 
-        public static void InitialiseAppResources()
-        {
-            Path = Assembly.GetExecutingAssembly().Location;
-        }
-
-        public static void DetectedNewProcess()
-        {
-            NewProcessDetected?.Invoke(typeof(AppResources), EventArgs.Empty);
-        }
-
         public static string MasterPassword { get; set; }
 
         public static bool IsRestrictionsMonitoringSet { get; set; }
 
-        public static bool IsProcessRestrictionsSet { get; set; }      
+        public static bool IsProcessRestrictionsSet { get; set; }
 
         public static bool IsFileSytemRestrictionSet { get; set; }
 
@@ -276,9 +276,20 @@ namespace RBS
 
         public static int TotalAlerts { get; set; }
 
+        #endregion
+
+        #region 4. Static Methods
+
+        public static void InitialiseAppResources()
+        {
+            Path = Assembly.GetExecutingAssembly().Location;
+        }
+
         public static void Shutdown()
         {
             Application.Current.Shutdown();
         }
+
+        #endregion
     }
 }
