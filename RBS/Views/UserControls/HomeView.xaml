@@ -119,7 +119,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="StackPanel_Header" Orientation="Vertical"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            
+
             <StackPanel x:Name="StackPanel_Title" Orientation="Horizontal">
                 <StackPanel x:Name="Stackpanel_TitleName" Orientation="Horizontal" Margin="426,25,225,0"
                  HorizontalAlignment="Center" Width="98">
@@ -172,7 +172,7 @@
                     <Button x:Name="Button_Production"  HorizontalAlignment="Center" 
                     Style="{StaticResource StyleHomeScreenButtonsDefault}" VerticalAlignment="Center" Margin="0" 
                     Click="Button_Production_Clicked" ToolTip="Production Environment" IsEnabled="False"  >
-                        <TextBlock Text="&#xE116;" FontSize="35" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" 
+                        <TextBlock Text="&#xE8D7;" FontSize="35" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" 
                         HorizontalAlignment="Center" Margin="0,1,0,0" />
                     </Button>
                 </StackPanel>
@@ -222,7 +222,7 @@
                 <TextBlock Text="Monitoring Engine :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
                 FontSize="14" 
                           Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <ToggleButton x:Name="ToggleButton_ME" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="54,0,0,0"
+                <ToggleButton x:Name="ToggleButton_ME" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="69,0,0,0"
                  Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center"
                   Checked="ToggleButton_ME_Checked" Unchecked="ToggleButton_ME_Unchecked">
                     <i:Interaction.Triggers>
@@ -235,7 +235,7 @@
                     </i:Interaction.Triggers>
                 </ToggleButton>
 
-                <TextBlock Text="---------->   Monitors Programs, files, processes, services, packets, devices, registry etc" 
+                <TextBlock Text="----------&gt;   Monitors processes, files, network and registry" 
                 VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
             </StackPanel>
 
@@ -253,9 +253,9 @@
                  VerticalAlignment="Center" Margin="10,0"/>
                 <ToggleButton x:Name="ToggleButton_Restrictions" Style="{StaticResource AnimatedSwitchForSubMenu}"
                  Height="20" Width="50" VerticalAlignment="Center" Checked="ToggleButton_Restrictions_Checked" 
-                 Unchecked="ToggleButton_Restrictions_UnChecked" HorizontalAlignment="Right" Margin="85,0,0,0"/>
-                <TextBlock Text="----------&gt;   Impose restrictions on files, processes, programs, services etc"
-                 VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
+                 Unchecked="ToggleButton_Restrictions_UnChecked" HorizontalAlignment="Right" Margin="104,0,0,0"/>
+                <TextBlock Text="----------&gt;   Impose restrictions on processes, files, network and registry"
+                 VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="49,0,0,0" FontSize="13"/>
             </StackPanel>
 
             <Line Stroke="Gray" StrokeThickness="0.2" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
@@ -268,13 +268,13 @@
                         <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                     </TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock Text="Behavior Locking :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" Margin="10,0"
-                 FontSize="14" VerticalAlignment="Center" Width="119"/>
-                <ToggleButton x:Name="ToggleButton_BL" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="47,0,0,0"
-                 Height="20" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                <TextBlock Text="Behavior Detection :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" Margin="10,0"
+                 FontSize="14" VerticalAlignment="Center" Width="128"/>
+                <ToggleButton x:Name="ToggleButton_BL" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="54,0,0,0"
+                 Height="20" Width="50" VerticalAlignment="Center" 
                  Checked="ToggleButton_BL_Checked" Unchecked="ToggleButton_BL_Unchecked"/>
-                <TextBlock Text="----------&gt;   Identifies the system behavior and locks it down" 
-                VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
+                <TextBlock Text="----------&gt;   Intelligently Identifies the system behavior from the monitored data" 
+                VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="49,0,0,0" FontSize="13"/>
             </StackPanel>
 
             <Line Stroke="Gray" StrokeThickness="0.2" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
@@ -288,11 +288,11 @@
                 </TextBlock>
                 <TextBlock Text="Misuse Detection System :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
                 Margin="10,0,0,0" FontSize="14" VerticalAlignment="Center"/>
-                <ToggleButton x:Name="ToggleButton_MDS" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="7,0,0,0" 
+                <ToggleButton x:Name="ToggleButton_MDS" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="31,0,0,0" 
                 Height="20" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" 
                 Unchecked="ToggleButton_MDS_UnChecked" Checked="ToggleButton_MDS_Checked"/>
-                <TextBlock Text="----------&gt;   Identifies the workflow of the user and monitors for any kind of misuse"
-                 VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
+                <TextBlock Text="----------&gt;   Applying restrictions on behaviour"
+                 VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="49,0,0,0" FontSize="13"/>
             </StackPanel>
 
             <Line Stroke="Gray" StrokeThickness="0.2" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top"
@@ -307,10 +307,10 @@
                 <TextBlock Text="Malware Protection :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
                 HorizontalAlignment="Right" FontSize="14" Margin="10,0" VerticalAlignment="Center"/>
                 <ToggleButton x:Name="ToggleButton_AntiMalware" Style="{StaticResource AnimatedSwitchForSubMenu}"
-                 Margin="36,0,0,0" Height="20" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Margin="56,0,0,0" Height="20" Width="50" VerticalAlignment="Center" 
                  Checked="ToggleButton_AntiMalware_Checked" Unchecked="ToggleButton_AntiMalware_UnChecked"/>
-                <TextBlock Text="----------&gt;   Tries to protect against Well known Malwares" VerticalAlignment="Center" 
-                FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
+                <TextBlock Text="----------&gt;   Antimalware Service" VerticalAlignment="Center" 
+                FontStyle="Italic" Foreground="#FFBDB6B6" Margin="49,0,0,0" FontSize="13"/>
             </StackPanel>
 
             <Line Stroke="Gray" StrokeThickness="0.19" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top"
@@ -323,42 +323,41 @@
                         <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                     </TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock Text="Task Detection System :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
+                <TextBlock Text="Intrution Prevention System :" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
                 HorizontalAlignment="Right" FontSize="14" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <ToggleButton x:Name="ToggleButton_TDS" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="23,0,0,0" 
+                <ToggleButton x:Name="ToggleButton_TDS" Style="{StaticResource AnimatedSwitchForSubMenu}" Margin="15,0,0,0" 
                 Height="20" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" 
                 Checked="ToggleButton_TDS_Checked" Unchecked="ToggleButton_TDS_UnChecked"/>
-                <TextBlock Text="---------->   Tries to identify the task happening inside the operating System" 
-                VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="50,0,0,0" FontSize="13"/>
+                <TextBlock Text="----------&gt;   Network based Intrusion detection and prevention system" 
+                VerticalAlignment="Center" FontStyle="Italic" Foreground="#FFBDB6B6" Margin="49,0,0,0" FontSize="13"/>
             </StackPanel>
 
         </StackPanel>
 
         <StackPanel x:Name="StackPanel_Footer" Grid.Row="2" Grid.RowSpan="2">
             <StackPanel x:Name="StackPanel_VulerabilityTitle" HorizontalAlignment="Center">
-                <TextBlock Text="System Overview" FontSize="14" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
-                Margin="0,0,0,5"/>
+                <TextBlock Text="Alerts Overview" FontSize="14" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" 
+                Margin="0,0,0,5" HorizontalAlignment="Center"/>
             </StackPanel>
-            <Border x:Name="Border_StackPanel_VulnerabilityStatusReports" HorizontalAlignment="Center"
-             VerticalAlignment="Center" Padding="5" Margin="29,0,24,0" CornerRadius="3" BorderThickness="0,0.25,0,0"
-              Width="889" BorderBrush="Gray">
-                <StackPanel x:Name="StackPanel_VulnerabilityStatusReports" Orientation="Horizontal" Margin="5,0"
-                 Height="40" VerticalAlignment="Top" Width="869">
-                    <TextBlock x:Name="TextBlock_EmergencyAlerts" Text="Emergency Alerts : 0"
+            <Border x:Name="Border_StackPanel_VulnerabilityStatusReports" HorizontalAlignment="Center" Padding="5" Margin="29,0,24,0"
+                    CornerRadius="3" BorderThickness="0,0.25,0,0" Width="937" BorderBrush="Gray">
+                <StackPanel x:Name="StackPanel_VulnerabilityStatusReports" Orientation="Horizontal" Margin="-5,0,-5,0"
+                 Height="40" VerticalAlignment="Center">
+                    <TextBlock x:Name="TextBlock_EmergencyAlerts" Text="High Severity : 0"
                      FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway SemiBold" VerticalAlignment="Center" 
                      Margin="25,0,0,0" FontWeight="Bold" FontSize="13">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="TextBlock_SeriousAlerts" Text="Serious Alerts : 0" Margin="230,0,0,0" 
+                    <TextBlock x:Name="TextBlock_SeriousAlerts" Text="Medium Severity : 0" Margin="279,0,0,0" 
                     FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway SemiBold" VerticalAlignment="Center" 
-                    FontWeight="Bold" FontSize="13">
+                    FontWeight="Bold" FontSize="13" HorizontalAlignment="Center">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="TextBlock_NormalAlerts" Text="Normal Alerts : 0" 
+                    <TextBlock x:Name="TextBlock_NormalAlerts" Text="Low Severity : 0" 
                     FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway SemiBold" VerticalAlignment="Center"
                      Margin="280,0,0,0" HorizontalAlignment="Right" FontWeight="Bold" FontSize="13">
                         <TextBlock.Foreground>
@@ -377,6 +376,6 @@
             </StackPanel>
 
         </StackPanel>
-        
+
     </Grid>
 </UserControl>

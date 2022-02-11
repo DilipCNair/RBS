@@ -93,19 +93,19 @@
                     <TextBlock Text="C: Drive" Foreground="Gray"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
-                    <CheckBox x:Name="CheckBox_D" IsChecked="True" Checked="CheckBox_D_Checked" 
+                    <CheckBox x:Name="CheckBox_D" IsChecked="false" Checked="CheckBox_D_Checked" 
                               Unchecked="CheckBox_D_UnChecked"/>
                     <TextBlock Text="D: Drive" Foreground="Gray"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
-                    <CheckBox x:Name="CheckBox_E" IsChecked="True" Checked="CheckBox_E_Checked" 
+                    <CheckBox x:Name="CheckBox_E" IsChecked="False" Checked="CheckBox_E_Checked" 
                               Unchecked="CheckBox_E_UnChecked"/>
                     <TextBlock Text="E: Drive" Foreground="Gray"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <CheckBox x:Name="CheckBox_F" IsChecked="True" Checked="CheckBox_F_Checked"
+                <StackPanel Orientation="Horizontal" Height="22">
+                    <CheckBox x:Name="CheckBox_F" IsChecked="False" Checked="CheckBox_F_Checked"
                               Unchecked="CheckBox_F_UnChecked"/>
-                    <TextBlock Text="F: Drive" Foreground="Gray"/>
+                    <TextBlock Text="F: Drive" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
             </TreeViewItem>
         </TreeView>
@@ -120,40 +120,40 @@
                     <TextBlock Text="Monitoring Engine :" Style="{StaticResource TextBlockForSettingsStyle}" 
                                Margin="10,0,0,0"/>
                 </TreeViewItem.Header>
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_IA" IsChecked="False" Checked="CheckBox_Applications_Checked" 
                               Unchecked="CheckBox_Applications_UnChecked"/>
-                    <TextBlock Text="Applications" Foreground="Gray"/>
-                </StackPanel>
+                    <TextBlock Text="Applications" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>-->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_FSM" IsChecked="True" Checked="CheckBox_FSM_Checked" 
                               Unchecked="CheckBox_FSM_UnChecked"/>
-                    <TextBlock Text="File System Monitoring" Foreground="Gray"/>
+                    <TextBlock Text="File System Monitoring" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_PS" IsChecked="False" Checked="CheckBox_PS_Checked" 
                               Unchecked="CheckBox_PS_Unchecked"/>
                     <TextBlock Text="Packet Analyser" Foreground="Gray"/>
-                </StackPanel>
+                </StackPanel>-->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_PM" IsChecked="True" Checked="CheckBox_PM_Checked" 
                               Unchecked="CheckBox_PM_Unchecked"/>
-                    <TextBlock Text="Process Monitoring" Foreground="Gray"/>
+                    <TextBlock Text="Process Monitoring" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_PPM" IsChecked="False" Checked="CheckBox_PPM_Checked" 
                               Unchecked="CheckBox_PPM_Unchecked"/>
-                    <TextBlock Text="Process Port Mapper" Foreground="Gray"/>
+                    <TextBlock Text="Process Port Mapper" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                     <CheckBox x:Name="CheckBox_WSM" IsChecked="False" Checked="CheckBox_WSM_Checked" 
                               Unchecked="CheckBox_WSM_Unchecked"/>
-                    <TextBlock Text="Services and Devices" Foreground="Gray"/>
+                    <TextBlock Text="Services and Devices" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Height="26">
                     <CheckBox x:Name="CheckBox_UIM" IsChecked="False" Checked="CheckBox_UIM_Checked" 
                               Unchecked="CheckBox_UIM_UnChecked"/>
-                    <TextBlock Text="User Input Monitoring" Foreground="Gray"/>
+                    <TextBlock Text="User Input Monitoring" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                 </StackPanel>

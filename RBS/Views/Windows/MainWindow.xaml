@@ -35,7 +35,8 @@
                 <RowDefinition Height="430*"/>
                 <RowDefinition Height="69*"/>
             </Grid.RowDefinitions>
-            <Views:MainContent x:Name="ViewMainContent" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Views:MainContent x:Name="ViewMainContent" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"/>
         </Grid>
         
     </Grid>

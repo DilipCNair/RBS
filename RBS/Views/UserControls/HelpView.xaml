@@ -20,15 +20,15 @@
         <Line Stroke="Gray" StrokeThickness="1" Width="895" HorizontalAlignment="Center" VerticalAlignment="Top" 
         X2="942" Margin="35,74,37,0"/>
 
-        <TreeView x:Name="Treeview_Abbreviations"  Margin="0,79,0,324">
-            <TreeViewItem IsExpanded="True" Height="256" Margin="30,0">
+        <TreeView x:Name="Treeview_Abbreviations"  Margin="0,79,0,324" Foreground="Gray">
+            <!--<TreeViewItem IsExpanded="True" Height="256" Margin="30,0">
                 <TreeViewItem.Header>
                     <TextBlock x:Name="Textblock_Abbreviations" HorizontalAlignment="Left" TextWrapping="Wrap" 
                     Text="Abbreviations" VerticalAlignment="Top" RenderTransformOrigin="-2.488,-6.588" 
                     FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="14" Margin="10,0,0,0"/>
                 </TreeViewItem.Header>
 
-                <StackPanel Orientation="Horizontal" Margin="-10,0,0,0">
+                <StackPanel x:Name="StackPanel_MonitoringEngine" Orientation="Horizontal" Margin="-10,0,0,0">
                     <BulletDecorator VerticalAlignment="Center" Margin="0,3,0,0">
                         <BulletDecorator.Bullet>
                             <Ellipse Height="7.5" Width="7.5" Fill="Gray" Margin="10,0,0,0" VerticalAlignment="Center"/>
@@ -123,6 +123,15 @@
                      Text="Non-Pdn : Non-Production Environment" VerticalAlignment="Top" 
                      RenderTransformOrigin="-2.488,-6.588" FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light"/>
                 </StackPanel>
+            </TreeViewItem>-->
+
+            <TreeViewItem IsExpanded="True" Height="256" Margin="30,0" Foreground="Gray">
+                <TreeViewItem.Header>
+                    <TextBlock x:Name="Textblock_Manual" HorizontalAlignment="Left" TextWrapping="Wrap" 
+                    Text="Manual" VerticalAlignment="Top" RenderTransformOrigin="-2.488,-6.588" 
+                    FontFamily="/RBS;component/RBSFonts/Raleway/#Raleway Light" FontSize="14" Margin="10,0,0,0" Foreground="Gray"/>
+                </TreeViewItem.Header>
+                <StackPanel></StackPanel>
             </TreeViewItem>
         </TreeView>
     </Grid>

@@ -10,3 +10,7 @@
    The authenication codes has been by passed by commenting it, since the project needs to upgraded to entity framework in the future.
    If uncommented the code will work but the naming conventions needs to be updated to be in sync with the project, otherwise it will give
    compilation error.
+
+-> When starting - Disable Hot Releoad in Debug Settings
+
+-> Disable Project Code in XAML View / Only Displaying Platform Controls

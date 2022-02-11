@@ -43,7 +43,7 @@
                 <SolidColorBrush Color="{DynamicResource FlatUI_Red}"/>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBlock x:Name="TotalAlerts_Textblock" Text="Total Alerts : 0" Margin="75,0,0,29" 
+        <TextBlock x:Name="TotalAlerts_Textblock" Text="Total Alerts : 1" Margin="75,0,0,29" 
                    HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="13">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="#FFADE8AD"/>
@@ -144,8 +144,8 @@
                 </Grid>
             </StackPanel>
         </Border>
-        <Line Y2="90" Panel.ZIndex="1" VerticalAlignment="Center" HorizontalAlignment="Left"
-              Margin="261,107,0,20" StrokeThickness="1.5" Height="94">
+        <Line Y2="90" Panel.ZIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left"
+              Margin="264,114,0,0" StrokeThickness="1.5" Height="94">
             <Line.Stroke>
                 <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
             </Line.Stroke>
@@ -157,8 +157,8 @@
                 <SolidColorBrush Color="#FFADE8AD"/>
             </TextBlock.Foreground>
         </TextBlock>
-        <Line Y2="86" Panel.ZIndex="1" VerticalAlignment="Center" HorizontalAlignment="Left"
-              Margin="261,-67,241,25" StrokeThickness="1.5">
+        <Line Y2="86" Panel.ZIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left"
+              Margin="264,28,0,0" StrokeThickness="1.5">
             <Line.Stroke>
                 <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
             </Line.Stroke>

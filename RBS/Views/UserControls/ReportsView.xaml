@@ -39,17 +39,11 @@
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                 </Style>
             </TabControl.Resources>
-            <TabItem Header="Applications" Style="{StaticResource StyleForTabItem}">
-                <ChildViews:Applications MaxHeight="562"/>
+            <TabItem Header="Process" Style="{StaticResource StyleForTabItem}">
+                <Views:ProcessReports MaxHeight="562"/>
             </TabItem>
             <TabItem Header="File System" Style="{StaticResource StyleForTabItem}">
                 <Views:FSM_Reports MaxHeight="562"/>
-            </TabItem>
-            <TabItem Header="Packet Sniffer" Style="{StaticResource StyleForTabItem}">
-                <Views:PacketSniffer_Reports MaxHeight="562"/>
-            </TabItem>
-            <TabItem Header="Process" Style="{StaticResource StyleForTabItem}">
-                <Views:ProcessReports MaxHeight="562"/>
             </TabItem>
             <TabItem Header="Process Port Mapper" Style="{StaticResource StyleForTabItem}">
                 <ChildViews:Process_Port_Map MaxHeight="562"/>
@@ -57,9 +51,16 @@
             <TabItem Header="User Input" Style="{StaticResource StyleForTabItem}">
                 <Views:UIM_Reports MaxHeight="562"/>
             </TabItem>
+            <TabItem Header="Applications" Style="{StaticResource StyleForTabItem}">
+                <ChildViews:Applications MaxHeight="562"/>
+            </TabItem>
             <TabItem Header="Services/Drivers" Style="{StaticResource StyleForTabItem}">
                 <ChildViews:WindowsServices MaxHeight="562"/>
             </TabItem>
+            <!--<TabItem Header="Packet Sniffer" Style="{StaticResource StyleForTabItem}">
+                <Views:PacketSniffer_Reports MaxHeight="562"/>
+            </TabItem>-->
+            
         </TabControl>
     </Grid>
 </UserControl>
