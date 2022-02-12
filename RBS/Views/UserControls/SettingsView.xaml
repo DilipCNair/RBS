@@ -126,7 +126,7 @@
                     <TextBlock Text="Applications" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>-->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
-                    <CheckBox x:Name="CheckBox_FSM" IsChecked="True" Checked="CheckBox_FSM_Checked" 
+                    <CheckBox x:Name="CheckBox_FSM" IsChecked="False" Checked="CheckBox_FSM_Checked" 
                               Unchecked="CheckBox_FSM_UnChecked"/>
                     <TextBlock Text="File System Monitoring" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
@@ -177,12 +177,12 @@
                 <ComboBox.BorderBrush>
                     <SolidColorBrush Color="{DynamicResource HighLightingGreenForWhiteBackground}"/>
                 </ComboBox.BorderBrush>
-                <ComboBoxItem IsSelected="True">
+                <ComboBoxItem>
                     <Italic>
                         <Run Text="White-list"/>
                     </Italic>
                 </ComboBoxItem>
-                <ComboBoxItem>
+                <ComboBoxItem IsSelected="True">
                     <Italic>
                         <Run Text="Black-list"/>
                     </Italic>
