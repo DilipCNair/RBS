@@ -38,7 +38,8 @@
     </Window.Resources>
 
     <Grid>
-        <CustomControls:TransitioningContentControl x:Name="WholeContentControl" Content="{Binding CurrentViewModelWhole}"/>
+        <CustomControls:TransitioningContentControl x:Name="WholeContentControl" 
+                                                    Content="{Binding CurrentViewModelWhole}"/>
     </Grid>
     
 </CustomControls:MetroWindow>

@@ -67,12 +67,12 @@ namespace RBS
             SystemSounds.Hand.Play();
             Application.Current.Dispatcher.Invoke(delegate
             {
-                TextBlock_AlertNo.Text = AppResources.LastAlert.No.ToString();
+                //TextBlock_AlertNo.Text = AppResources.LastAlert.No.ToString();
                 Information_Textblock.Text = AppResources.LastAlert.Information;
                 Activity_Textblock.Text = AppResources.LastAlert.Activity;
                 Date_Textblock.Text = AppResources.LastAlert.Date;
                 Time_Textblock.Text = AppResources.LastAlert.Time;
-                TextBlock_AlertNo.Text = AppResources.LastAlert.No.ToString();
+                //TextBlock_AlertNo.Text = AppResources.LastAlert.No.ToString();
             });
         }
 

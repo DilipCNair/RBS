@@ -90,53 +90,52 @@
                         <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Date : " FontSize="15" Grid.Column="2" VerticalAlignment="Center" 
-                               Margin="0,9,127,8" Height="16" FontStyle="Italic" Grid.ColumnSpan="2">
+                    <TextBlock Text="Date   : " FontSize="15" Grid.Column="1" VerticalAlignment="Center" 
+                               Margin="444,0,127,0" Height="32" FontStyle="Italic" Grid.ColumnSpan="3">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="Date_Textblock" Grid.Column="3" VerticalAlignment="Center" 
-                               Margin="7,9,0,0" Height="24" FontSize="15">
+                    <TextBlock x:Name="Date_Textblock" Grid.Column="3" VerticalAlignment="Top" 
+                               Margin="10,1,7,0" Height="19" FontSize="15">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
 
-                    <TextBlock Text="Info :" Margin="5,8,0,7" FontSize="15" VerticalAlignment="Center" 
-                               Height="18" HorizontalAlignment="Left" Width="36" >
+                    <TextBlock Text="Info       :" FontSize="15" VerticalAlignment="Center" 
+                               Height="30" HorizontalAlignment="Left" Width="67" Grid.ColumnSpan="2" >
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="Information_Textblock" FontSize="15" VerticalAlignment="Center" 
-                               Margin="46,8,0,7" Height="18" Grid.ColumnSpan="2">
+                    <TextBlock x:Name="Information_Textblock" FontSize="15" VerticalAlignment="Top" 
+                               Margin="16,2,38,0" Height="24" Grid.Column="1">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock Text="Activity  :" HorizontalAlignment="Left" FontSize="15" Width="62" 
-                               Grid.Row="1" Margin="5,6,0,6" VerticalAlignment="Center" Height="18" 
-                               Grid.ColumnSpan="2">
+                    <TextBlock Text="Activity  :" HorizontalAlignment="Left" FontSize="15" Width="67" 
+                               Grid.Row="1" VerticalAlignment="Center" Height="30" Grid.ColumnSpan="2">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="Activity_Textblock" Grid.Row="1" Grid.Column="1" FontSize="15" 
-                               Margin="16,7,0,0">
+                    <TextBlock x:Name="Activity_Textblock" Grid.Column="1" FontSize="15" 
+                               Margin="16,0,38,10" Grid.Row="1">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock Text="Time :" HorizontalAlignment="Center" FontSize="15" Grid.Column="2"
-                               Width="40" Grid.Row="1" VerticalAlignment="Center" Margin="0,6,134,6" 
-                               Height="18" FontStyle="Italic" Grid.ColumnSpan="2">
+                    <TextBlock Text="Time   :" HorizontalAlignment="Left" FontSize="15" Grid.Column="1"
+                               Width="51" Grid.Row="1" VerticalAlignment="Center" Margin="444,0,0,0" 
+                               Height="28" FontStyle="Italic" Grid.ColumnSpan="3">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <TextBlock x:Name="Time_Textblock" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"
-                               Margin="10,7,0,0" Height="23" FontSize="15">
+                    <TextBlock x:Name="Time_Textblock" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top"
+                               Margin="12,1,8,0" FontSize="15">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="#FFADE8AD"/>
                         </TextBlock.Foreground>
@@ -150,7 +149,7 @@
                 <SolidColorBrush Color="{DynamicResource DarkCyan}"/>
             </Line.Stroke>
         </Line>
-        <TextBlock x:Name="TextBlock_AlertNo" Text="6" Margin="237,0,0,56"
+        <TextBlock x:Name="TextBlock_AlertNo" Text="1" Margin="237,0,0,56"
                    HorizontalAlignment="Left" VerticalAlignment="Bottom" 
                    FontWeight="Bold" Panel.ZIndex="1" FontSize="20">
             <TextBlock.Foreground>
