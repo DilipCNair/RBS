@@ -35,7 +35,7 @@ namespace RBS
             int portNumber = 587;
             bool enableSSL = true;
             string emailFrom = "dilipn6@gmail.com";
-            string password = "anisatge1";
+            string password = "";
             string emailTo = null;
             foreach (User user in AppResources.Users)
             {
