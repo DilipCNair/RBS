@@ -1,4 +1,8 @@
-# Restriciton Based System (Host Based Intrusion Detection SYstem designed for Windows)
+# Restriciton Based System
 
-You can get the project portfolio using the One Drive Link
+A Host Based Intrusion Detection System designed for Windows
+
+Want to know more about the project you can go through the project portfolio link given below :
+
+One Drive Link
 https://1drv.ms/b/s!AtVXrUNZYOgHuTsG94XOyaVjyZp7?e=12XOXl
